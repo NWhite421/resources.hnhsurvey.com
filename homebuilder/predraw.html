@@ -18,7 +18,7 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-  <main class="pt-2">
+  <main class="py-2">
     <div style="position: fixed; top: 10px; right: 10px;" class="d-print-none">
       <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#tableofcontents" role="button"
         aria-controls="tableofcontents">
@@ -29,96 +29,335 @@
       <div class="text-center">
         <h1>Pre-Draw Checklist</h1>
         <h6 class="d-print-none">General Scattered Lot</h6>
-        <div class="row d-none d-print-flex" id="review-information">
+        <div class="row d-none d-print-flex mb-0" id="review-information">
           <div class="col-6 text-start">
-            <p>Job Number: <span id="job-number">TBD</span></p>
+            <p class="pb-2 mb-0">Job Number: <b><span id="job-number">Not specified</span></b></p>
           </div>
           <div class="col-6 text-end">
-            <p>Review: <span id="review-number">TBD</span></p>
+            <p class="pb-2 mb-0">Review: <b><span id="review-number">Not specified</span></b></p>
           </div>
         </div>
       </div>
-      <hr>
-      <h5 id="legal-information" class="w-100 bg-secondary p-1">Legal Information</h5>
+      <hr class="my-0 py-2">
+      <h5 id="model-space" class="w-100 border-top border-bottom border-primary p-1 text-center text-primary">Model Space</h5>
       <div class="row">
         <div class="col-12 col-lg-6">
           <div class="row align-items-start align-items-md-center">
-            <div class="col-4 col-md-3 d-grid">
+            <div class="col-3 d-grid">
               <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
-                <input type="radio" class="btn-check" name="q1" id="btnFail1" autocomplete="off" checked>
-                <label class="btn btn-outline-danger w-100 py-0" for="btnFail1">FAIL</label>
+                <input type="radio" class="btn-check" name="qa1" id="btnPassa1" autocomplete="off">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPassa1"><i class="bi bi-check2"></i></label>
 
-                <input type="radio" class="btn-check" name="q1" id="btnPass1" autocomplete="off">
-                <label class="btn btn-outline-success w-100 py-0" for="btnPass1">PASS</label>
+                <input type="radio" class="btn-check" name="qa1" id="btnNaa1" autocomplete="off">
+                <label class="btn btn-outline-secondary w-100 py-0" for="btnNaa1"><i class="bi bi-slash-circle"></i></label>
               </div>
             </div>
-            <div class="col-8 col-md-9 align-middle">
-              <h6 class="text-start">Test Header</h6>
+            <div class="col-9 align-middle">
+              <h6 class="text-start">Legal Description Harmony</h6>
             </div>
           </div>
           <hr class="my-1">
-          <p>This is a test paragraph to see the different formatting of the descriptive text. It has to be at least
-            this long.</p>
+          <p>The legal description matches between the property card, deed, and plat. The aerial appears to match the
+            legal description. The address provided by the client matches the property card (or the parcel ID number).</p>
         </div>
         <div class="col-12 col-lg-6">
           <div class="row align-items-start align-items-md-center">
-            <div class="col-4 col-md-3 d-grid">
+            <div class="col-3 d-grid">
               <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
-                <input type="radio" class="btn-check" name="q2" id="btnFail2" autocomplete="off" checked>
-                <label class="btn btn-outline-danger w-100 py-0" for="btnFail2">FAIL</label>
+                <input type="radio" class="btn-check" name="qa2" id="btnPassa2" autocomplete="off">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPassa2"><i class="bi bi-check2"></i></label>
 
-                <input type="radio" class="btn-check" name="q2" id="btnPass2" autocomplete="off">
-                <label class="btn btn-outline-success w-100 py-0" for="btnPass2">PASS</label>
+                <input type="radio" class="btn-check" name="qa2" id="btnNaa2" autocomplete="off">
+                <label class="btn btn-outline-secondary w-100 py-0" for="btnNaa2"><i class="bi bi-slash-circle"></i></label>
               </div>
             </div>
-            <div class="col-8 col-md-9 align-middle">
-              <h6 class="text-start">Test Header</h6>
+            <div class="col-9 align-middle">
+              <h6 class="text-start">Save the Drawing</h6>
             </div>
           </div>
           <hr class="my-1">
-          <p>This is a test paragraph to see the different formatting of the descriptive text. It has to be at least
-            this long.</p>
+          <p>Save the drawing file into the root directory of the project with one of the following formats:</p>
+          <div class="row">
+            <div class="row text-center pb-2 d-print-none">
+              <div class="col-12 col-md-6">
+                <p class="my-0">Property has a street address:</p>
+                <strong class="my-0">[Job Number] [Street Number] [Street Name].dwg</strong>
+                <p class="text-muted my-0 py-0">22-01-001 18 Sample.dwg</p>
+                <small class="text-muted my-0 py-0">Drop the street suffix (st, rd, dr, etc)</small>
+              </div>
+              <div class="col-12 col-md-6">
+                <p class="my-0">Property does not have a street address:</p>
+                <strong class="my-0">[Job Number] [Street Name] [Lot Number].dwg</strong>
+                <p class="text-muted my-0 py-0">22-01-001 Sample 2.dwg</p>
+                <small class="text-muted my-0 py-0">Drop the street suffix (st, rd, dr, etc)</small>
+              </div>
+            </div>
+            <div class="row text-center pb-2 d-none d-print-flex">
+              <div class="col-6">
+                <p class="my-0">Property has a street address:</p>
+                <strong class="my-0">[Job Number] [Street Number] [Street Name].dwg</strong>
+                <p class="text-muted my-0 py-0">22-01-001 18 Sample.dwg</p>
+                <small class="text-muted my-0 py-0">Drop the street suffix (st, rd, dr, etc)</small>
+              </div>
+              <div class="col-6">
+                <p class="my-0">Property does not have a street address:</p>
+                <strong class="my-0">[Job Number] [Street Name] [Lot Number].dwg</strong>
+                <p class="text-muted my-0 py-0">22-01-001 Sample 2.dwg</p>
+                <small class="text-muted my-0 py-0">Drop the street suffix (st, rd, dr, etc)</small>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="col-12 col-lg-6">
           <div class="row align-items-start align-items-md-center">
-            <div class="col-4 col-md-3 d-grid">
+            <div class="col-3 d-grid">
               <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
-                <input type="radio" class="btn-check" name="q3" id="btnFail3" autocomplete="off" checked>
-                <label class="btn btn-outline-danger w-100 py-0" for="btnFail3">FAIL</label>
+                <input type="radio" class="btn-check" name="qa3" id="btnPassa3" autocomplete="off">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPassa3"><i class="bi bi-check2"></i></label>
 
-                <input type="radio" class="btn-check" name="q3" id="btnPass3" autocomplete="off">
-                <label class="btn btn-outline-success w-100 py-0" for="btnPass3">PASS</label>
+                <input type="radio" class="btn-check" name="qa3" id="btnNaa3" autocomplete="off">
+                <label class="btn btn-outline-secondary w-100 py-0" for="btnNaa3"><i class="bi bi-slash-circle"></i></label>
               </div>
             </div>
-            <div class="col-8 col-md-9 align-middle">
-              <h6 class="text-start">Test Header</h6>
+            <div class="col-9 align-middle">
+              <h6 class="text-start">Boundary & Adjacent Information</h6>
             </div>
           </div>
           <hr class="my-1">
-          <p>This is a test paragraph to see the different formatting of the descriptive text. It has to be at least
-            this long.</p>
+          <p>The boundary, adjacent parcels, and roads are drafted. Each subject parcel segment has appropriate
+            measurements (bearing and distance for lines, curve data for curves) (Reference). Easements are drafted and
+            annotated. The subject parcel is identified with lot & block information. Adjacent lots are annotated with
+            their lot number (and block number if the lot is in another block).</p>
         </div>
         <div class="col-12 col-lg-6">
           <div class="row align-items-start align-items-md-center">
-            <div class="col-4 col-md-3 d-grid">
+            <div class="col-3 d-grid">
               <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
-                <input type="radio" class="btn-check" name="q4" id="btnFail4" autocomplete="off" checked>
-                <label class="btn btn-outline-danger w-100 py-0" for="btnFail4">FAIL</label>
+                <input type="radio" class="btn-check" name="qa4" id="btnPassa4" autocomplete="off">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPassa4"><i class="bi bi-check2"></i></label>
 
-                <input type="radio" class="btn-check" name="q4" id="btnPass4" autocomplete="off">
-                <label class="btn btn-outline-success w-100 py-0" for="btnPass4">PASS</label>
+                <input type="radio" class="btn-check" name="qa4" id="btnNaa4" autocomplete="off">
+                <label class="btn btn-outline-secondary w-100 py-0" for="btnNaa4"><i class="bi bi-slash-circle"></i></label>
               </div>
             </div>
-            <div class="col-8 col-md-9 align-middle">
-              <h6 class="text-start">Test Header</h6>
+            <div class="col-9 align-middle">
+              <h6 class="text-start">Easements</h6>
             </div>
           </div>
           <hr class="my-1">
-          <p>This is a test paragraph to see the different formatting of the descriptive text. It has to be at least
-            this long.</p>
+          <p>Add line work for every easement shown on the plat, either described through the typical diagram shown on
+            the first page of the plat or as shown on the lot itself. Label each easement with its width and purpose. A
+            typical width and description can be used if all sides are the same.</p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-start align-items-md-center">
+            <div class="col-3 d-grid">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
+                <input type="radio" class="btn-check" name="qa5" id="btnPassa5" autocomplete="off">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPassa5"><i class="bi bi-check2"></i></label>
+
+                <input type="radio" class="btn-check" name="qa5" id="btnNaa5" autocomplete="off">
+                <label class="btn btn-outline-secondary w-100 py-0" for="btnNaa5"><i class="bi bi-slash-circle"></i></label>
+              </div>
+            </div>
+            <div class="col-9 align-middle">
+              <h6 class="text-start">Dimensions</h6>
+            </div>
+          </div>
+          <hr class="my-1">
+          <p>Add two (2) dimensions, one from each property corner, to the centerline of the right-of-way. Ensure the
+            accuracy is showing two (2) decimal places.</p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-start align-items-md-center">
+            <div class="col-3 d-grid">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
+                <input type="radio" class="btn-check" name="qa6" id="btnPassa6" autocomplete="off">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPassa6"><i class="bi bi-check2"></i></label>
+
+                <input type="radio" class="btn-check" name="qa6" id="btnNaa6" autocomplete="off">
+                <label class="btn btn-outline-secondary w-100 py-0" for="btnNaa6"><i class="bi bi-slash-circle"></i></label>
+              </div>
+            </div>
+            <div class="col-9 align-middle">
+              <h6 class="text-start">Road Information</h6>
+            </div>
+          </div>
+          <hr class="my-1">
+          <p>Each road directly adjacent to the parcel has: the road name (if the road name is different from the plat,
+            make the current road name large), plat name (if applicable), and a line containing the width of the
+            right-of-way. Draw the entire right-of-way centerline from intersection to intersection or intersection to
+            cul-de-sac termination.</p>
+          <div class="row text-center d-print-none">
+            <div class="col-12 col-md-4">
+              <p class="my-0">Default Street Label</p>
+              <h5 class="my-0 text-muted">EXAMPLE STREET</h5>
+              <p class="text-muted">50.0' R/W(P)</p>
+            </div>
+            <div class="col-12 col-md-4">
+              <p class="my-0">Varying Width R/W</p>
+              <h5 class="my-0 text-muted">EXAMPLE STREET</h5>
+              <p class="text-muted">R/W WIDTH VARIES(P)</p>
+            </div>
+            <div class="col-12 col-md-4">
+              <p class="my-0 d-print-none">Road Name Does Not Match Plat</p>
+              <p class="my-0 d-none">Road Name Does Not Match Plat</p>
+              <h5 class="my-0 text-muted">EXAMPLE STREET</h5>
+              <p class="text-muted">PLATTED ROAD NAME(P)<br>50.0' R/W(P)</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-start align-items-md-center">
+            <div class="col-3 d-grid">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
+                <input type="radio" class="btn-check" name="qa7" id="btnPassa7" autocomplete="off">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPassa7"><i class="bi bi-check2"></i></label>
+
+                <input type="radio" class="btn-check" name="qa7" id="btnNaa7" autocomplete="off">
+                <label class="btn btn-outline-secondary w-100 py-0" for="btnNaa7"><i class="bi bi-slash-circle"></i></label>
+              </div>
+            </div>
+            <div class="col-9 align-middle">
+              <h6 class="text-start">Adjacent Parcel Information</h6>
+            </div>
+          </div>
+          <hr class="my-1">
+          <p>List the lot number and whether the lot is improved, vacant, or the FFE of the building (depending on available information).</p>
+          <div class="row">
+            <div class="col-6">
+              <p class="my-0 bg-success px-2 border border-success rounded-2" style="--bs-bg-opacity: .5;">Improved Lot (No FFE)</p>
+              <p class="text-muted mb-0">LOT #<br>IMPROVED</p>
+            </div>
+            <div class="col-6">
+              <p class="my-0 bg-success px-2 border border-success rounded-2" style="--bs-bg-opacity: .5;">Improved Lot (with FFE)</p>
+              <p class="text-muted mb-0">LOT #<br>IMPROVED<br>FFE: XX.XX'</p>
+            </div>
+            <div class="col-6">
+              <p class="my-0 bg-success px-2 border border-success rounded-2" style="--bs-bg-opacity: .5;">Vacant Lot</p>
+              <p class="text-muted mb-0">LOT #<br>VACANT</p>
+            </div>
+            <div class="col-6">
+              <p class="my-0 bg-danger px-2 border border-danger rounded-2" style="--bs-bg-opacity: .5;">Wrong Label for Improved Lots</p>
+              <p class="text-muted mb-0">LOT #<br>FFE: XX.XX'</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+      <h5 id="paper-space" class="w-100 border-top border-bottom border-primary p-1 text-center text-primary">Paper Space</h5>
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-start align-items-md-center">
+            <div class="col-3 d-grid">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
+                <input type="radio" class="btn-check" name="qb1" id="btnPassb1" autocomplete="off">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPassb1"><i class="bi bi-check2"></i></label>
+
+                <input type="radio" class="btn-check" name="qb1" id="btnNab1" autocomplete="off">
+                <label class="btn btn-outline-secondary w-100 py-0" for="btnNab1"><i class="bi bi-slash-circle"></i></label>
+              </div>
+            </div>
+            <div class="col-9 align-middle">
+              <h6 class="text-start">Legal Description</h6>
+            </div>
+          </div>
+          <hr class="my-1">
+          <p>Add the legal description by either using the legal description helper (lot and block lots only) or typing out the legal description.</p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-start align-items-md-center">
+            <div class="col-3 d-grid">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
+                <input type="radio" class="btn-check" name="qb2" id="btnPassb2" autocomplete="off">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPassb2"><i class="bi bi-check2"></i></label>
+
+                <input type="radio" class="btn-check" name="qb2" id="btnNab2" autocomplete="off">
+                <label class="btn btn-outline-secondary w-100 py-0" for="btnNab2"><i class="bi bi-slash-circle"></i></label>
+              </div>
+            </div>
+            <div class="col-9 align-middle">
+              <h6 class="text-start">Boundary Survey Certified To</h6>
+            </div>
+          </div>
+          <hr class="my-1">
+          <p>Fill out with the client name. If we have additional certifications, they will also go under this heading.</p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-start align-items-md-center">
+            <div class="col-3 d-grid">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
+                <input type="radio" class="btn-check" name="qb3" id="btnPassb3" autocomplete="off">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPassb3"><i class="bi bi-check2"></i></label>
+
+                <input type="radio" class="btn-check" name="qb3" id="btnNab3" autocomplete="off">
+                <label class="btn btn-outline-secondary w-100 py-0" for="btnNab3"><i class="bi bi-slash-circle"></i></label>
+              </div>
+            </div>
+            <div class="col-9 align-middle">
+              <h6 class="text-start">Property Address</h6>
+            </div>
+          </div>
+          <hr class="my-1">
+          <p>The property address is added to the survey. If there is no street number available, add the parcel ID number or alternate key (ALTKEY) above the street name.</p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-start align-items-md-center">
+            <div class="col-3 d-grid">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
+                <input type="radio" class="btn-check" name="qb4" id="btnPassb4" autocomplete="off">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPassb4"><i class="bi bi-check2"></i></label>
+
+                <input type="radio" class="btn-check" name="qb4" id="btnNab4" autocomplete="off">
+                <label class="btn btn-outline-secondary w-100 py-0" for="btnNab4"><i class="bi bi-slash-circle"></i></label>
+              </div>
+            </div>
+            <div class="col-9 align-middle">
+              <h6 class="text-start">Lot Size</h6>
+            </div>
+          </div>
+          <hr class="my-1">
+          <p>If the lot size is less than 21,780 square feet (0.5 acres), put the square footage of the lot. If the lot is at or above 21,780 square feet (0.5 acres), put the acreage. We do not put both elevations.</p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-start align-items-md-center">
+            <div class="col-3 d-grid">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
+                <input type="radio" class="btn-check" name="qb5" id="btnPassb5" autocomplete="off">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPassb5"><i class="bi bi-check2"></i></label>
+
+                <input type="radio" class="btn-check" name="qb5" id="btnNab5" autocomplete="off">
+                <label class="btn btn-outline-secondary w-100 py-0" for="btnNab5"><i class="bi bi-slash-circle"></i></label>
+              </div>
+            </div>
+            <div class="col-9 align-middle">
+              <h6 class="text-start">Surveyor's Note 6 - FEMA</h6>
+            </div>
+          </div>
+          <hr class="my-1">
+          <p class="mb-0 pb-2">Fill out the missing information in the FEMA note; including the map and panel number, jurisdiction, effective date, and flood zone(s). If the property lies in a &quot;AE&quot; zone, post the elevation.</p>
+          <a href="https://msc.fema.gov/portal/search" target="_blank" class="btn btn-primary my-0 py-0 me-2 d-print-none">Website</a>
+          <a href="https://hazards-fema.maps.arcgis.com/apps/webappviewer/index.html?id=8b0adb51996444d4879338b5529aa9cd" target="_blank" class="btn btn-primary my-0 py-0 me-2 d-print-none">GIS Site</a>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-start align-items-md-center">
+            <div class="col-3 d-grid">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
+                <input type="radio" class="btn-check" name="qb6" id="btnPassb6" autocomplete="off">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPassb6"><i class="bi bi-check2"></i></label>
+
+                <input type="radio" class="btn-check" name="qb6" id="btnNab6" autocomplete="off">
+                <label class="btn btn-outline-secondary w-100 py-0" for="btnNab6"><i class="bi bi-slash-circle"></i></label>
+              </div>
+            </div>
+            <div class="col-9 align-middle">
+              <h6 class="text-start">Surveyor's Note 9 - FPRN CORS</h6>
+            </div>
+          </div>
+          <hr class="my-1">
+          <p class="mb-0 pb-2">Fill out the three missing FPRN CORS stations with the three nearest to the property.</p>
+          <a href="https://www.myfloridagps.com/DMap/" target="_blank" class="btn btn-primary my-0 py-0 me-2 d-print-none">Website</a>
+        </div>
+      </div>
     </div>
   </main>
   <footer class="footer mt-auto">
@@ -145,7 +384,8 @@
   <div class="offcanvas-body d-flex flex-column align-content-stretch">
 
     <div class="mt-auto">
-      <a href="#" class="btn btn-primary me-2">Save Copy</a>
+      <a href="#" class="btn btn-primary me-2" onclick="saveLink()" data-bs-toggle="offcanvas" href="#tableofcontents"
+      role="button" aria-controls="tableofcontents">Save Link</a>
       <a href="#" class="btn btn-primary" onclick="printFile()" data-bs-toggle="offcanvas" href="#tableofcontents"
         role="button" aria-controls="tableofcontents">Print Copy</a>
     </div>
@@ -174,6 +414,26 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary" onclick="confirmPrint()">Print</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal" tabindex="-1" id="saveModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Printing File</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="save-link-label">Job Link</span>
+          <input type="text" class="form-control" aria-label="Job number" aria-describedby="save-link-label" id="save-link">
+          <button class="btn btn-primary" type="button" id="save-link-copy">Copy Link</button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
