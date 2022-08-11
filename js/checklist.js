@@ -35,3 +35,16 @@ function confirmPrint() {
 
   checklistVariables.validPass = false;
 }
+
+function saveLink() {
+  const saveModal = new bootstrap.Modal('#saveModal', {
+    keyboard: false,
+    focus: true
+  });
+  saveModal.show();
+  checklistVariables.saveModal = saveModal;
+
+  const htmlLink = document.getElementById("save-link");
+  //TODO: Add parameter handling.
+  htmlLink.value = window.location.href;
+}
