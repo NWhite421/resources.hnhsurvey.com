@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="print-friendly" content="true">
+  <title>Home - H &amp; H Survey</title>
+  <link href="../resource/hnh_icon_color.png" rel="icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <script src="../js/general.js"></script>
+  <script src="../js/checklist.js"></script>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <main class="pt-2">
+    <div style="position: fixed; top: 10px; right: 10px;" class="d-print-none">
+      <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#tableofcontents" role="button"
+        aria-controls="tableofcontents">
+        <i class="bi bi-layout-sidebar"></i>
+      </a>
+    </div>
+    <div class="container">
+      <div class="text-center">
+        <h1>Pre-Draw Checklist</h1>
+        <h6 class="d-print-none">General Scattered Lot</h6>
+        <div class="row d-none d-print-flex" id="review-information">
+          <div class="col-6 text-start">
+            <p>Job Number: <span id="job-number">TBD</span></p>
+          </div>
+          <div class="col-6 text-end">
+            <p>Review: <span id="review-number">TBD</span></p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <h5 id="legal-information" class="w-100 bg-secondary p-1">Legal Information</h5>
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-start align-items-md-center">
+            <div class="col-4 col-md-3 d-grid">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
+                <input type="radio" class="btn-check" name="q1" id="btnFail1" autocomplete="off" checked>
+                <label class="btn btn-outline-danger w-100 py-0" for="btnFail1">FAIL</label>
+
+                <input type="radio" class="btn-check" name="q1" id="btnPass1" autocomplete="off">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPass1">PASS</label>
+              </div>
+            </div>
+            <div class="col-8 col-md-9 align-middle">
+              <h6 class="text-start">Test Header</h6>
+            </div>
+          </div>
+          <hr class="my-1">
+          <p>This is a test paragraph to see the different formatting of the descriptive text. It has to be at least
+            this long.</p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-start align-items-md-center">
+            <div class="col-4 col-md-3 d-grid">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
+                <input type="radio" class="btn-check" name="q2" id="btnFail2" autocomplete="off" checked>
+                <label class="btn btn-outline-danger w-100 py-0" for="btnFail2">FAIL</label>
+
+                <input type="radio" class="btn-check" name="q2" id="btnPass2" autocomplete="off">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPass2">PASS</label>
+              </div>
+            </div>
+            <div class="col-8 col-md-9 align-middle">
+              <h6 class="text-start">Test Header</h6>
+            </div>
+          </div>
+          <hr class="my-1">
+          <p>This is a test paragraph to see the different formatting of the descriptive text. It has to be at least
+            this long.</p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-start align-items-md-center">
+            <div class="col-4 col-md-3 d-grid">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
+                <input type="radio" class="btn-check" name="q3" id="btnFail3" autocomplete="off" checked>
+                <label class="btn btn-outline-danger w-100 py-0" for="btnFail3">FAIL</label>
+
+                <input type="radio" class="btn-check" name="q3" id="btnPass3" autocomplete="off">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPass3">PASS</label>
+              </div>
+            </div>
+            <div class="col-8 col-md-9 align-middle">
+              <h6 class="text-start">Test Header</h6>
+            </div>
+          </div>
+          <hr class="my-1">
+          <p>This is a test paragraph to see the different formatting of the descriptive text. It has to be at least
+            this long.</p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-start align-items-md-center">
+            <div class="col-4 col-md-3 d-grid">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
+                <input type="radio" class="btn-check" name="q4" id="btnFail4" autocomplete="off" checked>
+                <label class="btn btn-outline-danger w-100 py-0" for="btnFail4">FAIL</label>
+
+                <input type="radio" class="btn-check" name="q4" id="btnPass4" autocomplete="off">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPass4">PASS</label>
+              </div>
+            </div>
+            <div class="col-8 col-md-9 align-middle">
+              <h6 class="text-start">Test Header</h6>
+            </div>
+          </div>
+          <hr class="my-1">
+          <p>This is a test paragraph to see the different formatting of the descriptive text. It has to be at least
+            this long.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+  <footer class="footer mt-auto">
+    <div class="container-fluid bg-dark py-3 d-print-none mt-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-6 text-center text-sm-start">
+            <p class="my-0 py-0"><span class="text-muted" autofill>&copy; [year] - Exacta Land Surveyors</span></p>
+            <p class="my-0 py-0"><span class="text-muted">H &amp; H Survey Consultants</span></p>
+          </div>
+          <div class="col-12 col-sm-6 text-center text-sm-end">
+            <a href="LegalNotice.html" class="text-white" hidden>Legal Notices</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="tableofcontents" aria-labelledby="tableofcontentsLabel">
+  <div class="offcanvas-header bg-dark">
+    <h5 class="offcanvas-title text-white" id="tableofcontentsLabel">Table of Contents</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column align-content-stretch">
+
+    <div class="mt-auto">
+      <a href="#" class="btn btn-primary me-2">Save Copy</a>
+      <a href="#" class="btn btn-primary" onclick="printFile()" data-bs-toggle="offcanvas" href="#tableofcontents"
+        role="button" aria-controls="tableofcontents">Print Copy</a>
+    </div>
+  </div>
+</div>
+<div class="modal" tabindex="-1" id="printModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Printing File</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="job-number-print-label">Job Number</span>
+          <input type="text" class="form-control" aria-label="Job number" aria-describedby="job-number-print-label"
+            id="job-number-print">
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="review-number-print-label">Review</span>
+          <input type="number" class="form-control" aria-label="Review number"
+            aria-describedby="review-number-print-label" id="review-number-print" min="1"
+            onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="confirmPrint()">Print</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</html>
