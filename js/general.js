@@ -47,6 +47,17 @@ function getDate() {
   return [mm, dd, yyyy, hh, min, sec];
 }
 
+function convertTextareaToHTML(textArea) {
+  var input = textArea;
+  console.log(input);
+  var lines = input.split('\n');
+  var html = '';
+  for (var i = 0; i < lines.length; i++) {
+    html += '<p class="my-1">' + lines[i] + '</p>';
+  }
+  return html;
+}
+
 // #region Cookie Management
 
 function setCookie(cookieName, cookieValue, expireDays) {

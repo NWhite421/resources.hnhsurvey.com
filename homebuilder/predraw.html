@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="print-friendly" content="true">
-  <title>Home - H &amp; H Survey</title>
+  <title>Pre-Draw - H &amp; H Survey</title>
   <link href="../resource/hnh_icon_color.png" rel="icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -25,10 +25,10 @@
         <i class="bi bi-layout-sidebar"></i>
       </a>
     </div>
-    <div class="container">
+    <div class="container" data-bs-spy="scroll" data-bs-target="#nav-toc" data-bs-smooth-scroll="true">
       <div class="text-center">
         <h1>Pre-Draw Checklist</h1>
-        <h6 class="d-print-none">General Scattered Lot</h6>
+        <h6 id="subtitle">General Scattered Lot</h6>
         <div class="row d-none d-print-flex mb-0" id="review-information">
           <div class="col-6 text-start">
             <p class="pb-2 mb-0">Job Number: <b><span id="job-number">Not specified</span></b></p>
@@ -42,7 +42,7 @@
       <h5 id="model-space" class="w-100 border-top border-bottom border-primary p-1 text-center text-primary">Model Space</h5>
       <div class="row">
         <div class="col-12 col-lg-6">
-          <div class="row align-items-start align-items-md-center">
+          <div class="row align-items-start align-items-md-center" id="section-a1">
             <div class="col-3 d-grid">
               <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
                 <input type="radio" class="btn-check" name="qa1" id="btnPassa1" autocomplete="off">
@@ -61,7 +61,7 @@
             legal description. The address provided by the client matches the property card (or the parcel ID number).</p>
         </div>
         <div class="col-12 col-lg-6">
-          <div class="row align-items-start align-items-md-center">
+          <div class="row align-items-start align-items-md-center" id="section-a2">
             <div class="col-3 d-grid">
               <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
                 <input type="radio" class="btn-check" name="qa2" id="btnPassa2" autocomplete="off">
@@ -92,24 +92,10 @@
                 <small class="text-muted my-0 py-0">Drop the street suffix (st, rd, dr, etc)</small>
               </div>
             </div>
-            <div class="row text-center pb-2 d-none d-print-flex">
-              <div class="col-6">
-                <p class="my-0">Property has a street address:</p>
-                <strong class="my-0">[Job Number] [Street Number] [Street Name].dwg</strong>
-                <p class="text-muted my-0 py-0">22-01-001 18 Sample.dwg</p>
-                <small class="text-muted my-0 py-0">Drop the street suffix (st, rd, dr, etc)</small>
-              </div>
-              <div class="col-6">
-                <p class="my-0">Property does not have a street address:</p>
-                <strong class="my-0">[Job Number] [Street Name] [Lot Number].dwg</strong>
-                <p class="text-muted my-0 py-0">22-01-001 Sample 2.dwg</p>
-                <small class="text-muted my-0 py-0">Drop the street suffix (st, rd, dr, etc)</small>
-              </div>
-            </div>
           </div>
         </div>
         <div class="col-12 col-lg-6">
-          <div class="row align-items-start align-items-md-center">
+          <div class="row align-items-start align-items-md-center" id="section-a3">
             <div class="col-3 d-grid">
               <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
                 <input type="radio" class="btn-check" name="qa3" id="btnPassa3" autocomplete="off">
@@ -130,7 +116,7 @@
             their lot number (and block number if the lot is in another block).</p>
         </div>
         <div class="col-12 col-lg-6">
-          <div class="row align-items-start align-items-md-center">
+          <div class="row align-items-start align-items-md-center" id="section-a4">
             <div class="col-3 d-grid">
               <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
                 <input type="radio" class="btn-check" name="qa4" id="btnPassa4" autocomplete="off">
@@ -150,7 +136,7 @@
             typical width and description can be used if all sides are the same.</p>
         </div>
         <div class="col-12 col-lg-6">
-          <div class="row align-items-start align-items-md-center">
+          <div class="row align-items-start align-items-md-center" id="section-a5">
             <div class="col-3 d-grid">
               <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
                 <input type="radio" class="btn-check" name="qa5" id="btnPassa5" autocomplete="off">
@@ -169,7 +155,7 @@
             accuracy is showing two (2) decimal places.</p>
         </div>
         <div class="col-12 col-lg-6">
-          <div class="row align-items-start align-items-md-center">
+          <div class="row align-items-start align-items-md-center" id="section-a6">
             <div class="col-3 d-grid">
               <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
                 <input type="radio" class="btn-check" name="qa6" id="btnPassa6" autocomplete="off">
@@ -208,7 +194,7 @@
           </div>
         </div>
         <div class="col-12 col-lg-6">
-          <div class="row align-items-start align-items-md-center">
+          <div class="row align-items-start align-items-md-center" id="section-a7">
             <div class="col-3 d-grid">
               <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
                 <input type="radio" class="btn-check" name="qa7" id="btnPassa7" autocomplete="off">
@@ -224,7 +210,7 @@
           </div>
           <hr class="my-1">
           <p>List the lot number and whether the lot is improved, vacant, or the FFE of the building (depending on available information).</p>
-          <div class="row">
+          <div class="row d-print-none">
             <div class="col-6">
               <p class="my-0 bg-success px-2 border border-success rounded-2" style="--bs-bg-opacity: .5;">Improved Lot (No FFE)</p>
               <p class="text-muted mb-0">LOT #<br>IMPROVED</p>
@@ -247,7 +233,7 @@
       <h5 id="paper-space" class="w-100 border-top border-bottom border-primary p-1 text-center text-primary">Paper Space</h5>
       <div class="row">
         <div class="col-12 col-lg-6">
-          <div class="row align-items-start align-items-md-center">
+          <div class="row align-items-start align-items-md-center" id="section-b1">
             <div class="col-3 d-grid">
               <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
                 <input type="radio" class="btn-check" name="qb1" id="btnPassb1" autocomplete="off">
@@ -265,7 +251,7 @@
           <p>Add the legal description by either using the legal description helper (lot and block lots only) or typing out the legal description.</p>
         </div>
         <div class="col-12 col-lg-6">
-          <div class="row align-items-start align-items-md-center">
+          <div class="row align-items-start align-items-md-center" id="section-b2">
             <div class="col-3 d-grid">
               <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
                 <input type="radio" class="btn-check" name="qb2" id="btnPassb2" autocomplete="off">
@@ -283,7 +269,7 @@
           <p>Fill out with the client name. If we have additional certifications, they will also go under this heading.</p>
         </div>
         <div class="col-12 col-lg-6">
-          <div class="row align-items-start align-items-md-center">
+          <div class="row align-items-start align-items-md-center" id="section-b3">
             <div class="col-3 d-grid">
               <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
                 <input type="radio" class="btn-check" name="qb3" id="btnPassb3" autocomplete="off">
@@ -301,7 +287,7 @@
           <p>The property address is added to the survey. If there is no street number available, add the parcel ID number or alternate key (ALTKEY) above the street name.</p>
         </div>
         <div class="col-12 col-lg-6">
-          <div class="row align-items-start align-items-md-center">
+          <div class="row align-items-start align-items-md-center" id="section-b4">
             <div class="col-3 d-grid">
               <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
                 <input type="radio" class="btn-check" name="qb4" id="btnPassb4" autocomplete="off">
@@ -319,7 +305,7 @@
           <p>If the lot size is less than 21,780 square feet (0.5 acres), put the square footage of the lot. If the lot is at or above 21,780 square feet (0.5 acres), put the acreage. We do not put both elevations.</p>
         </div>
         <div class="col-12 col-lg-6">
-          <div class="row align-items-start align-items-md-center">
+          <div class="row align-items-start align-items-md-center" id="section-b5">
             <div class="col-3 d-grid">
               <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
                 <input type="radio" class="btn-check" name="qb5" id="btnPassb5" autocomplete="off">
@@ -339,7 +325,7 @@
           <a href="https://hazards-fema.maps.arcgis.com/apps/webappviewer/index.html?id=8b0adb51996444d4879338b5529aa9cd" target="_blank" class="btn btn-primary my-0 py-0 me-2 d-print-none">GIS Site</a>
         </div>
         <div class="col-12 col-lg-6">
-          <div class="row align-items-start align-items-md-center">
+          <div class="row align-items-start align-items-md-center" id="section-b6">
             <div class="col-3 d-grid">
               <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
                 <input type="radio" class="btn-check" name="qb6" id="btnPassb6" autocomplete="off">
@@ -357,6 +343,11 @@
           <p class="mb-0 pb-2">Fill out the three missing FPRN CORS stations with the three nearest to the property.</p>
           <a href="https://www.myfloridagps.com/DMap/" target="_blank" class="btn btn-primary my-0 py-0 me-2 d-print-none">Website</a>
         </div>
+      </div>
+      <i><p class="text-muted d-none d-print-flex">Note: Items not marked indicated the item is not complete.</p></i>
+      <div id="comment-section" hidden>
+        <h5>Comments by Reviewer</h5>
+        <p id="comment-area"></p>
       </div>
     </div>
   </main>
@@ -382,12 +373,44 @@
     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body d-flex flex-column align-content-stretch">
-
+    <a href="../index.html" class="border-bottom flex-column pb-2 mb-2">Return to Homepage</a>
+    <nav id="nav-tob" class="w-100 flex-column align-items-stretch pe-4 border-bottom">
+      <nav class="nav nav-pills flex-column">
+        <a class="nav-link" href="#model-space">Model Space</a>
+        <nav class="nav nav-pills flex-column">
+          <a class="nav-link ms-3" href="#section-a1">Legal Description Harmony</a>
+          <a class="nav-link ms-3" href="#section-a2">Save the Drawing</a>
+          <a class="nav-link ms-3" href="#section-a3">Boundary &amp; Adjacent Information</a>
+          <a class="nav-link ms-3" href="#section-a4">Easements</a>
+          <a class="nav-link ms-3" href="#section-a5">Dimensions</a>
+          <a class="nav-link ms-3" href="#section-a6">Road Information</a>
+          <a class="nav-link ms-3" href="#section-a7">Adjacent Parcel Information</a>
+        </nav>
+        <a class="nav-link" href="#paper-space">Paper Space</a>
+        <nav class="nav nav-pills flex-column">
+          <a class="nav-link ms-3" href="#section-b1">Legal Description</a>
+          <a class="nav-link ms-3" href="#section-b2">Boundary Survey Certified To</a>
+          <a class="nav-link ms-3" href="#section-b3">Property Address</a>
+          <a class="nav-link ms-3" href="#section-b4">Lot Size</a>
+          <a class="nav-link ms-3" href="#section-b5">Surveyor's Note 6 - FEMA</a>
+          <a class="nav-link ms-3" href="#section-b6">Surveyor's Note 9 - FPRN CORS</a>
+        </nav>
+      </nav>
+    </nav>
     <div class="mt-auto">
-      <a href="#" class="btn btn-primary me-2" onclick="saveLink()" data-bs-toggle="offcanvas" href="#tableofcontents"
-      role="button" aria-controls="tableofcontents">Save Link</a>
-      <a href="#" class="btn btn-primary" onclick="printFile()" data-bs-toggle="offcanvas" href="#tableofcontents"
-        role="button" aria-controls="tableofcontents">Print Copy</a>
+      <div class="row">
+        <div class="col-12 col-sm-4 d-grid">
+          <a href="#" class="btn btn-primary mb-2" onclick="saveLink()" data-bs-toggle="offcanvas" href="#tableofcontents"
+          role="button" aria-controls="tableofcontents">Save Link</a>
+        </div>
+        <div class="col-12 col-sm-4 d-grid">
+          <a href="#" class="btn btn-primary mb-2" onclick="printFile()" data-bs-toggle="offcanvas" href="#tableofcontents"
+          role="button" aria-controls="tableofcontents">Print PDF Copy</a>
+        </div>
+        <div class="col-12 col-sm-4 d-grid">
+          <a href="#" class="btn btn-primary" onclick="resetAllChecks()">Reset Form</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -399,16 +422,31 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <div class="input-group mb-3">
+        <div class="input-group mb-3 col-12">
           <span class="input-group-text" id="job-number-print-label">Job Number</span>
           <input type="text" class="form-control" aria-label="Job number" aria-describedby="job-number-print-label"
             id="job-number-print">
         </div>
-        <div class="input-group mb-3">
+        <div class="input-group mb-3 col-12">
           <span class="input-group-text" id="review-number-print-label">Review</span>
           <input type="number" class="form-control" aria-label="Review number"
             aria-describedby="review-number-print-label" id="review-number-print" min="1"
             onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57">
+        </div>
+        <div class="form-check mb-2 col-12">
+          <input class="form-check-input" type="checkbox" value="" id="include-comments"
+          onclick="toggleComments()">
+          <label class="form-check-label" for="include-comments">
+            Include comments in prints
+          </label>
+        </div>
+        <div class="input-group mb-3 col-12">
+          <span class="input-group-text" id="reviewer-label">Reviewer</span>
+          <input type="text" class="form-control" aria-label="Reviewer" aria-describedby="reviewer-label" disabled id="reviewer">
+        </div>
+        <div class="mb-3 col-12">
+          <label for="comment-text" class="form-label">Comments</label>
+          <textarea class="form-control" id="comment-text" rows="3" disabled></textarea>
         </div>
       </div>
       <div class="modal-footer">
@@ -419,7 +457,7 @@
   </div>
 </div>
 <div class="modal" tabindex="-1" id="saveModal">
-  <div class="modal-dialog">
+  <div class="modal-dialog -modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h5>Printing File</h5>
@@ -428,8 +466,9 @@
       <div class="modal-body">
         <div class="input-group mb-3">
           <span class="input-group-text" id="save-link-label">Job Link</span>
-          <input type="text" class="form-control" aria-label="Job number" aria-describedby="save-link-label" id="save-link">
-          <button class="btn btn-primary" type="button" id="save-link-copy">Copy Link</button>
+          <input type="text" class="form-control" aria-label="Job number" aria-describedby="save-link-label" id="save-link" readonly aria-readonly="true">
+          <button class="btn btn-primary" type="button" id="save-link-copy"
+          onclick="confirmSaveLink()">Copy Link</button>
         </div>
       </div>
       <div class="modal-footer">
@@ -438,5 +477,20 @@
     </div>
   </div>
 </div>
-
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="toast-link-success" class="toast text-bg-primary" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000">
+    <div class="toast-body">
+      <h6 class="mb-0 pb-0">Success!</h6>
+      <p>The link was copied to the clipboard.</p>
+    </div>
+  </div>
+</div>
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="toast-reset-success" class="toast text-bg-primary" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000">
+    <div class="toast-body">
+      <h6 class="mb-0 pb-0">Success!</h6>
+      <p>The form has been reset.</p>
+    </div>
+  </div>
+</div>
 </html>
