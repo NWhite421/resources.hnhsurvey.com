@@ -19,12 +19,7 @@
 
 <body class="d-flex flex-column min-vh-100">
   <main class="py-2">
-    <div style="position: fixed; top: 10px; right: 10px;" class="d-print-none">
-      <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#tableofcontents" role="button"
-        aria-controls="tableofcontents">
-        <i class="bi bi-layout-sidebar"></i>
-      </a>
-    </div>
+    
     <div class="container" data-bs-spy="scroll" data-bs-target="#nav-toc" data-bs-smooth-scroll="true">
       <div class="text-center">
         <h1>Pre-Draw Checklist</h1>
@@ -43,17 +38,22 @@
       <div class="row">
         <div class="col-12 col-lg-6">
           <div class="row align-items-start align-items-md-center" id="section-a1">
-            <div class="col-3 d-grid">
-              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
-                <input type="radio" class="btn-check" name="qa1" id="btnPassa1" autocomplete="off">
-                <label class="btn btn-outline-success w-100 py-0" for="btnPassa1"><i class="bi bi-check2"></i></label>
+            <div class="col-12 col-sm-3 d-grid text-center text-sm-start d-print-none">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area" data-int-status="statusa1">
+                <input type="radio" class="btn-check" name="qa1" id="btnPassa1" autocomplete="off" data-bs-statusText="PASS " data-bs-statusClasses="text-success">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPassa1"><i class="bi bi-check-circle"></i></label>
 
-                <input type="radio" class="btn-check" name="qa1" id="btnNaa1" autocomplete="off">
+                <input type="radio" class="btn-check" name="qa1" id="btnNaa1" autocomplete="off" checked data-bs-statusText="N/A " data-bs-statusClasses="text-secondary">
                 <label class="btn btn-outline-secondary w-100 py-0" for="btnNaa1"><i class="bi bi-slash-circle"></i></label>
+                
+                <input type="radio" class="btn-check" name="qa1" id="btnFaila1" autocomplete="off" data-bs-statusText="FAIL " data-bs-statusClasses="text-danger">
+                <label class="btn btn-outline-danger w-100 py-0" for="btnFaila1"><i class="bi bi-x-circle"></i></label>
               </div>
             </div>
-            <div class="col-9 align-middle">
-              <h6 class="text-start">Legal Description Harmony</h6>
+            <div class="col-8 col-sm-9 align-middle">
+              <h6 class="text-start">
+                <span id="statusa1" class="d-none d-print-inline"></span>Legal Description Harmony
+              </h6>
             </div>
           </div>
           <hr class="my-1">
@@ -62,17 +62,20 @@
         </div>
         <div class="col-12 col-lg-6">
           <div class="row align-items-start align-items-md-center" id="section-a2">
-            <div class="col-3 d-grid">
-              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
-                <input type="radio" class="btn-check" name="qa2" id="btnPassa2" autocomplete="off">
-                <label class="btn btn-outline-success w-100 py-0" for="btnPassa2"><i class="bi bi-check2"></i></label>
+            <div class="col-12 col-sm-3 d-grid text-center text-sm-start d-print-none">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area" data-int-status="statusa2">
+                <input type="radio" class="btn-check" name="qa2" id="btnPassa2" autocomplete="off" data-bs-statusText="PASS " data-bs-statusClasses="text-success">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPassa2"><i class="bi bi-check-circle"></i></label>
 
-                <input type="radio" class="btn-check" name="qa2" id="btnNaa2" autocomplete="off">
+                <input type="radio" class="btn-check" name="qa2" id="btnNaa2" autocomplete="off" checked data-bs-statusText="N/A " data-bs-statusClasses="text-secondary">
                 <label class="btn btn-outline-secondary w-100 py-0" for="btnNaa2"><i class="bi bi-slash-circle"></i></label>
+                
+                <input type="radio" class="btn-check" name="qa2" id="btnFaila2" autocomplete="off" data-bs-statusText="FAIL " data-bs-statusClasses="text-danger">
+                <label class="btn btn-outline-danger w-100 py-0" for="btnFaila2"><i class="bi bi-x-circle"></i></label>
               </div>
             </div>
-            <div class="col-9 align-middle">
-              <h6 class="text-start">Save the Drawing</h6>
+            <div class="col-8 col-sm-9 align-middle">
+              <h6 class="text-start"><span id="statusa2" class="d-none d-print-inline"></span>Save the Drawing</h6>
             </div>
           </div>
           <hr class="my-1">
@@ -96,17 +99,20 @@
         </div>
         <div class="col-12 col-lg-6">
           <div class="row align-items-start align-items-md-center" id="section-a3">
-            <div class="col-3 d-grid">
-              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
-                <input type="radio" class="btn-check" name="qa3" id="btnPassa3" autocomplete="off">
-                <label class="btn btn-outline-success w-100 py-0" for="btnPassa3"><i class="bi bi-check2"></i></label>
+            <div class="col-12 col-sm-3 d-grid text-center text-sm-start d-print-none">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area" data-int-status="statusa3">
+                <input type="radio" class="btn-check" name="qa3" id="btnPassa3" autocomplete="off" data-bs-statusText="PASS " data-bs-statusClasses="text-success">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPassa3"><i class="bi bi-check-circle"></i></label>
 
-                <input type="radio" class="btn-check" name="qa3" id="btnNaa3" autocomplete="off">
+                <input type="radio" class="btn-check" name="qa3" id="btnNaa3" autocomplete="off" checked data-bs-statusText="N/A " data-bs-statusClasses="text-secondary">
                 <label class="btn btn-outline-secondary w-100 py-0" for="btnNaa3"><i class="bi bi-slash-circle"></i></label>
+                
+                <input type="radio" class="btn-check" name="qa3" id="btnFaila3" autocomplete="off" data-bs-statusText="FAIL " data-bs-statusClasses="text-danger">
+                <label class="btn btn-outline-danger w-100 py-0" for="btnFaila3"><i class="bi bi-x-circle"></i></label>
               </div>
             </div>
-            <div class="col-9 align-middle">
-              <h6 class="text-start">Boundary & Adjacent Information</h6>
+            <div class="col-8 col-sm-9 align-middle">
+              <h6 class="text-start"><span id="statusa3" class="d-none d-print-inline"></span>Boundary & Adjacent Information</h6>
             </div>
           </div>
           <hr class="my-1">
@@ -117,17 +123,20 @@
         </div>
         <div class="col-12 col-lg-6">
           <div class="row align-items-start align-items-md-center" id="section-a4">
-            <div class="col-3 d-grid">
-              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
-                <input type="radio" class="btn-check" name="qa4" id="btnPassa4" autocomplete="off">
-                <label class="btn btn-outline-success w-100 py-0" for="btnPassa4"><i class="bi bi-check2"></i></label>
+            <div class="col-12 col-sm-3 d-grid text-center text-sm-start d-print-none">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area" data-int-status="statusa4">
+                <input type="radio" class="btn-check" name="qa4" id="btnPassa4" autocomplete="off" data-bs-statusText="PASS " data-bs-statusClasses="text-success">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPassa4"><i class="bi bi-check-circle"></i></label>
 
-                <input type="radio" class="btn-check" name="qa4" id="btnNaa4" autocomplete="off">
+                <input type="radio" class="btn-check" name="qa4" id="btnNaa4" autocomplete="off" checked data-bs-statusText="N/A " data-bs-statusClasses="text-secondary">
                 <label class="btn btn-outline-secondary w-100 py-0" for="btnNaa4"><i class="bi bi-slash-circle"></i></label>
+                
+                <input type="radio" class="btn-check" name="qa4" id="btnFaila4" autocomplete="off" data-bs-statusText="FAIL " data-bs-statusClasses="text-danger">
+                <label class="btn btn-outline-danger w-100 py-0" for="btnFaila4"><i class="bi bi-x-circle"></i></label>
               </div>
             </div>
-            <div class="col-9 align-middle">
-              <h6 class="text-start">Easements</h6>
+            <div class="col-8 col-sm-9 align-middle">
+              <h6 class="text-start"><span id="statusa4" class="d-none d-print-inline"></span>Easements</h6>
             </div>
           </div>
           <hr class="my-1">
@@ -137,17 +146,20 @@
         </div>
         <div class="col-12 col-lg-6">
           <div class="row align-items-start align-items-md-center" id="section-a5">
-            <div class="col-3 d-grid">
-              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
-                <input type="radio" class="btn-check" name="qa5" id="btnPassa5" autocomplete="off">
-                <label class="btn btn-outline-success w-100 py-0" for="btnPassa5"><i class="bi bi-check2"></i></label>
+            <div class="col-12 col-sm-3 d-grid text-center text-sm-start d-print-none">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area" data-int-status="statusa5">
+                <input type="radio" class="btn-check" name="qa5" id="btnPassa5" autocomplete="off" data-bs-statusText="PASS " data-bs-statusClasses="text-success">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPassa5"><i class="bi bi-check-circle"></i></label>
 
-                <input type="radio" class="btn-check" name="qa5" id="btnNaa5" autocomplete="off">
+                <input type="radio" class="btn-check" name="qa5" id="btnNaa5" autocomplete="off" checked data-bs-statusText="N/A " data-bs-statusClasses="text-secondary">
                 <label class="btn btn-outline-secondary w-100 py-0" for="btnNaa5"><i class="bi bi-slash-circle"></i></label>
+                
+                <input type="radio" class="btn-check" name="qa5" id="btnFaila5" autocomplete="off" data-bs-statusText="FAIL " data-bs-statusClasses="text-danger">
+                <label class="btn btn-outline-danger w-100 py-0" for="btnFaila5"><i class="bi bi-x-circle"></i></label>
               </div>
             </div>
-            <div class="col-9 align-middle">
-              <h6 class="text-start">Dimensions</h6>
+            <div class="col-8 col-sm-9 align-middle">
+              <h6 class="text-start"><span id="statusa5" class="d-none d-print-inline"></span>Dimensions</h6>
             </div>
           </div>
           <hr class="my-1">
@@ -156,17 +168,20 @@
         </div>
         <div class="col-12 col-lg-6">
           <div class="row align-items-start align-items-md-center" id="section-a6">
-            <div class="col-3 d-grid">
-              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
-                <input type="radio" class="btn-check" name="qa6" id="btnPassa6" autocomplete="off">
-                <label class="btn btn-outline-success w-100 py-0" for="btnPassa6"><i class="bi bi-check2"></i></label>
+            <div class="col-12 col-sm-3 d-grid text-center text-sm-start d-print-none">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area" data-int-status="statusa6">
+                <input type="radio" class="btn-check" name="qa6" id="btnPassa6" autocomplete="off" data-bs-statusText="PASS " data-bs-statusClasses="text-success">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPassa6"><i class="bi bi-check-circle"></i></label>
 
-                <input type="radio" class="btn-check" name="qa6" id="btnNaa6" autocomplete="off">
+                <input type="radio" class="btn-check" name="qa6" id="btnNaa6" autocomplete="off" checked data-bs-statusText="N/A " data-bs-statusClasses="text-secondary">
                 <label class="btn btn-outline-secondary w-100 py-0" for="btnNaa6"><i class="bi bi-slash-circle"></i></label>
+                
+                <input type="radio" class="btn-check" name="qa6" id="btnFaila6" autocomplete="off" data-bs-statusText="FAIL " data-bs-statusClasses="text-danger">
+                <label class="btn btn-outline-danger w-100 py-0" for="btnFaila6"><i class="bi bi-x-circle"></i></label>
               </div>
             </div>
-            <div class="col-9 align-middle">
-              <h6 class="text-start">Road Information</h6>
+            <div class="col-8 col-sm-9 align-middle">
+              <h6 class="text-start"><span id="statusa6" class="d-none d-print-inline"></span>Road Information</h6>
             </div>
           </div>
           <hr class="my-1">
@@ -194,18 +209,21 @@
           </div>
         </div>
         <div class="col-12 col-lg-6">
-          <div class="row align-items-start align-items-md-center" id="section-a7">
-            <div class="col-3 d-grid">
-              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
-                <input type="radio" class="btn-check" name="qa7" id="btnPassa7" autocomplete="off">
-                <label class="btn btn-outline-success w-100 py-0" for="btnPassa7"><i class="bi bi-check2"></i></label>
+          <div class="row align-items-start align-items-md-center" id="section-a7" data-int-status="statusa7">
+            <div class="col-12 col-sm-3 d-grid text-center text-sm-start d-print-none">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area" data-int-status="statusa7">
+                <input type="radio" class="btn-check" name="qa7" id="btnPassa7" autocomplete="off" data-bs-statusText="PASS " data-bs-statusClasses="text-success">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPassa7"><i class="bi bi-check-circle"></i></label>
 
-                <input type="radio" class="btn-check" name="qa7" id="btnNaa7" autocomplete="off">
+                <input type="radio" class="btn-check" name="qa7" id="btnNaa7" autocomplete="off" checked data-bs-statusText="N/A " data-bs-statusClasses="text-secondary">
                 <label class="btn btn-outline-secondary w-100 py-0" for="btnNaa7"><i class="bi bi-slash-circle"></i></label>
+                
+                <input type="radio" class="btn-check" name="qa7" id="btnFaila7" autocomplete="off" data-bs-statusText="FAIL " data-bs-statusClasses="text-danger">
+                <label class="btn btn-outline-danger w-100 py-0" for="btnFaila7"><i class="bi bi-x-circle"></i></label>
               </div>
             </div>
-            <div class="col-9 align-middle">
-              <h6 class="text-start">Adjacent Parcel Information</h6>
+            <div class="col-8 col-sm-9 align-middle">
+              <h6 class="text-start"><span id="statusa7" class="d-none d-print-inline"></span>Adjacent Parcel Information</h6>
             </div>
           </div>
           <hr class="my-1">
@@ -234,17 +252,20 @@
       <div class="row">
         <div class="col-12 col-lg-6">
           <div class="row align-items-start align-items-md-center" id="section-b1">
-            <div class="col-3 d-grid">
-              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
-                <input type="radio" class="btn-check" name="qb1" id="btnPassb1" autocomplete="off">
-                <label class="btn btn-outline-success w-100 py-0" for="btnPassb1"><i class="bi bi-check2"></i></label>
+            <div class="col-12 col-sm-3 d-grid text-center text-sm-start d-print-none">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area" data-int-status="statusb1">
+                <input type="radio" class="btn-check" name="qb1" id="btnPassb1" autocomplete="off" data-bs-statusText="PASS " data-bs-statusClasses="text-success">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPassb1"><i class="bi bi-check-circle"></i></label>
 
-                <input type="radio" class="btn-check" name="qb1" id="btnNab1" autocomplete="off">
+                <input type="radio" class="btn-check" name="qb1" id="btnNab1" autocomplete="off" checked data-bs-statusText="N/A " data-bs-statusClasses="text-secondary">
                 <label class="btn btn-outline-secondary w-100 py-0" for="btnNab1"><i class="bi bi-slash-circle"></i></label>
+                
+                <input type="radio" class="btn-check" name="qb1" id="btnFailb1" autocomplete="off" data-bs-statusText="FAIL " data-bs-statusClasses="text-danger">
+                <label class="btn btn-outline-danger w-100 py-0" for="btnFailb1"><i class="bi bi-x-circle"></i></label>
               </div>
             </div>
-            <div class="col-9 align-middle">
-              <h6 class="text-start">Legal Description</h6>
+            <div class="col-8 col-sm-9 align-middle">
+              <h6 class="text-start"><span id="statusb1" class="d-none d-print-inline"></span>Legal Description</h6>
             </div>
           </div>
           <hr class="my-1">
@@ -252,17 +273,20 @@
         </div>
         <div class="col-12 col-lg-6">
           <div class="row align-items-start align-items-md-center" id="section-b2">
-            <div class="col-3 d-grid">
-              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
-                <input type="radio" class="btn-check" name="qb2" id="btnPassb2" autocomplete="off">
-                <label class="btn btn-outline-success w-100 py-0" for="btnPassb2"><i class="bi bi-check2"></i></label>
+            <div class="col-12 col-sm-3 d-grid text-center text-sm-start d-print-none">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area" data-int-status="statusb2">
+                <input type="radio" class="btn-check" name="qb2" id="btnPassb2" autocomplete="off" data-bs-statusText="PASS " data-bs-statusClasses="text-success">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPassb2"><i class="bi bi-check-circle"></i></label>
 
-                <input type="radio" class="btn-check" name="qb2" id="btnNab2" autocomplete="off">
+                <input type="radio" class="btn-check" name="qb2" id="btnNab2" autocomplete="off" checked data-bs-statusText="N/A " data-bs-statusClasses="text-secondary">
                 <label class="btn btn-outline-secondary w-100 py-0" for="btnNab2"><i class="bi bi-slash-circle"></i></label>
+                
+                <input type="radio" class="btn-check" name="qb2" id="btnFailb2" autocomplete="off" data-bs-statusText="FAIL " data-bs-statusClasses="text-danger">
+                <label class="btn btn-outline-danger w-100 py-0" for="btnFailb2"><i class="bi bi-x-circle"></i></label>
               </div>
             </div>
-            <div class="col-9 align-middle">
-              <h6 class="text-start">Boundary Survey Certified To</h6>
+            <div class="col-8 col-sm-9 align-middle">
+              <h6 class="text-start"><span id="statusb2" class="d-none d-print-inline"></span>Boundary Survey Certified To</h6>
             </div>
           </div>
           <hr class="my-1">
@@ -270,17 +294,20 @@
         </div>
         <div class="col-12 col-lg-6">
           <div class="row align-items-start align-items-md-center" id="section-b3">
-            <div class="col-3 d-grid">
-              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
-                <input type="radio" class="btn-check" name="qb3" id="btnPassb3" autocomplete="off">
-                <label class="btn btn-outline-success w-100 py-0" for="btnPassb3"><i class="bi bi-check2"></i></label>
+            <div class="col-12 col-sm-3 d-grid text-center text-sm-start d-print-none">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area" data-int-status="statusb3">
+                <input type="radio" class="btn-check" name="qb3" id="btnPassb3" autocomplete="off" data-bs-statusText="PASS " data-bs-statusClasses="text-success">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPassb3"><i class="bi bi-check-circle"></i></label>
 
-                <input type="radio" class="btn-check" name="qb3" id="btnNab3" autocomplete="off">
+                <input type="radio" class="btn-check" name="qb3" id="btnNab3" autocomplete="off" checked data-bs-statusText="N/A " data-bs-statusClasses="text-secondary">
                 <label class="btn btn-outline-secondary w-100 py-0" for="btnNab3"><i class="bi bi-slash-circle"></i></label>
+                
+                <input type="radio" class="btn-check" name="qb3" id="btnFailb3" autocomplete="off" data-bs-statusText="FAIL " data-bs-statusClasses="text-danger">
+                <label class="btn btn-outline-danger w-100 py-0" for="btnFailb3"><i class="bi bi-x-circle"></i></label>
               </div>
             </div>
-            <div class="col-9 align-middle">
-              <h6 class="text-start">Property Address</h6>
+            <div class="col-8 col-sm-9 align-middle">
+              <h6 class="text-start"><span id="statusb3" class="d-none d-print-inline"></span>Property Address</h6>
             </div>
           </div>
           <hr class="my-1">
@@ -288,17 +315,20 @@
         </div>
         <div class="col-12 col-lg-6">
           <div class="row align-items-start align-items-md-center" id="section-b4">
-            <div class="col-3 d-grid">
-              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
-                <input type="radio" class="btn-check" name="qb4" id="btnPassb4" autocomplete="off">
-                <label class="btn btn-outline-success w-100 py-0" for="btnPassb4"><i class="bi bi-check2"></i></label>
+            <div class="col-12 col-sm-3 d-grid text-center text-sm-start d-print-none">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area" data-int-status="statusb4">
+                <input type="radio" class="btn-check" name="qb4" id="btnPassb4" autocomplete="off" data-bs-statusText="PASS " data-bs-statusClasses="text-success">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPassb4"><i class="bi bi-check-circle"></i></label>
 
-                <input type="radio" class="btn-check" name="qb4" id="btnNab4" autocomplete="off">
+                <input type="radio" class="btn-check" name="qb4" id="btnNab4" autocomplete="off" checked data-bs-statusText="N/A " data-bs-statusClasses="text-secondary">
                 <label class="btn btn-outline-secondary w-100 py-0" for="btnNab4"><i class="bi bi-slash-circle"></i></label>
+                
+                <input type="radio" class="btn-check" name="qb4" id="btnFailb4" autocomplete="off" data-bs-statusText="FAIL " data-bs-statusClasses="text-danger">
+                <label class="btn btn-outline-danger w-100 py-0" for="btnFailb4"><i class="bi bi-x-circle"></i></label>
               </div>
             </div>
-            <div class="col-9 align-middle">
-              <h6 class="text-start">Lot Size</h6>
+            <div class="col-8 col-sm-9 align-middle">
+              <h6 class="text-start"><span id="statusb4" class="d-none d-print-inline"></span>Lot Size</h6>
             </div>
           </div>
           <hr class="my-1">
@@ -306,17 +336,20 @@
         </div>
         <div class="col-12 col-lg-6">
           <div class="row align-items-start align-items-md-center" id="section-b5">
-            <div class="col-3 d-grid">
-              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
-                <input type="radio" class="btn-check" name="qb5" id="btnPassb5" autocomplete="off">
-                <label class="btn btn-outline-success w-100 py-0" for="btnPassb5"><i class="bi bi-check2"></i></label>
+            <div class="col-12 col-sm-3 d-grid text-center text-sm-start d-print-none">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area" data-int-status="statusb5">
+                <input type="radio" class="btn-check" name="qb5" id="btnPassb5" autocomplete="off" data-bs-statusText="PASS " data-bs-statusClasses="text-success">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPassb5"><i class="bi bi-check-circle"></i></label>
 
-                <input type="radio" class="btn-check" name="qb5" id="btnNab5" autocomplete="off">
+                <input type="radio" class="btn-check" name="qb5" id="btnNab5" autocomplete="off" checked data-bs-statusText="N/A " data-bs-statusClasses="text-secondary">
                 <label class="btn btn-outline-secondary w-100 py-0" for="btnNab5"><i class="bi bi-slash-circle"></i></label>
+                
+                <input type="radio" class="btn-check" name="qb5" id="btnFailb5" autocomplete="off" data-bs-statusText="FAIL " data-bs-statusClasses="text-danger">
+                <label class="btn btn-outline-danger w-100 py-0" for="btnFailb5"><i class="bi bi-x-circle"></i></label>
               </div>
             </div>
-            <div class="col-9 align-middle">
-              <h6 class="text-start">Surveyor's Note 6 - FEMA</h6>
+            <div class="col-8 col-sm-9 align-middle">
+              <h6 class="text-start"><span id="statusb5" class="d-none d-print-inline"></span>Surveyor's Note 6 - FEMA</h6>
             </div>
           </div>
           <hr class="my-1">
@@ -326,17 +359,20 @@
         </div>
         <div class="col-12 col-lg-6">
           <div class="row align-items-start align-items-md-center" id="section-b6">
-            <div class="col-3 d-grid">
-              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area">
-                <input type="radio" class="btn-check" name="qb6" id="btnPassb6" autocomplete="off">
-                <label class="btn btn-outline-success w-100 py-0" for="btnPassb6"><i class="bi bi-check2"></i></label>
+            <div class="col-12 col-sm-3 d-grid text-center text-sm-start d-print-none">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area" data-int-status="statusb6">
+                <input type="radio" class="btn-check" name="qb6" id="btnPassb6" autocomplete="off" data-bs-statusText="PASS " data-bs-statusClasses="text-success">
+                <label class="btn btn-outline-success w-100 py-0" for="btnPassb6"><i class="bi bi-check-circle"></i></label>
 
-                <input type="radio" class="btn-check" name="qb6" id="btnNab6" autocomplete="off">
+                <input type="radio" class="btn-check" name="qb6" id="btnNab6" autocomplete="off" checked data-bs-statusText="N/A " data-bs-statusClasses="text-secondary">
                 <label class="btn btn-outline-secondary w-100 py-0" for="btnNab6"><i class="bi bi-slash-circle"></i></label>
+                
+                <input type="radio" class="btn-check" name="qb6" id="btnFailb6" autocomplete="off" data-bs-statusText="FAIL " data-bs-statusClasses="text-danger">
+                <label class="btn btn-outline-danger w-100 py-0" for="btnFailb6"><i class="bi bi-x-circle"></i></label>
               </div>
             </div>
-            <div class="col-9 align-middle">
-              <h6 class="text-start">Surveyor's Note 9 - FPRN CORS</h6>
+            <div class="col-8 col-sm-9 align-middle">
+              <h6 class="text-start"><span id="statusb6" class="d-none d-print-inline"></span>Surveyor's Note 9 - FPRN CORS</h6>
             </div>
           </div>
           <hr class="my-1">
@@ -344,11 +380,16 @@
           <a href="https://www.myfloridagps.com/DMap/" target="_blank" class="btn btn-primary my-0 py-0 me-2 d-print-none">Website</a>
         </div>
       </div>
-      <i><p class="text-muted d-none d-print-flex">Note: Items not marked indicated the item is not complete.</p></i>
-      <div id="comment-section" hidden>
-        <h5>Comments by Reviewer</h5>
-        <p id="comment-area"></p>
+      <div id="comment-section" class="d-none d-print-block">
+        <h5 class="mt-0 mb-0 py-0">Comments by Reviewer</h5>
+        <p id="comment-area" class="py-1 my-0"></p>
       </div>
+    </div>
+    <div style="position: fixed; top: 10px; right: 10px;" class="d-print-none">
+      <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#tableofcontents" role="button"
+        aria-controls="tableofcontents">
+        <i class="bi bi-layout-text-sidebar"></i>
+      </a>
     </div>
   </main>
   <footer class="footer mt-auto">

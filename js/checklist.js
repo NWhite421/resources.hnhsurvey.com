@@ -14,11 +14,55 @@ window.addEventListener("beforeprint", event => {
   const textPrintHtml = document.getElementById("comment-area");
 
   if (checkReview.checked) {
-    textPrintArea.removeAttribute('hidden');
     textPrintHtml.innerHTML = convertTextareaToHTML(textArea.value);
-    textPrintHtml.innerHTML += "<br><i>Reviewed by: " + reviewer.value + "</i>"
+    textPrintHtml.innerHTML += "<i>Reviewed by: " + reviewer.value + "</i>"
+  } else {
+    textPrintHtml.innerHTML = "<i>No comments</i>";
   }
+  handlePrintSetup();
 });
+
+function handlePrintSetup() {
+  const checkedButtons = document.querySelectorAll('input[type=radio]:checked');
+  console.log(checkedButtons.length);
+
+  checkedButtons.forEach(button => {
+    console.log(button);
+    const buttonValue = button.getAttribute("data-bs-statusText");
+    if (buttonValue != null) {
+      const buttonClasses = button.getAttribute("data-bs-statusClasses");
+      const resultFieldId = button.parentElement.getAttribute("data-int-status");
+      var resultField = document.getElementById(resultFieldId);
+      if (resultField != null) {
+        resultField.classList = "d-none d-print-inline " + buttonClasses;
+        resultField.innerText = buttonValue;
+      }
+      console.error("could not find the element \"" + resultFieldId + "\"");
+    }
+    console.error("The button was not properly configured \"" + button.getAttribute("id") + "\"");
+  })
+  
+  /*
+  for (let i = 0; i < radioGroups.length; i++) {
+    const group = radioGroups[i];
+    const status = group.getAttribute("data-int-status");
+    const element = document.getElementById(status);
+    if (status == null) {
+      console.error("the specified status field could not be found in group " + group);
+      continue;
+    }
+    const buttons = group.getElementsByTagName("input");
+    for (let j = 0; j < buttons.length; j++) {
+      const button = buttons[j];
+      if (button.checked) {
+        const statusText = button.getAttribute("data-bs-statusText");
+        const statusClasses = button.getAttribute("data-bs-statusColor");
+        element.classList = "d-none d-print-inline" + statusClasses;
+        element.innerHTML = statusText;
+      }
+    }
+  }*/
+}
 
 window.addEventListener("afterprint", event => {
   const textPrintArea = document.getElementById("comment-section");
@@ -182,12 +226,13 @@ function toggleComments() {
 }
 
 function resetAllChecks() {
-  const radios = document.querySelectorAll('input[type=radio]');
+  const radios = document.querySelectorAll('input[type=radio][checked]');
   var confirmReset = confirm("Are you sure you wish to reset this form. Any inputs will be lost.");
   if (confirmReset) {
     radios.forEach(element => {
-      element.checked = false;
+      element.checked = true;
     });
+
     const toastLiveExample = document.getElementById('toast-reset-success')
     const toast = new bootstrap.Toast(toastLiveExample);
     toast.show();
