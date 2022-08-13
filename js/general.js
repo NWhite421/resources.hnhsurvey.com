@@ -1,13 +1,31 @@
+/*
+ * File: general.js
+ * Path: \js
+ * Project: HNH Resources Website
+ * Created Date: 08-11-2022 19-53-07
+ * Author: Nathan White
+ * -----
+ * Last Modified: 08-13-2022 12-18-35
+ * Modified By: Nathan White
+ * -----
+ * Copyright (c) 2022 Exacta Land Surveying
+ */
+
 window.addEventListener("load", onLoad);
 window.addEventListener("beforeprint", onPagePrint);
+window.addEventListener("afterprint", onPageFinishPrint)
 
 function onLoad() {
   var today = getDate()
 
-  const dateString = today[0] + "/" + today[1] + "/" + today[2];
-  setCookie("lastVisit", dateString, 365)
+  const date = new Date();
+  setCookie("lastVisit", date.toISOString(), 365)
 
   autofillAreas();
+
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.getElementById('color-theme').href = "https://cdn.jsdelivr.net/npm/bootswatch@5.2.0/dist/darkly/bootstrap.min.css";
+  }
 }
 
 function autofillAreas() {
@@ -31,9 +49,17 @@ function autofillAreas() {
 
 function onPagePrint() {
   var isPrintFriendly = document.querySelector('meta[name="print-friendly"]').content;
-  if (isPrintFriendly == "false") {
+  if (isPrintFriendly == "none") {
     alert("You are printing a page not configured for paper. Content may or may not display correctly.")
   }
+
+  var element = document.getElementById('color-theme');
+  element.setAttribute("disabled", "true");
+}
+
+function onPageFinishPrint() {
+  var element = document.getElementById('color-theme');
+  element.removeAttribute("disabled");
 }
 
 function getDate() {

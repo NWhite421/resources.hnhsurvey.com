@@ -1,10 +1,24 @@
+<!--
+File: predraw.html
+Path: \homebuilder
+Project: HNH Resources Website
+Created Date: 08-11-2022 19-53-07
+Author: Nathan White
+-----
+Last Modified: 08-13-2022 12-24-56
+Modified By: Nathan White
+-----
+Copyright (c) 2022 Exacta Land Surveying
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="print-friendly" content="true">
+  <meta name="print-friendly" content="gui">
+  <meta name="last-update" content="2022-08-12T22:39:49Z">
   <title>Pre-Draw - H &amp; H Survey</title>
   <link href="../resource/hnh_icon_color.png" rel="icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -13,6 +27,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="" id="color-theme">
   <script src="../js/general.js"></script>
   <script src="../js/checklist.js"></script>
 </head>
@@ -409,7 +424,7 @@
   </footer>
 </body>
 <div class="offcanvas offcanvas-start" tabindex="-1" id="tableofcontents" aria-labelledby="tableofcontentsLabel">
-  <div class="offcanvas-header bg-dark">
+  <div class="offcanvas-header bg-secondary">
     <h5 class="offcanvas-title text-white" id="tableofcontentsLabel">Table of Contents</h5>
     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
@@ -440,15 +455,11 @@
     </nav>
     <div class="mt-auto">
       <div class="row">
-        <div class="col-12 col-sm-4 d-grid">
-          <a href="#" class="btn btn-primary mb-2" onclick="saveLink()" data-bs-toggle="offcanvas" href="#tableofcontents"
-          role="button" aria-controls="tableofcontents">Save Link</a>
-        </div>
-        <div class="col-12 col-sm-4 d-grid">
+        <div class="col-12 col-sm-6 d-grid">
           <a href="#" class="btn btn-primary mb-2" onclick="printFile()" data-bs-toggle="offcanvas" href="#tableofcontents"
-          role="button" aria-controls="tableofcontents">Print PDF</a>
+          role="button" aria-controls="tableofcontents">Print / Save URL</a>
         </div>
-        <div class="col-12 col-sm-4 d-grid">
+        <div class="col-12 col-sm-6 d-grid">
           <a href="#" class="btn btn-primary mb-2" onclick="resetAllChecks()">Reset Form</a>
         </div>
       </div>
@@ -456,7 +467,7 @@
   </div>
 </div>
 <div class="modal" tabindex="-1" id="printModal">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-xl modal-fullscreen-sm-down">
     <div class="modal-content">
       <div class="modal-header">
         <h5>Printing File</h5>
@@ -466,13 +477,13 @@
         <div class="input-group mb-3 col-12">
           <span class="input-group-text" id="job-number-print-label">Job Number</span>
           <input type="text" class="form-control" aria-label="Job number" aria-describedby="job-number-print-label"
-            id="job-number-print">
+            id="job-number-print" onkeyup="getSaveLink()">
         </div>
         <div class="input-group mb-3 col-12">
           <span class="input-group-text" id="review-number-print-label">Review</span>
           <input type="number" class="form-control" aria-label="Review number"
             aria-describedby="review-number-print-label" id="review-number-print" min="1"
-            onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57">
+            onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" onchange="getSaveLink()">
         </div>
         <div class="form-check mb-2 col-12">
           <input class="form-check-input" type="checkbox" value="" id="include-comments"
@@ -483,37 +494,34 @@
         </div>
         <div class="input-group mb-3 col-12">
           <span class="input-group-text" id="reviewer-label">Reviewer</span>
-          <input type="text" class="form-control" aria-label="Reviewer" aria-describedby="reviewer-label" disabled id="reviewer">
+          <input type="text" class="form-control" aria-label="Reviewer" aria-describedby="reviewer-label" disabled id="reviewer" onkeyup="getSaveLink()">
         </div>
         <div class="mb-3 col-12">
           <label for="comment-text" class="form-label">Comments</label>
           <textarea class="form-control" id="comment-text" rows="3" disabled></textarea>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" onclick="confirmPrint()">Print</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="modal" tabindex="-1" id="saveModal">
-  <div class="modal-dialog -modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5>Printing File</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="input-group mb-3">
+        <span class="mb-3 col-12">
+          <div class="row border border-danger bg-danger text-white rounded mx-2" style="--bs-bg-opacity: .2;" hidden id="print-error">
+            <div class="col-12">
+              <p class="pb-0 my-0">Please complete the following fields.</p>
+              <ul id="print-error-list">
+                <li>test</li>
+                <li>test</li>
+              </ul>
+            </div>
+          </div>
+        </span>
+        <hr class="py-1 my-1">
+        <div class="input-group">
           <span class="input-group-text" id="save-link-label">Job Link</span>
           <input type="text" class="form-control" aria-label="Job number" aria-describedby="save-link-label" id="save-link" readonly aria-readonly="true">
           <button class="btn btn-primary" type="button" id="save-link-copy"
-          onclick="confirmSaveLink()">Copy Link</button>
+          onclick="confirmSaveLink()" title="Copy link to clipboard"><i class="bi bi-clipboard-fill"></i></button>
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="confirmPrint()">Print</button>
       </div>
     </div>
   </div>
