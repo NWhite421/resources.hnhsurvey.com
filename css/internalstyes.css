@@ -1,0 +1,18 @@
+/*
+ * Filename: c:\Projects\hnh-resources\css\internalstyes.css
+ * Path: c:\Projects\hnh-resources
+ * Created Date: Sunday, August 14th 2022, 1:23:24 pm
+ * Author: Nathan White
+ * 
+ * Copyright (c) 2022 Exacta Land Surveying
+ */
+
+ .autocad-command {
+  background-color: var(--bs-secondary);
+  color: var(--bs-white);
+  padding: 0.125rem 0.25rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
