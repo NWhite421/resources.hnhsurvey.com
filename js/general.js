@@ -35,13 +35,13 @@ function autofillAreas() {
   
   for (let index = 0; index < items.length; index++) {
     var element = items[index];
-    console.log(element);
+    console.debug(element);
 
     var innerHtml = element.innerHTML;
-    console.log("before: " + innerHtml)
+    console.debug("before: " + innerHtml)
     innerHtml = innerHtml.replace("[year]", today[2]);
     
-    console.log("after: " + innerHtml)
+    console.debug("after: " + innerHtml)
 
     element.innerHTML = innerHtml;
   }

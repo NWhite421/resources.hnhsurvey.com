@@ -1,0 +1,9 @@
+.autocad-command {
+  background-color: var(--bs-secondary);
+  color: var(--bs-white);
+  padding: 0.125rem 0.25rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
