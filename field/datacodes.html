@@ -1,0 +1,3645 @@
+<!--
+Filename: c:\Projects\HNH_Checklists\guides\BasisBearing.html
+Path: c:\Projects\HNH_Checklists\guides
+Created Date: Wednesday, January 19th 2022, 7:33:19 pm
+Author: Nathan (ThatFloridaMan)
+
+Copyright (c) 2022 Your Company
+-->
+
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="print-friendly" content="none">
+    <meta name="last-update" content="2022-08-18T00:00:23Z">
+    <title>Data Codes - H &amp; H Survey</title>
+    <link href="../resource/hnh_icon_color.png" rel="icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="" id="color-theme">
+    <link rel="stylesheet" href="../css/internalstyes.css">
+    <script src="../js/general.js"></script>
+    <script src="../js/tableSearch.js"></script>
+  </head>
+
+<header class="d-print-none">
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark" style="--bs-breadcrumb-divider: '>';">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../../index.html">
+        <img src="../resource/hnh_icon_color.png" height="32" alt="Company Logo">
+      </a>
+      <!--Toggler button-->
+      <!--User Name-->
+      <!--Breadcrumb-->
+      <ol class="breadcrumb mx-auto my-auto text-white d-none d-sm-flex">
+        <a href="../index.html" class="breadcrumb-item text-reset">Home</a>
+        <li class="breadcrumb-item" aria-current="page">Point &amp; Line Codes</li>
+      </ol>
+      <ol class="breadcrumb mx-auto my-auto text-white d-flex d-sm-none">
+        <a href="../index.html" class="breadcrumb-item text-reset">Home</a>
+        <li class="breadcrumb-item" aria-current="page">Point &amp; Line Codes</li>
+      </ol>
+      <!--Goto section-->
+    </div>
+    </div>
+  </nav>
+</header>
+
+<body class="d-flex flex-column min-vh-100">
+  <div class="container pt-2">
+    <div class="row mb-2 justify-content-between">
+      <div class="col-12 col-md-3 pb-2">
+          <input type="text" class="form-control" placeholder="Search Term" aria-label="Search for a code" id="searchBar">
+      </div>
+      <div class="col-12 col-md-3 pb-2 text-center text-sm-start d-grid">
+        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+          <input type="radio" class="btn-check" name="bgSearchFunction" id="btnradio1" autocomplete="off" checked>
+          <label class="btn btn-outline-primary w-100" for="btnradio1">Codes</label>
+        
+          <input type="radio" class="btn-check" name="bgSearchFunction" id="btnradio2" autocomplete="off">
+          <label class="btn btn-outline-primary w-100" for="btnradio2">Descriptions</label>
+        </div>
+      </div>
+      <div class="col-12 col-md-3 pb-2 text-center text-sm-start d-grid">
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-primary w-100" onclick="searchTable()">Search</button>
+          <button type="button" class="btn btn-danger w-100" onclick="clearSearch()">Clear</button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <table class="table table-sm table-striped mt-2" id="tableCodes">
+          <thead>
+            <th scope="col">Code</th>
+            <th scope="col" class="d-none d-lg-table-cell">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col" class="d-none d-lg-table-cell text-center">Point/Line</th>
+            <th scope="col" class="d-none d-lg-table-cell text-center">Zone</th>
+          </thead>
+          <tr>
+            <td scope="row">25MPH</td>
+            <td class="d-none d-lg-table-cell">PM25MPH_ep</td>
+            <td>Pavement Marking Message - 25 MPH (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">AC</td>
+            <td class="d-none d-lg-table-cell">PavtAsphaltCrown_ep</td>
+            <td>Asphalt Pavement Crown (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">ACU</td>
+            <td class="d-none d-lg-table-cell">AirCondition_ep</td>
+            <td>Air Conditioning Unit (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">AGF</td>
+            <td class="d-none d-lg-table-cell">AgricultField_ep</td>
+            <td>Agricultural Field or Farmland (Not Groves or Orchards) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">AGV</td>
+            <td class="d-none d-lg-table-cell">VaultsAG_ep</td>
+            <td>Vaults Above Grade (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">AHEAD</td>
+            <td class="d-none d-lg-table-cell">PMAHEAD_ep</td>
+            <td>Pavement Marking Message - AHEAD (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">ANT</td>
+            <td class="d-none d-lg-table-cell">Antenna_ep</td>
+            <td>Antenna (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">AP</td>
+            <td class="d-none d-lg-table-cell">PavtAsphalt_ep</td>
+            <td>Asphalt Pavement Edge (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">APRS</td>
+            <td class="d-none d-lg-table-cell">Bridge_ep</td>
+            <td>Bridge Approaches and Slabs (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">ARST</td>
+            <td class="d-none d-lg-table-cell">ArchSite_ep</td>
+            <td>Archeological Site (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">AT</td>
+            <td class="d-none d-lg-table-cell">MonumentAT_ep</td>
+            <td>Control Monuments - Aerial Targets</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">5</td>
+          </tr>
+          <tr>
+            <td scope="row">ATTN</td>
+            <td class="d-none d-lg-table-cell">Attenuator_ep</td>
+            <td>Attenuator Systems (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">BARW</td>
+            <td class="d-none d-lg-table-cell">WallBarrier_ep</td>
+            <td>Barrier Wall Dividing Traffic (All Types) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">BAS</td>
+            <td class="d-none d-lg-table-cell">Basins_ep</td>
+            <td>Sediment Basins, Retention Ponds (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">BCATVA</td>
+            <td class="d-none d-lg-table-cell">CATVBurA_ep</td>
+            <td>Cable TV Line Quality Level A Locate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">BCATVB</td>
+            <td class="d-none d-lg-table-cell">CATVBurB_ep</td>
+            <td>Cable TV Line Quality Level B Designate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">BCATVC</td>
+            <td class="d-none d-lg-table-cell">CATVBurC_ep</td>
+            <td>Cable TV Line Quality Level C Above Ground Evidence (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">BCATVD</td>
+            <td class="d-none d-lg-table-cell">CATVBurD_ep</td>
+            <td>Cable TV Line Quality Level D Existing Records (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">BGV</td>
+            <td class="d-none d-lg-table-cell">VaultsBG_ep</td>
+            <td>Vaults Below Grade (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">BIKE</td>
+            <td class="d-none d-lg-table-cell">PMBIKE_ep</td>
+            <td>Pavement Marking Message - BIKE (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">BIKELN</td>
+            <td class="d-none d-lg-table-cell">PMBikeLane_ep</td>
+            <td>Pavement Marking Symbol - Bicycle (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">BKRK</td>
+            <td class="d-none d-lg-table-cell">BikeRack_ep</td>
+            <td>Bicycle Rack (All Sizes) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">BL</td>
+            <td class="d-none d-lg-table-cell">BaselineSurvey</td>
+            <td>Baseline Survey</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">6</td>
+          </tr>
+          <tr>
+            <td scope="row">BLC</td>
+            <td class="d-none d-lg-table-cell">BLSurveyCntrl_ep</td>
+            <td>Baseline Survey Control (Traverse Line)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">5</td>
+          </tr>
+          <tr>
+            <td scope="row">BLDG</td>
+            <td class="d-none d-lg-table-cell">Building_ep</td>
+            <td>Buildings (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">BLF</td>
+            <td class="d-none d-lg-table-cell">BLSurveyField_ep</td>
+            <td>Baseline Survey Field (Calculated from BLC)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">6</td>
+          </tr>
+          <tr>
+            <td scope="row">BLSS</td>
+            <td class="d-none d-lg-table-cell">BaselineSideStreet</td>
+            <td>Baseline Side Street</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">6</td>
+          </tr>
+          <tr>
+            <td scope="row">BN</td>
+            <td class="d-none d-lg-table-cell">Beacons_ep</td>
+            <td>Beacons and Path Illumination (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">BNCH</td>
+            <td class="d-none d-lg-table-cell">Bench_ep</td>
+            <td>Bench (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">BNK</td>
+            <td class="d-none d-lg-table-cell">BankMent_ep</td>
+            <td>Embankment (Manmade, Top or Bottom) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">BOH</td>
+            <td class="d-none d-lg-table-cell">BuildingOH_ep</td>
+            <td>Building Roof Overhangs (Encroachments) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">BOL</td>
+            <td class="d-none d-lg-table-cell">Bollard_ep</td>
+            <td>Bollards (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">BPWRA</td>
+            <td class="d-none d-lg-table-cell">ElecBurA_ep</td>
+            <td>Electrical Quality Level A Locate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">BPWRB</td>
+            <td class="d-none d-lg-table-cell">ElecBurB_ep</td>
+            <td>Electrical Quality Level B Designate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">BPWRC</td>
+            <td class="d-none d-lg-table-cell">ElecBurC_ep</td>
+            <td>Electrical Quality Level C Above Ground Evidence (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">BPWRD</td>
+            <td class="d-none d-lg-table-cell">ElecBurD_ep</td>
+            <td>Electrical Quality Level D Existing Records (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">BRCK</td>
+            <td class="d-none d-lg-table-cell">PavtBrick_ep</td>
+            <td>Brick Pavement Edge (Brick Roadways and Sidewalks)  (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">BRDG</td>
+            <td class="d-none d-lg-table-cell">BridgeEle_ep</td>
+            <td>Bridge Elements (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">4</td>
+          </tr>
+          <tr>
+            <td scope="row">BSECA</td>
+            <td class="d-none d-lg-table-cell">ElecBurSecA_ep</td>
+            <td>Conductor (Secondary Distribution) Quality Level A Locate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">BSECB</td>
+            <td class="d-none d-lg-table-cell">ElecBurSecB_ep</td>
+            <td>Conductor (Secondary Distribution) Quality Level B Designate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">BSECC</td>
+            <td class="d-none d-lg-table-cell">ElecBurSecC_ep</td>
+            <td>Conductor (Secondary Distribution) Quality Level C Above Ground Evidence (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">BSECD</td>
+            <td class="d-none d-lg-table-cell">ElecBurSecD_ep</td>
+            <td>Conductor (Secondary Distribution) Quality Level D Existing Records (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">BSTP</td>
+            <td class="d-none d-lg-table-cell">BusStop_ep</td>
+            <td>Bus Stop (Chain for Larger Structures) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">BTA</td>
+            <td class="d-none d-lg-table-cell">TeleBurA_ep</td>
+            <td>Telephone (All Sizes) Quality Level A Locate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">BTB</td>
+            <td class="d-none d-lg-table-cell">TeleBurB_ep</td>
+            <td>Telephone (All Sizes) Quality Level B Designate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">BTC</td>
+            <td class="d-none d-lg-table-cell">TeleBurC_ep</td>
+            <td>Telephone (All Sizes) Quality Level C Above Ground Evidence (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">BTD</td>
+            <td class="d-none d-lg-table-cell">TeleBurD_ep</td>
+            <td>Telephone (All Sizes) Quality Level D Existing Records (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">BTDA</td>
+            <td class="d-none d-lg-table-cell">TeleBurDA_ep</td>
+            <td>Telephone, DUCT (All Sizes) Quality Level A Locate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">BTDB</td>
+            <td class="d-none d-lg-table-cell">TeleBurDB_ep</td>
+            <td>Telephone, DUCT (All Sizes) Quality Level B Designate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">BTDC</td>
+            <td class="d-none d-lg-table-cell">TeleBurDC_ep</td>
+            <td>Telephone, DUCT (All Sizes) Quality Level C Above Ground Evidence (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">BTDD</td>
+            <td class="d-none d-lg-table-cell">TeleBurDD_ep</td>
+            <td>Telephone, DUCT (All Sizes) Quality Level D Existing Records (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">BTTA</td>
+            <td class="d-none d-lg-table-cell">TeleBurTA_ep</td>
+            <td>Telephone, TOLL (All Sizes) Quality Level A Locate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">BTTB</td>
+            <td class="d-none d-lg-table-cell">TeleBurTB_ep</td>
+            <td>Telephone, TOLL (All Sizes) Quality Level B Designate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">BTTC</td>
+            <td class="d-none d-lg-table-cell">TeleBurTC_ep</td>
+            <td>Telephone, TOLL (All Sizes) Quality Level C Above Ground Evidence (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">BTTD</td>
+            <td class="d-none d-lg-table-cell">TeleBurTD_ep</td>
+            <td>Telephone, TOLL (All Sizes) Quality Level D Existing Records (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">BUMP</td>
+            <td class="d-none d-lg-table-cell">PMBUMP_ep</td>
+            <td>Pavement Marking Message - BUMP (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">BUOY</td>
+            <td class="d-none d-lg-table-cell">Buoy_ep</td>
+            <td>Buoy (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">BUS</td>
+            <td class="d-none d-lg-table-cell">PMBUS_ep</td>
+            <td>Pavement Marking Message - BUS (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">BXC</td>
+            <td class="d-none d-lg-table-cell">BoxCulvert_ep</td>
+            <td>Box Culvert (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">CALCPT</td>
+            <td class="d-none d-lg-table-cell">CalcPt</td>
+            <td>Mapping Calculated 2D Point</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">CAN</td>
+            <td class="d-none d-lg-table-cell">Canal_ep</td>
+            <td>Canal, Lock (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">CAPA</td>
+            <td class="d-none d-lg-table-cell">ElecCAPA_ep</td>
+            <td>Capacitors (Above Ground) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">CAPB</td>
+            <td class="d-none d-lg-table-cell">ElecCAPB_ep</td>
+            <td>Capacitors (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">CATV</td>
+            <td class="d-none d-lg-table-cell">CATVAer_ep</td>
+            <td>Cable TV Line (Aerial) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">CATVCA</td>
+            <td class="d-none d-lg-table-cell">CATVCondBurA_ep</td>
+            <td>Cable TV Conduit System Quality Level A Locate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">CATVCB</td>
+            <td class="d-none d-lg-table-cell">CATVCondBurB_ep</td>
+            <td>Cable TV Conduit System Quality Level B Designate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">CATVCC</td>
+            <td class="d-none d-lg-table-cell">CATVCondBurC_ep</td>
+            <td>Cable TV Conduit System Quality Level C Above Ground Evidence (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">CATVCD</td>
+            <td class="d-none d-lg-table-cell">CATVCondBurD_ep</td>
+            <td>Cable TV Conduit System Quality Level D Existing Records (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">CATVS</td>
+            <td class="d-none d-lg-table-cell">CATVMisc_ep</td>
+            <td>Cable TV Service Box and Miscelleneous, Pole (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">CB</td>
+            <td class="d-none d-lg-table-cell">CatchBasin_ep</td>
+            <td>Catch Basins (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">CBR</td>
+            <td class="d-none d-lg-table-cell">CableBarrier_ep</td>
+            <td>Cable Barrier (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">CCMON</td>
+            <td class="d-none d-lg-table-cell">MonumentCCC_ep</td>
+            <td>Control Monuments - Concrete (Cast)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">5</td>
+          </tr>
+          <tr>
+            <td scope="row">CCR</td>
+            <td class="d-none d-lg-table-cell">CurbRamp_ep</td>
+            <td>Curb Cut Ramp (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">CDH</td>
+            <td class="d-none d-lg-table-cell">MonumentCDH_ep</td>
+            <td>Control Monuments - Drill Hole, Plug</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">5</td>
+          </tr>
+          <tr>
+            <td scope="row">CDRM</td>
+            <td class="d-none d-lg-table-cell">MonumentCDR_ep</td>
+            <td>Control Monuments - Deep Rod Mark</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">5</td>
+          </tr>
+          <tr>
+            <td scope="row">CEM</td>
+            <td class="d-none d-lg-table-cell">Cemetery_ep</td>
+            <td>Cemetery, Grave Outlines (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">CG</td>
+            <td class="d-none d-lg-table-cell">CGep_ep</td>
+            <td>Curb / Curb and Gutter (at EP &amp; FL) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">CGB</td>
+            <td class="d-none d-lg-table-cell">CGBack_ep</td>
+            <td>Curb and Gutter (Back) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">CGD</td>
+            <td class="d-none d-lg-table-cell">CattleGuard_ep</td>
+            <td>Cattle Guard (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">CGF</td>
+            <td class="d-none d-lg-table-cell">CGFace_ep</td>
+            <td>Curb and Gutter (Face) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">CINL</td>
+            <td class="d-none d-lg-table-cell">InletCurb_ep</td>
+            <td>Curb Inlets (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">CIRC</td>
+            <td class="d-none d-lg-table-cell">MonumentCIRC_ep</td>
+            <td>Control Monuments - 5/8 Rod and Cap</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">5</td>
+          </tr>
+          <tr>
+            <td scope="row">CLC</td>
+            <td class="d-none d-lg-table-cell">CLConst_dp</td>
+            <td>Centerline Construction</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">6</td>
+          </tr>
+          <tr>
+            <td scope="row">CLMT</td>
+            <td class="d-none d-lg-table-cell">TowerTrans_ep</td>
+            <td>Transmission Tower (Single Column) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">CLNO</td>
+            <td class="d-none d-lg-table-cell">SanitarySewerCLNO_ep</td>
+            <td>Sanitary Sewer Cleanout (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">CMON</td>
+            <td class="d-none d-lg-table-cell">MonumentCC_ep</td>
+            <td>Monuments - Concrete (Cast)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">6</td>
+          </tr>
+          <tr>
+            <td scope="row">CMPST</td>
+            <td class="d-none d-lg-table-cell">Campstove_ep</td>
+            <td>Campstove, Grill, Firepit, BBQ (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">CNL</td>
+            <td class="d-none d-lg-table-cell">MonumentCNL_ep</td>
+            <td>Control Monuments - Nail, Spike, Pin</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">5</td>
+          </tr>
+          <tr>
+            <td scope="row">CNPY</td>
+            <td class="d-none d-lg-table-cell">Canopy_ep</td>
+            <td>Shelters of All Kinds (Gas Station, Toll Plaza, etc.) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">COE</td>
+            <td class="d-none d-lg-table-cell">WetlandCOE_ep</td>
+            <td>Unitied States Army Corps of Engineers (COE) Wetlands (Marsh or Swamp) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">COL</td>
+            <td class="d-none d-lg-table-cell">GovCountyLine_ep</td>
+            <td>Government: County Line (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">COM</td>
+            <td class="d-none d-lg-table-cell">MonumentCOM_ep</td>
+            <td>Control Monuments - Other Marker?</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">5</td>
+          </tr>
+          <tr>
+            <td scope="row">CONV</td>
+            <td class="d-none d-lg-table-cell">Conveyor_ep</td>
+            <td>Conveyor Belt Systems (All Types) (Industrial, Agricultural, etc.) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">CPIP</td>
+            <td class="d-none d-lg-table-cell">MonumentCPIP_ep</td>
+            <td>Control Monuments - Metal Pipe, Rod, Bar</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">5</td>
+          </tr>
+          <tr>
+            <td scope="row">CPMON</td>
+            <td class="d-none d-lg-table-cell">MonumentCCP_ep</td>
+            <td>Control Monuments - Concrete (Poured)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">5</td>
+          </tr>
+          <tr>
+            <td scope="row">CPST</td>
+            <td class="d-none d-lg-table-cell">MonumentCPST_ep</td>
+            <td>Control Monuments - Post, Stake, Staub</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">5</td>
+          </tr>
+          <tr>
+            <td scope="row">CPVC</td>
+            <td class="d-none d-lg-table-cell">PavtConcreteCrown_ep</td>
+            <td>Concrete Pavement (Crown) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">CPVJ</td>
+            <td class="d-none d-lg-table-cell">PavtConcJoints_ep</td>
+            <td>Concrete Pavement (Joints) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">CPVT</td>
+            <td class="d-none d-lg-table-cell">PavtConcrete_ep</td>
+            <td>Concrete Pavement (Edges) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">CRW</td>
+            <td class="d-none d-lg-table-cell">CurbRampWarning_ep</td>
+            <td>Detectable Warnings on Curb Ramps (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">CSH</td>
+            <td class="d-none d-lg-table-cell">Core_ep</td>
+            <td>Core Sample or Test Hole (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">CSL</td>
+            <td class="d-none d-lg-table-cell">ConcSlabs_ep</td>
+            <td>Concrete Slabs (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">CSTMD</td>
+            <td class="d-none d-lg-table-cell">MonumentCSTD_ep</td>
+            <td>Control Monuments - Stamped Disk</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">5</td>
+          </tr>
+          <tr>
+            <td scope="row">CSTMP</td>
+            <td class="d-none d-lg-table-cell">MonumentCSTP_ep</td>
+            <td>Control Monuments - Stamped Plate</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">5</td>
+          </tr>
+          <tr>
+            <td scope="row">CYL</td>
+            <td class="d-none d-lg-table-cell">GovCityLimitLine_ep</td>
+            <td>Government: City Limit Line (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">DECK</td>
+            <td class="d-none d-lg-table-cell">Deck_ep</td>
+            <td>Deck / Porch (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">DEFAULT</td>
+            <td class="d-none d-lg-table-cell">PointLocator_ep</td>
+            <td>Point Locator Symbol (Existing) To Accommodate Bentley Default Output</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">DEFAULT_POINT</td>
+            <td class="d-none d-lg-table-cell">PointLocator_ep</td>
+            <td>Point Locator Symbol (Existing) To Accommodate Bentley Default Output</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">DEP</td>
+            <td class="d-none d-lg-table-cell">WetlandDEP_ep</td>
+            <td>Water Management Districts (WMD) &amp; Florida Department of Environmental Protection (DEP) Wetlands (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">DF</td>
+            <td class="d-none d-lg-table-cell">Dolphins_ep</td>
+            <td>Dolphins and Fenders (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">DFL</td>
+            <td class="d-none d-lg-table-cell">FlowLine_ep</td>
+            <td>Ditch Flow Line Direction (Ditches, Swells, etc.) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">DH</td>
+            <td class="d-none d-lg-table-cell">MonumentDH_ep</td>
+            <td>Monuments - Drill Hole, Plug</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">6</td>
+          </tr>
+          <tr>
+            <td scope="row">DLP</td>
+            <td class="d-none d-lg-table-cell">DelineatorPost_ep</td>
+            <td>Delineator Post, Metal and Flexible (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">DMP</td>
+            <td class="d-none d-lg-table-cell">Trash_ep</td>
+            <td>Dumpster, Trash Disposal (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">DMPS</td>
+            <td class="d-none d-lg-table-cell">SanitarySewerDSta_ep</td>
+            <td>Sanitary Sewer Dump Station (SS) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">DOCK</td>
+            <td class="d-none d-lg-table-cell">Docks_ep</td>
+            <td>Docks and Wharfs (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">DRIP</td>
+            <td class="d-none d-lg-table-cell">TreeDripLine_ep</td>
+            <td>Tree Drip Line for Delineating Root Systems (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">DRM</td>
+            <td class="d-none d-lg-table-cell">MonumentDR_ep</td>
+            <td>Monuments - Deep Rod Mark</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">6</td>
+          </tr>
+          <tr>
+            <td scope="row">DRNB</td>
+            <td class="d-none d-lg-table-cell">InletBottom_ep</td>
+            <td>Drainage Structure Bottoms (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">DRNP</td>
+            <td class="d-none d-lg-table-cell">DrainPipes_ep</td>
+            <td>Drainage Pipes and Spouts (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">DTCH</td>
+            <td class="d-none d-lg-table-cell">Ditch_ep</td>
+            <td>Ditch (Top, Bottom and Flow Lines) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">DTCHI</td>
+            <td class="d-none d-lg-table-cell">InletDBI_ep</td>
+            <td>Ditch Bottom Inlet (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">DTCHP</td>
+            <td class="d-none d-lg-table-cell">DitchPavt_ep</td>
+            <td>Ditch Pavement (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">DUCTA</td>
+            <td class="d-none d-lg-table-cell">ConduitA_ep</td>
+            <td>Utility Conduit &amp; Encasements Quality Level A Locate (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">DUCTB</td>
+            <td class="d-none d-lg-table-cell">ConduitB_ep</td>
+            <td>Utility Conduit &amp; Encasements Quality Level B Designate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">DUCTC</td>
+            <td class="d-none d-lg-table-cell">ConduitC_ep</td>
+            <td>Utility Conduit &amp; Encasements Quality Level C Above Ground Evidence (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">DUCTD</td>
+            <td class="d-none d-lg-table-cell">ConduitD_ep</td>
+            <td>Utility Conduit &amp; Encasements Quality Level D Existing Records (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">DUMB</td>
+            <td class="d-none d-lg-table-cell">DummyChains_ep</td>
+            <td>Dummy Chains (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">DWY</td>
+            <td class="d-none d-lg-table-cell">Driveway_ep</td>
+            <td>Driveway (Drive, Lane, Turnouts) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">EAST</td>
+            <td class="d-none d-lg-table-cell">PMEAST_ep</td>
+            <td>Pavement Marking Message - EAST (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">ECP</td>
+            <td class="d-none d-lg-table-cell">ElecMultiCtrl_ep</td>
+            <td>Electric Control Panel with Multiple Controls (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">ELECS</td>
+            <td class="d-none d-lg-table-cell">ElecServBox_ep</td>
+            <td>Electric Service Box (Large) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">ELEO</td>
+            <td class="d-none d-lg-table-cell">ElecOutlet_ep</td>
+            <td>Electrical Outlet (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">EM</td>
+            <td class="d-none d-lg-table-cell">WetlandEM_ep</td>
+            <td>Edge of Mangrove (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">EOI</td>
+            <td class="d-none d-lg-table-cell">SU_Interupt_ep</td>
+            <td>Subsurface Utility (End of Interuption) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">ESL</td>
+            <td class="d-none d-lg-table-cell">EndangeredL_ep</td>
+            <td>Endangered Species Line</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">ESMT</td>
+            <td class="d-none d-lg-table-cell">EaseLine_ep</td>
+            <td>Easement Lines (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">ESMTP</td>
+            <td class="d-none d-lg-table-cell">EasePerpLine</td>
+            <td>Easement Lines Perpetual (Proposed)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">ESP</td>
+            <td class="d-none d-lg-table-cell">EndangeredP_ep</td>
+            <td>Endangered Species Point</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">EXIST</td>
+            <td class="d-none d-lg-table-cell">DTMBoundary_ep</td>
+            <td>Digital Terrain Model (DTM) Boundary (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">FAU</td>
+            <td class="d-none d-lg-table-cell">WaterFct_ep</td>
+            <td>Faucet (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">FC</td>
+            <td class="d-none d-lg-table-cell">TankUG_ep</td>
+            <td>Fill Cap (Buried Tank) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">FES</td>
+            <td class="d-none d-lg-table-cell">EndTreatFES_ep</td>
+            <td>Flared End Section (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">FFE</td>
+            <td class="d-none d-lg-table-cell">FFElev_ep</td>
+            <td>Finished Floor Elevation (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">FH</td>
+            <td class="d-none d-lg-table-cell">FireHydrant_ep</td>
+            <td>Fire Hydrant (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">FLD</td>
+            <td class="d-none d-lg-table-cell">FloodLight_ep</td>
+            <td>Flood Light (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">FMA</td>
+            <td class="d-none d-lg-table-cell">SanitaryFM_A_ep</td>
+            <td>Force Main (All Sizes) Quality Level A Locate (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">FMB</td>
+            <td class="d-none d-lg-table-cell">SanitaryFM_B_ep</td>
+            <td>Force Main (All Sizes) Quality Level B Designate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">FMC</td>
+            <td class="d-none d-lg-table-cell">SanitaryFM_C_ep</td>
+            <td>Force Main (All Sizes) Quality Level C Above Ground Evidence (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">FMD</td>
+            <td class="d-none d-lg-table-cell">SanitaryFM_D_ep</td>
+            <td>Force Main (All Sizes) Quality Level D Existing Records (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">FNC</td>
+            <td class="d-none d-lg-table-cell">Fence_ep</td>
+            <td>Fence (All Types) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">FO</td>
+            <td class="d-none d-lg-table-cell">FOTAer_ep</td>
+            <td>Fiber Optics Telephone (Aerial) (Size Unknown) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">FOC</td>
+            <td class="d-none d-lg-table-cell">FOCAer_ep</td>
+            <td>Fiber Optics Cable (Aerial) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">FOCUA</td>
+            <td class="d-none d-lg-table-cell">FOCBurA_ep</td>
+            <td>Fiber Optics Cable Quality Level A Locate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">FOCUB</td>
+            <td class="d-none d-lg-table-cell">FOCBurB_ep</td>
+            <td>Fiber Optics Cable Quality Level B Designate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">FOCUC</td>
+            <td class="d-none d-lg-table-cell">FOCBurC_ep</td>
+            <td>Fiber Optics Cable Quality Level C Above Ground Evidence (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">FOCUD</td>
+            <td class="d-none d-lg-table-cell">FOCBurD_ep</td>
+            <td>Fiber Optics Cable Quality Level D Existing Records (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">FOP</td>
+            <td class="d-none d-lg-table-cell">FOEAer_ep</td>
+            <td>Fiber Optics Electrical (Aerial) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">FOPUA</td>
+            <td class="d-none d-lg-table-cell">FOEBurA_ep</td>
+            <td>Fiber Optics Electrical Quality Level A Locate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">FOPUB</td>
+            <td class="d-none d-lg-table-cell">FOEBurB_ep</td>
+            <td>Fiber Optics Electrical Quality Level B Designate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">FOPUC</td>
+            <td class="d-none d-lg-table-cell">FOEBurC_ep</td>
+            <td>Fiber Optics Electrical Quality Level C Above Ground Evidence (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">FOPUD</td>
+            <td class="d-none d-lg-table-cell">FOEBurD_ep</td>
+            <td>Fiber Optics Electrical Quality Level D Existing Records (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">FOTVUA</td>
+            <td class="d-none d-lg-table-cell">FOTVBurA_ep</td>
+            <td>Fiber Optics Television Quality Level A Locate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">FOTVUB</td>
+            <td class="d-none d-lg-table-cell">FOTVBurB_ep</td>
+            <td>Fiber Optics Television Quality Level B Designate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">FOTVUC</td>
+            <td class="d-none d-lg-table-cell">FOTVBurC_ep</td>
+            <td>Fiber Optics Television Quality Level C Above Ground Evidence (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">FOTVUD</td>
+            <td class="d-none d-lg-table-cell">FOTVBurD_ep</td>
+            <td>Fiber Optics Television Quality Level D Existing Records (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">FOUA</td>
+            <td class="d-none d-lg-table-cell">FOTBurA_ep</td>
+            <td>Fiber Optics Telephone Quality Level A Locate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">FOUB</td>
+            <td class="d-none d-lg-table-cell">FOTBurB_ep</td>
+            <td>Fiber Optics Telephone Quality Level B Designate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">FOUC</td>
+            <td class="d-none d-lg-table-cell">FOTBurC_ep</td>
+            <td>Fiber Optics Telephone Quality Level C Above Ground Evidence (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">FOUD</td>
+            <td class="d-none d-lg-table-cell">FOTBurD_ep</td>
+            <td>Fiber Optics Telephone Quality Level D Existing Records (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">FP</td>
+            <td class="d-none d-lg-table-cell">FlagPole_ep</td>
+            <td>Flag Pole (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">FUSE</td>
+            <td class="d-none d-lg-table-cell">ElecFuse_ep</td>
+            <td>Fuses (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">GA</td>
+            <td class="d-none d-lg-table-cell">Gauges_ep</td>
+            <td>Gauges (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">GASA</td>
+            <td class="d-none d-lg-table-cell">GasA_ep</td>
+            <td>Gas Line (All Sizes) Quality Level A Locate (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">GASB</td>
+            <td class="d-none d-lg-table-cell">GasB_ep</td>
+            <td>Gas Line (All Sizes) Quality Level B Designate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">GASC</td>
+            <td class="d-none d-lg-table-cell">GasC_ep</td>
+            <td>Gas Line (All Sizes) Quality Level C Above Ground Evidence (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">GASD</td>
+            <td class="d-none d-lg-table-cell">GasD_ep</td>
+            <td>Gas Line (All Sizes) Quality Level D Existing Records (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">GBRK</td>
+            <td class="d-none d-lg-table-cell">GroundBrkLine_ep</td>
+            <td>Ground Break Line (Not Slopes or Embankments) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">GI</td>
+            <td class="d-none d-lg-table-cell">InletGutter_ep</td>
+            <td>Gutter Inlets (All Types) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">GND</td>
+            <td class="d-none d-lg-table-cell">GroundShot_ep</td>
+            <td>Ground Shot for Digital Terrain Model (DTM) Densification (Hard Bottom Soundings) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">GOLF</td>
+            <td class="d-none d-lg-table-cell">Golf_ep</td>
+            <td>Golf Course Features (All Types) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">GRDBL</td>
+            <td class="d-none d-lg-table-cell">GuardrailDbl_ep</td>
+            <td>Guardrail Double Face (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">GRL</td>
+            <td class="d-none d-lg-table-cell">GuardrailLt_ep</td>
+            <td>Guardrail Left (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">GRR</td>
+            <td class="d-none d-lg-table-cell">GuardrailRt_ep</td>
+            <td>Guardrail Right (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">GRT</td>
+            <td class="d-none d-lg-table-cell">DrainGrate_ep</td>
+            <td>Metal Drainage Grate within Concrete Structure (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">GRTL</td>
+            <td class="d-none d-lg-table-cell">GovGrantLine_ep</td>
+            <td>Government: Grant Line (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">GRV</td>
+            <td class="d-none d-lg-table-cell">TreeLineGrove_ep</td>
+            <td>Groves &amp; Orchards (Boundary) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">GT</td>
+            <td class="d-none d-lg-table-cell">Gates_ep</td>
+            <td>Gates (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">GTM</td>
+            <td class="d-none d-lg-table-cell">GasTestMisc_ep</td>
+            <td>Gas Test &amp; Miscellaneous (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">GYA</td>
+            <td class="d-none d-lg-table-cell">GuyWireAnchor_ep</td>
+            <td>Guy Anchor (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">GYP</td>
+            <td class="d-none d-lg-table-cell">GuyWirePole_ep</td>
+            <td>Guy Pole (Dead-man) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">GYS</td>
+            <td class="d-none d-lg-table-cell">GuyWireSpan_ep</td>
+            <td>Span Guys (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">HED</td>
+            <td class="d-none d-lg-table-cell">ShrubHedge_ep</td>
+            <td>Hedges and Shrubs (Boundary) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">HML</td>
+            <td class="d-none d-lg-table-cell">Tower_ep</td>
+            <td>High Mast Lighting Poles (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">HNDC</td>
+            <td class="d-none d-lg-table-cell">PMAccessible_ep</td>
+            <td>Pavement Marking Symbol - Accessible (Handicap) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">HNDRL</td>
+            <td class="d-none d-lg-table-cell">Railing_ep</td>
+            <td>Railings (All Types); Piperail, Guiderail, Handrail Used for Pedestrian and Bicycles (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">HOLE</td>
+            <td class="d-none d-lg-table-cell">Hole_ep</td>
+            <td>Hole (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">HUMP</td>
+            <td class="d-none d-lg-table-cell">PMHUMP_ep</td>
+            <td>Pavement Marking Message - HUMP (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">HVL</td>
+            <td class="d-none d-lg-table-cell">ElecAerHVL_ep</td>
+            <td>High Voltage Transmission Line (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">INCN</td>
+            <td class="d-none d-lg-table-cell">Furnace_ep</td>
+            <td>Incinerator, Boiler, or Furnace (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">INV</td>
+            <td class="d-none d-lg-table-cell">FlowlineInvert_ep</td>
+            <td>Flow Line or Invert Elevations (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">IRC</td>
+            <td class="d-none d-lg-table-cell">MonumentIRC_ep</td>
+            <td>Monuments - 5/8 Rod and Cap</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">6</td>
+          </tr>
+          <tr>
+            <td scope="row">ITCP</td>
+            <td class="d-none d-lg-table-cell">ITSCamera_ep</td>
+            <td>Intelligent Transportation System (ITS) Closed Caption TV Camera Pole (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">8</td>
+          </tr>
+          <tr>
+            <td scope="row">ITFCA</td>
+            <td class="d-none d-lg-table-cell">ITSFiberCableA_ep</td>
+            <td>Intelligent Transportation System (ITS) Fiber Cable Quality Level A Locate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">8</td>
+          </tr>
+          <tr>
+            <td scope="row">ITFCB</td>
+            <td class="d-none d-lg-table-cell">ITSFiberCableB_ep</td>
+            <td>Intelligent Transportation System (ITS) Fiber Cable Quality Level B Designate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">8</td>
+          </tr>
+          <tr>
+            <td scope="row">ITFCC</td>
+            <td class="d-none d-lg-table-cell">ITSFiberCableC_ep</td>
+            <td>Intelligent Transportation System (ITS) Fiber Cable Quality Level C Above Ground Evidence (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">8</td>
+          </tr>
+          <tr>
+            <td scope="row">ITFCD</td>
+            <td class="d-none d-lg-table-cell">ITSFiberCableD_ep</td>
+            <td>Intelligent Transportation System (ITS) Fiber Cable Quality Level D Existing Records (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">8</td>
+          </tr>
+          <tr>
+            <td scope="row">ITPS</td>
+            <td class="d-none d-lg-table-cell">ITSPwrSupply_ep</td>
+            <td>Intelligent Transportation System (ITS) Closed Caption TV Power Supply (Wired, Solar, etc) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">8</td>
+          </tr>
+          <tr>
+            <td scope="row">ITVS</td>
+            <td class="d-none d-lg-table-cell">ITSVehSensor_ep</td>
+            <td>Intelligent Transportation System (ITS) Vehicle Sensor, Infared (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">8</td>
+          </tr>
+          <tr>
+            <td scope="row">JB</td>
+            <td class="d-none d-lg-table-cell">DrainJnctBox_ep</td>
+            <td>Drainage Junction Box (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">LANE</td>
+            <td class="d-none d-lg-table-cell">PMLANE_ep</td>
+            <td>Pavement Marking Message - LANE (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">LARW</td>
+            <td class="d-none d-lg-table-cell">LARWLine_ep</td>
+            <td>Limited Access Right of Way Lines (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">LARWP</td>
+            <td class="d-none d-lg-table-cell">LARWLine</td>
+            <td>Limited Access Right of Way Lines (Proposed)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">LEFT</td>
+            <td class="d-none d-lg-table-cell">PMLEFT_ep</td>
+            <td>Pavement Marking Message - LEFT (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">LICAG</td>
+            <td class="d-none d-lg-table-cell">EaseLicLine</td>
+            <td>Easement License Agreement Line</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">LL</td>
+            <td class="d-none d-lg-table-cell">LaneLine_ep</td>
+            <td>Pavement Marking - Lane Lines, Delineates Travel Lanes (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">LMB</td>
+            <td class="d-none d-lg-table-cell">LowBrdgMemb_ep</td>
+            <td>Low Members of the Bridge (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">4</td>
+          </tr>
+          <tr>
+            <td scope="row">LOC</td>
+            <td class="d-none d-lg-table-cell">ConstLimits</td>
+            <td>Construction Limits</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">LOTLN</td>
+            <td class="d-none d-lg-table-cell">GovLotLine_ep</td>
+            <td>Government: Lot Line (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">LP</td>
+            <td class="d-none d-lg-table-cell">Luminaire_ep</td>
+            <td>Street Light / Pole (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">LV</td>
+            <td class="d-none d-lg-table-cell">SlopesLevee_ep</td>
+            <td>Levees, Dikes, or Dams (Top or Bottom) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">MAINT</td>
+            <td class="d-none d-lg-table-cell">MaintLine</td>
+            <td>Maintenance Line</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">MAR</td>
+            <td class="d-none d-lg-table-cell">WetlandMAR_ep</td>
+            <td>Edge of Wetlands (Marsh or Swamp) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">MBX</td>
+            <td class="d-none d-lg-table-cell">Mailbox_ep</td>
+            <td>Mailbox(s) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">ME</td>
+            <td class="d-none d-lg-table-cell">MeterElec_ep</td>
+            <td>Meter (Electric) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">MEDI</td>
+            <td class="d-none d-lg-table-cell">InletMedian_ep</td>
+            <td>Median Inlets (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">MEDRL</td>
+            <td class="d-none d-lg-table-cell">GovMeanderLine_ep</td>
+            <td>Government: Meander Line (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">MERGE</td>
+            <td class="d-none d-lg-table-cell">PMMERGE_ep</td>
+            <td>Pavement Marking Message - MERGE (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">MERGLT</td>
+            <td class="d-none d-lg-table-cell">PMMergeLeft_ep</td>
+            <td>Pavement Marking - Merge Left Arrow (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">MERGRT</td>
+            <td class="d-none d-lg-table-cell">PMMergeRight_ep</td>
+            <td>Pavement Marking - Merge Right Arrow (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">MES</td>
+            <td class="d-none d-lg-table-cell">EndTreatMES_ep</td>
+            <td>Mitered End Section (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">MEU</td>
+            <td class="d-none d-lg-table-cell">MeterElecBur_ep</td>
+            <td>Meter (Electric) (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">MG</td>
+            <td class="d-none d-lg-table-cell">MeterGas_ep</td>
+            <td>Meter (Gas) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">MH</td>
+            <td class="d-none d-lg-table-cell">ManholeUnknown_ep</td>
+            <td>Manhole (Unknown) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">MHCATV</td>
+            <td class="d-none d-lg-table-cell">ManholeCOMM_ep</td>
+            <td>Manhole (Communications) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">MHD</td>
+            <td class="d-none d-lg-table-cell">ManholeSW_ep</td>
+            <td>Manhole (Storm Water) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">MHE</td>
+            <td class="d-none d-lg-table-cell">ManholeElec_ep</td>
+            <td>Manhole (Electric) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">MHG</td>
+            <td class="d-none d-lg-table-cell">ManholeGas_ep</td>
+            <td>Manhole (Gas) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">MHS</td>
+            <td class="d-none d-lg-table-cell">ManholeSS_ep</td>
+            <td>Manhole (Sanitary Sewer) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">MHT</td>
+            <td class="d-none d-lg-table-cell">ManholeTel_ep</td>
+            <td>Manhole (Telephone) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">MHW</td>
+            <td class="d-none d-lg-table-cell">ManholeWater_ep</td>
+            <td>Manhole (Water) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">MHWL</td>
+            <td class="d-none d-lg-table-cell">MHWL_TIITF_Line</td>
+            <td>TIITF:Mean / Ordinary High Water Lines</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">MISC</td>
+            <td class="d-none d-lg-table-cell">TopoMisc_ep</td>
+            <td>Topography (Miscellaneous) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">MON</td>
+            <td class="d-none d-lg-table-cell">MonConRW</td>
+            <td>Mapping Concrete Monument Right of Way (Annotation Cell)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">MONRD</td>
+            <td class="d-none d-lg-table-cell">MonRodOpen</td>
+            <td>Mapping Rod Monument Open (Found) (Annotation Cell)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">MONRDS</td>
+            <td class="d-none d-lg-table-cell">MonRodSolid</td>
+            <td>Mapping Rod Monument Solid (Set) (Annotation Cell)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">MONSQ</td>
+            <td class="d-none d-lg-table-cell">MonConcOpen</td>
+            <td>Mapping Concrete Monument Open (Found) (Annotation Cell)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">MONSQS</td>
+            <td class="d-none d-lg-table-cell">MonConcSolid</td>
+            <td>Mapping Concrete Monument Solid (Set) (Annotation Cell)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">MONW</td>
+            <td class="d-none d-lg-table-cell">WellMon_ep</td>
+            <td>Well Monitoring, Taps (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">MP</td>
+            <td class="d-none d-lg-table-cell">PavtMisc_ep</td>
+            <td>Pavement Parking Lot/Guardrail/Miscellaneous Pavement (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">MPH</td>
+            <td class="d-none d-lg-table-cell">PMMPH_ep</td>
+            <td>Pavement Marking Message - MPH (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">MS</td>
+            <td class="d-none d-lg-table-cell">SignMulti_ep</td>
+            <td>Multi-column Sign (Large Sign) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">MU</td>
+            <td class="d-none d-lg-table-cell">MeterUnk_ep</td>
+            <td>Meter (Unknown) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">MURPHY</td>
+            <td class="d-none d-lg-table-cell">Murphy_TIITF_Line</td>
+            <td>TIITF: Upland TIITF:Murphy Reservations Lines</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">MW</td>
+            <td class="d-none d-lg-table-cell">MeterWater_ep</td>
+            <td>Meter (Water) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">NL</td>
+            <td class="d-none d-lg-table-cell">MonumentNL_ep</td>
+            <td>Monuments - Nail, Spike, Pin</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">6</td>
+          </tr>
+          <tr>
+            <td scope="row">NORTH</td>
+            <td class="d-none d-lg-table-cell">PMNORTH_ep</td>
+            <td>Pavement Marking Message - NORTH (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">NOTE</td>
+            <td class="d-none d-lg-table-cell">TextFeatureLabel</td>
+            <td>Text - Feature Label</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">NPWLA</td>
+            <td class="d-none d-lg-table-cell">WaterNP_A_ep</td>
+            <td>Non-potable Water Line (All Sizes) Quality Level A Locate (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">NPWLB</td>
+            <td class="d-none d-lg-table-cell">WaterNP_B_ep</td>
+            <td>Non-potable Water Line (All Sizes) Quality Level B Designate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">NPWLC</td>
+            <td class="d-none d-lg-table-cell">WaterNP_C_ep</td>
+            <td>Non-potable Water Line (All Sizes) Quality Level C Above Ground Evidence (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">NPWLD</td>
+            <td class="d-none d-lg-table-cell">WaterNP_D_ep</td>
+            <td>Non-potable Water Line (All Sizes) Quality Level D Existing Records (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">NSPF</td>
+            <td class="d-none d-lg-table-cell">GovParkLine_ep</td>
+            <td>Government: National or State Park or Forest Line (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">NVAL</td>
+            <td class="d-none d-lg-table-cell">NonVehcLine_ep</td>
+            <td>Existing:Non-Vehicular Access Line</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">OBSC</td>
+            <td class="d-none d-lg-table-cell">AreaObscured_ep</td>
+            <td>Obscured Area (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">OM</td>
+            <td class="d-none d-lg-table-cell">MonumentOM_ep</td>
+            <td>Monuments - Other Marker?</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">6</td>
+          </tr>
+          <tr>
+            <td scope="row">ONLY</td>
+            <td class="d-none d-lg-table-cell">PMONLY_ep</td>
+            <td>Pavement Marking Message - ONLY (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">OP</td>
+            <td class="d-none d-lg-table-cell">ShrubOrnamental_ep</td>
+            <td>Ornamental Plant (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">PASS</td>
+            <td class="d-none d-lg-table-cell">PMPASS_ep</td>
+            <td>Pavement Marking Message - PASS (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">PAVBRK</td>
+            <td class="d-none d-lg-table-cell">PavtBreak_ep</td>
+            <td>Pavement Slope Break Line (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">PCULV</td>
+            <td class="d-none d-lg-table-cell">PipeCulvert_ep</td>
+            <td>Pipe Culvert (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">PED</td>
+            <td class="d-none d-lg-table-cell">PMPED_ep</td>
+            <td>Pavement Marking Message - PED (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">PETROA</td>
+            <td class="d-none d-lg-table-cell">Oil_A_ep</td>
+            <td>Oil Line (All Sizes) Quality Level A Locate (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">PETROB</td>
+            <td class="d-none d-lg-table-cell">Oil_B_ep</td>
+            <td>Oil Line (All Sizes) Quality Level B Designate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">PETROC</td>
+            <td class="d-none d-lg-table-cell">Oil_C_ep</td>
+            <td>Oil Line (All Sizes) Quality Level C Above Ground Evidence (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">PETROD</td>
+            <td class="d-none d-lg-table-cell">Oil_D_ep</td>
+            <td>Oil Line (All Sizes) Quality Level D Existing Records (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">PHW</td>
+            <td class="d-none d-lg-table-cell">HazardWaste_ep</td>
+            <td>Potential Hazardous Waste Site (Old Gas Stations, Dry Cleaners, etc.) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">PIL</td>
+            <td class="d-none d-lg-table-cell">PilingPt_ep</td>
+            <td>Pilings, Piers, or Columns (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">PILE</td>
+            <td class="d-none d-lg-table-cell">PilingColumn_ep</td>
+            <td>Pilings and Columns (All Types) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">PIP</td>
+            <td class="d-none d-lg-table-cell">MonumentPIP_ep</td>
+            <td>Monuments - Metal Pipe, Rod, Bar</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">6</td>
+          </tr>
+          <tr>
+            <td scope="row">PIPENA</td>
+            <td class="d-none d-lg-table-cell">PipeEncaseA_ep</td>
+            <td>Pipe Encasements Quality Level A Locate (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">PIPENB</td>
+            <td class="d-none d-lg-table-cell">PipeEncaseB_ep</td>
+            <td>Pipe Encasements Quality Level B Designate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">PIPENC</td>
+            <td class="d-none d-lg-table-cell">PipeEncaseC_ep</td>
+            <td>Pipe Encasements Quality Level C Above Ground Evidence (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">PIPEND</td>
+            <td class="d-none d-lg-table-cell">PipeEncaseD_ep</td>
+            <td>Pipe Encasements Quality Level D Existing Records (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">PKGM</td>
+            <td class="d-none d-lg-table-cell">ParkMeter_ep</td>
+            <td>Parking Meter (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">PLEQ</td>
+            <td class="d-none d-lg-table-cell">Playground_ep</td>
+            <td>Playground Equipment (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">PLNT</td>
+            <td class="d-none d-lg-table-cell">LandscapeBordr_ep</td>
+            <td>Landscape Planter Structures and Areas (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">PMON</td>
+            <td class="d-none d-lg-table-cell">MonumentCP_ep</td>
+            <td>Monuments - Concrete (Poured)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">6</td>
+          </tr>
+          <tr>
+            <td scope="row">PMP</td>
+            <td class="d-none d-lg-table-cell">PumpNonPet_ep</td>
+            <td>Pump (Non Petroleum) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">PMPF</td>
+            <td class="d-none d-lg-table-cell">Pump_ep</td>
+            <td>Pump (Petroleum / Fuel) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">PMPIS</td>
+            <td class="d-none d-lg-table-cell">PumpIsland_ep</td>
+            <td>Pump Island (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">PMPST</td>
+            <td class="d-none d-lg-table-cell">SanitarySewerPSta_ep</td>
+            <td>Pump Station (Sanitary Sewer) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">PMRK</td>
+            <td class="d-none d-lg-table-cell">PMRK_ep</td>
+            <td>Pavement Marking - Line Markings (Exclude Travel Lanes) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">POOL</td>
+            <td class="d-none d-lg-table-cell">Pools_ep</td>
+            <td>Pools and Fountains (Not Ponds) (All Types) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">POST</td>
+            <td class="d-none d-lg-table-cell">Post_ep</td>
+            <td>Post or Pole (Not Monuments) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">PP</td>
+            <td class="d-none d-lg-table-cell">PoleElec_ep</td>
+            <td>Electrical Pole (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">PPT</td>
+            <td class="d-none d-lg-table-cell">PoleElecT_ep</td>
+            <td>Electrical Pole With Transformer (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">PRI</td>
+            <td class="d-none d-lg-table-cell">ElecAerPri_ep</td>
+            <td>Conductors (Primary Distribution) (Aerial) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">PROP</td>
+            <td class="d-none d-lg-table-cell">PropertyLine_ep</td>
+            <td>Property Lines / Lot Lines (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">PRWM</td>
+            <td class="d-none d-lg-table-cell">MonPermRW</td>
+            <td>Mapping Permanent Right of Way Monument (Annotation Cell)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">PS</td>
+            <td class="d-none d-lg-table-cell">PedSignal_ep</td>
+            <td>Pedestrian Signal Unit, Signage (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">PST</td>
+            <td class="d-none d-lg-table-cell">MonumentPST_ep</td>
+            <td>Monuments - Post, Stake, Staub</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">6</td>
+          </tr>
+          <tr>
+            <td scope="row">PWR</td>
+            <td class="d-none d-lg-table-cell">ElecAer_ep</td>
+            <td>Electrical Conductors (Distribution &amp; Transmission) (Aerial) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">QDEL</td>
+            <td class="d-none d-lg-table-cell">SU_Delineator_ep</td>
+            <td>Subsurface Utility (Quality Level Delineator) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">QLA</td>
+            <td class="d-none d-lg-table-cell">SU_QLA_ep</td>
+            <td>Subsurface Utility Quality Level A Locate (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">QLB</td>
+            <td class="d-none d-lg-table-cell">SU_QLB_ep</td>
+            <td>Subsurface Utility Quality Level B Designate (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">QLC</td>
+            <td class="d-none d-lg-table-cell">SU_QLC_ep</td>
+            <td>Subsurface Utility Quality Level C Above Ground Evidence (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">QLD</td>
+            <td class="d-none d-lg-table-cell">SU_QLD_ep</td>
+            <td>Subsurface Utility Quality Level D Existing Records (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">QQTRS</td>
+            <td class="d-none d-lg-table-cell">GovQtrQtrLine_ep</td>
+            <td>Government: Quarter / Quarter Section Line (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">QTREW</td>
+            <td class="d-none d-lg-table-cell">GovQtrSectCnrEW_ep</td>
+            <td>Government: 1/4 Section Corner E or W (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">QTRNS</td>
+            <td class="d-none d-lg-table-cell">GovQtrSectCnrNS_ep</td>
+            <td>Government: 1/4 Section Corner N or S (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">QTRS</td>
+            <td class="d-none d-lg-table-cell">GovQuarterLine_ep</td>
+            <td>Government: Quarter Section Line (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">RAAL</td>
+            <td class="d-none d-lg-table-cell">PMRoundaboutApproachL_ep</td>
+            <td>Pavement Marking - Roundabout Approach Left Arrow (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">RAALT</td>
+            <td class="d-none d-lg-table-cell">PMRoundaboutApproachLT_ep</td>
+            <td>Pavement Marking - Roundabout Approach Left-Thru Arrow (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">RAFL</td>
+            <td class="d-none d-lg-table-cell">PMRoundaboutFishL_ep</td>
+            <td>Pavement Marking - Roundabout Fish-hook Left Arrow (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">RAFLR</td>
+            <td class="d-none d-lg-table-cell">PMRoundaboutFishLR_ep</td>
+            <td>Pavement Marking - Roundabout Fish-hook Left-Right Arrow (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">RAFT</td>
+            <td class="d-none d-lg-table-cell">PMRoundaboutFishT_ep</td>
+            <td>Pavement Marking - Roundabout Fish-hook Thru Arrow (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">RAFTL</td>
+            <td class="d-none d-lg-table-cell">PMRoundaboutFishTL_ep</td>
+            <td>Pavement Marking - Roundabout Fish-hook Thru-Left Arrow (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">RAFTLR</td>
+            <td class="d-none d-lg-table-cell">PMRoundaboutFishTLR_ep</td>
+            <td>Pavement Marking - Roundabout Fish-hook Thru-Left-Right Arrow (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">RAFTR</td>
+            <td class="d-none d-lg-table-cell">PMRoundaboutFishTR_ep</td>
+            <td>Pavement Marking - Roundabout Fish-hook Thru-Right Arrow (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">RAMP</td>
+            <td class="d-none d-lg-table-cell">AccessRamp_ep</td>
+            <td>Accessible Ramp (For Buildings, Docks, Sidewalks, etc. ) (Not Curbs) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">RD</td>
+            <td class="d-none d-lg-table-cell">Trail_ep</td>
+            <td>Roadway,Trail (Unpaved) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">REDULT</td>
+            <td class="d-none d-lg-table-cell">PMLaneReduceLeft_ep</td>
+            <td>Pavement Marking Message - Lane Reduction Left Arrow (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">REDURT</td>
+            <td class="d-none d-lg-table-cell">PMLaneReduceRight_ep</td>
+            <td>Pavement Marking Message - Lane Reduction Right Arrow (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">REFL</td>
+            <td class="d-none d-lg-table-cell">RefPtLine</td>
+            <td>Survey Reference Point Line / Detail (Miscellaneous)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">6</td>
+          </tr>
+          <tr>
+            <td scope="row">RETW</td>
+            <td class="d-none d-lg-table-cell">WallRetainEarth_ep</td>
+            <td>Wall Holding Earth (All) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">RG</td>
+            <td class="d-none d-lg-table-cell">GasReg_ep</td>
+            <td>Gas Regulator (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">RIGHT</td>
+            <td class="d-none d-lg-table-cell">PMRIGHT_ep</td>
+            <td>Pavement Marking Message - RIGHT (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">RIP</td>
+            <td class="d-none d-lg-table-cell">RipRap_ep</td>
+            <td>Rip Rap, Rubble (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">RLS</td>
+            <td class="d-none d-lg-table-cell">PMRLS_ep</td>
+            <td>Pavement Marking Symbol - Restricted Lane (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">ROW</td>
+            <td class="d-none d-lg-table-cell">RWLine_ep</td>
+            <td>Right of Way Lines (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">ROWP</td>
+            <td class="d-none d-lg-table-cell">RWLine</td>
+            <td>Right of Way Lines (Proposed)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">RR</td>
+            <td class="d-none d-lg-table-cell">RailroadTracks_ep</td>
+            <td>Railroad Tracks (Rail, Bed) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">RRCL</td>
+            <td class="d-none d-lg-table-cell">RRBaseline</td>
+            <td>Baseline:Rail Road Centerline</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">6</td>
+          </tr>
+          <tr>
+            <td scope="row">RRMP</td>
+            <td class="d-none d-lg-table-cell">RailroadMP_ep</td>
+            <td>Railroad Milepost (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">RRS</td>
+            <td class="d-none d-lg-table-cell">RailroadSwitch_ep</td>
+            <td>Railroad Switch (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">RRWS</td>
+            <td class="d-none d-lg-table-cell">RailroadWarn_ep</td>
+            <td>Railroad Warning Sign (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">RRX</td>
+            <td class="d-none d-lg-table-cell">RailroadXing_ep</td>
+            <td>Railroad Crossing (Roadway Platforms), Railroad Signal w/ Gate (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">RXR</td>
+            <td class="d-none d-lg-table-cell">PMRXR_ep</td>
+            <td>Pavement Marking Symbol - Railroad Crossing Symbol (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SAT</td>
+            <td class="d-none d-lg-table-cell">MonumentSAT_ep</td>
+            <td>Monuments - Hub and Tac</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">6</td>
+          </tr>
+          <tr>
+            <td scope="row">SATD</td>
+            <td class="d-none d-lg-table-cell">SateDish_ep</td>
+            <td>Satellite Dish Antenna (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">SCHOOL</td>
+            <td class="d-none d-lg-table-cell">PMSCHOOL_ep</td>
+            <td>Pavement Marking Message - SCHOOL (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SCT</td>
+            <td class="d-none d-lg-table-cell">TreeLineScatter_ep</td>
+            <td>Scattered Trees (Boundary) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SE</td>
+            <td class="d-none d-lg-table-cell">SanitarySewerEff_ep</td>
+            <td>Sanitary Effluent (Open Channel) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">SEAW</td>
+            <td class="d-none d-lg-table-cell">WallSea_ep</td>
+            <td>Sea Walls (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SEC</td>
+            <td class="d-none d-lg-table-cell">ElecAerSec_ep</td>
+            <td>Conductors (Secondary Distribution) (Aerial) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">SECT</td>
+            <td class="d-none d-lg-table-cell">GovSectionLine_ep</td>
+            <td>Government:  Section Lines (Existiing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">SEW</td>
+            <td class="d-none d-lg-table-cell">EndTreatSEW_ep</td>
+            <td>Straight Endwall (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">SGNC</td>
+            <td class="d-none d-lg-table-cell">SignColumn_ep</td>
+            <td>Cantilevered Sign Column (Large) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SGNT</td>
+            <td class="d-none d-lg-table-cell">SignTrussOH_ep</td>
+            <td>Trusses and Cantilevers for Overhead Signs (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SHARLN</td>
+            <td class="d-none d-lg-table-cell">PMSharedLane_ep</td>
+            <td>Pavement Marking Symbol - Shared Lane (with bicycles) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SHLDR</td>
+            <td class="d-none d-lg-table-cell">ShldrPaved_ep</td>
+            <td>Shoulder Edge (Paved) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SHP</td>
+            <td class="d-none d-lg-table-cell">PoleShared_ep</td>
+            <td>Shared Pole (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">SHPT</td>
+            <td class="d-none d-lg-table-cell">PoleSharedT_ep</td>
+            <td>Shared Pole with Transformer (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">SHR</td>
+            <td class="d-none d-lg-table-cell">Shrub_ep</td>
+            <td>Shrub, Bush (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SHRC</td>
+            <td class="d-none d-lg-table-cell">ShrubConiferous_ep</td>
+            <td>Coniferous Shrub (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SHRD</td>
+            <td class="d-none d-lg-table-cell">ShrubDeciduous_ep</td>
+            <td>Deciduous Shrub (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SHWM</td>
+            <td class="d-none d-lg-table-cell">WaterSeasHghMrk_ep</td>
+            <td>Seasonal High Water Mark (Bridges, Drainage Ponds and Trees as marked by Environmental) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">SIG</td>
+            <td class="d-none d-lg-table-cell">Signal_ep</td>
+            <td>Signal Head (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SIGC</td>
+            <td class="d-none d-lg-table-cell">SignalControl_ep</td>
+            <td>Signal Controller (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SIGNAL</td>
+            <td class="d-none d-lg-table-cell">PMSIGNAL_ep</td>
+            <td>Pavement Marking Message - SIGNAL (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SIGP</td>
+            <td class="d-none d-lg-table-cell">SignalPedestal_ep</td>
+            <td>Signal on Pedestal (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SILO</td>
+            <td class="d-none d-lg-table-cell">Silo_ep</td>
+            <td>Silo (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SILT</td>
+            <td class="d-none d-lg-table-cell">GroundShotSilt_ep</td>
+            <td>Top Elevation of Muck or Silt (Soft Bottom Soundings)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SLC</td>
+            <td class="d-none d-lg-table-cell">LiteCond_ep</td>
+            <td>Street Lighting Conduit (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">SLOW</td>
+            <td class="d-none d-lg-table-cell">PMSLOW_ep</td>
+            <td>Pavement Marking Message - SLOW (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SLP</td>
+            <td class="d-none d-lg-table-cell">Slopes_ep</td>
+            <td>Natural Slopes (Top or Bottom) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SLV</td>
+            <td class="d-none d-lg-table-cell">SubVacOrigLotLine</td>
+            <td>Subdivision Vacated or Original Lot Line (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">SMA</td>
+            <td class="d-none d-lg-table-cell">SignalSupport_ep</td>
+            <td>Signal Supports (Including Mast Arm) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SMAE</td>
+            <td class="d-none d-lg-table-cell">SignalSupportExt_ep</td>
+            <td>Signal Support Mast Arm Extension (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SOUTH</td>
+            <td class="d-none d-lg-table-cell">PMSOUTH_ep</td>
+            <td>Pavement Marking Message - SOUTH (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SP</td>
+            <td class="d-none d-lg-table-cell">WaterStandpipe_ep</td>
+            <td>Standpipe (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">SPD</td>
+            <td class="d-none d-lg-table-cell">DrainSpecial_ep</td>
+            <td>Special Drainage Feature (Describe) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">SPEW</td>
+            <td class="d-none d-lg-table-cell">EndTreatSPEW_ep</td>
+            <td>Special Endwall (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">SPH</td>
+            <td class="d-none d-lg-table-cell">Sprinkler_ep</td>
+            <td>Sprinkler Head (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">SPL</td>
+            <td class="d-none d-lg-table-cell">DrainSpillwy_ep</td>
+            <td>Spillways, Flumes or Scuppers (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">SPLE</td>
+            <td class="d-none d-lg-table-cell">ITSFiberSpliceE_ep</td>
+            <td>Intelligent Transportation System (ITS) Fiber Spliced Enclosure (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">8</td>
+          </tr>
+          <tr>
+            <td scope="row">SPLV</td>
+            <td class="d-none d-lg-table-cell">ITSFiberSpliceV_ep</td>
+            <td>Intelligent Transportation System (ITS) Fiber Spliced Vault (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">8</td>
+          </tr>
+          <tr>
+            <td scope="row">SPR</td>
+            <td class="d-none d-lg-table-cell">Tributary_ep</td>
+            <td>Spring (Water Source) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SRVC</td>
+            <td class="d-none d-lg-table-cell">JunctBox_ep</td>
+            <td>Junction Box / Service Cabinet (Elec/Tel) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">SSA</td>
+            <td class="d-none d-lg-table-cell">SanitarySewerA_ep</td>
+            <td>Sanitary Sewer (All Sizes) Quality Level A Locate (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">SSB</td>
+            <td class="d-none d-lg-table-cell">SanitarySewerB_ep</td>
+            <td>Sanitary Sewer (All Sizes) Quality Level B Designate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">SSC</td>
+            <td class="d-none d-lg-table-cell">SanitarySewerC_ep</td>
+            <td>Sanitary Sewer (All Sizes) Quality Level C Above Ground Evidence (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">SSD</td>
+            <td class="d-none d-lg-table-cell">SanitarySewerD_ep</td>
+            <td>Sanitary Sewer (All Sizes) Quality Level D Existing Records (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">SSP</td>
+            <td class="d-none d-lg-table-cell">SpanWireP_ep</td>
+            <td>Signal / Span Wire Pole (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SSS</td>
+            <td class="d-none d-lg-table-cell">SignSingle_ep</td>
+            <td>Sign (Single Pole Support) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SSW</td>
+            <td class="d-none d-lg-table-cell">SpanWire_ep</td>
+            <td>Signal / Span Wire (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">STAL</td>
+            <td class="d-none d-lg-table-cell">PMSTAL_ep</td>
+            <td>Pavement Marking - Straight and Turn Arrow Left (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">STALR</td>
+            <td class="d-none d-lg-table-cell">PMTALRS_ep</td>
+            <td>Pavement Marking - Turn Arrow Left, Right and Straight (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">STAR</td>
+            <td class="d-none d-lg-table-cell">PMSTAR_ep</td>
+            <td>Pavement Marking - Straight and Turn Arrow Right (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">STAROW</td>
+            <td class="d-none d-lg-table-cell">PMSTAROW_ep</td>
+            <td>Pavement Marking - Straight Through Direction Arrow (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">STCKP</td>
+            <td class="d-none d-lg-table-cell">StockPile_ep</td>
+            <td>Stock Piles (All Types) (Dirt, Gravel, Sand, etc.) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">STEAMA</td>
+            <td class="d-none d-lg-table-cell">SteamA_ep</td>
+            <td>Steam Line Quality Level A Locate (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">STEAMB</td>
+            <td class="d-none d-lg-table-cell">SteamB_ep</td>
+            <td>Steam Line Quality Level B Designate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">STEAMC</td>
+            <td class="d-none d-lg-table-cell">SteamC_ep</td>
+            <td>Steam Line Quality Level C Above Ground Evidence (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">STEAMD</td>
+            <td class="d-none d-lg-table-cell">SteamD_ep</td>
+            <td>Steam Line Quality Level D Existing Records (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">STL</td>
+            <td class="d-none d-lg-table-cell">GovStateLine_ep</td>
+            <td>Government: State Line (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">STM</td>
+            <td class="d-none d-lg-table-cell">Stump_ep</td>
+            <td>Stump (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">STMD</td>
+            <td class="d-none d-lg-table-cell">MonumentSTD_ep</td>
+            <td>Monuments - Stamped Disk</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">6</td>
+          </tr>
+          <tr>
+            <td scope="row">STMP</td>
+            <td class="d-none d-lg-table-cell">MonumentSTP_ep</td>
+            <td>Monuments - Stamped Plate</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">6</td>
+          </tr>
+          <tr>
+            <td scope="row">STOP</td>
+            <td class="d-none d-lg-table-cell">PMSTOP_ep</td>
+            <td>Pavement Marking Message - STOP (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">STP</td>
+            <td class="d-none d-lg-table-cell">Stairs_ep</td>
+            <td>Stairways, Steps (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">STRM</td>
+            <td class="d-none d-lg-table-cell">StreamEdge_ep</td>
+            <td>Stream Edge (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">STRMC</td>
+            <td class="d-none d-lg-table-cell">StreamCtr_ep</td>
+            <td>Stream Center (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">STS</td>
+            <td class="d-none d-lg-table-cell">StormSewer_ep</td>
+            <td>Storm Sewer (All Sizes) (Drain Pipes and Spouts) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">STTK</td>
+            <td class="d-none d-lg-table-cell">TankStor_ep</td>
+            <td>Storage Tank (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SUBL</td>
+            <td class="d-none d-lg-table-cell">SubDivLine</td>
+            <td>Subdivision Line (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">SUEL</td>
+            <td class="d-none d-lg-table-cell">SUEL_TIITF_Line</td>
+            <td>DEP:TIITF:Safe Upland Elevation Lines or Jurisdictional Lines established by DEP methodology</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">SUN</td>
+            <td class="d-none d-lg-table-cell">PMSUN_ep</td>
+            <td>Pavement Marking Message - SUN (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SW</td>
+            <td class="d-none d-lg-table-cell">Switchgear_ep</td>
+            <td>Switchgear &amp; Appurtenances (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">SWG</td>
+            <td class="d-none d-lg-table-cell">RailroadSgnalG_ep</td>
+            <td>Railroad Signal with Gate (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SWK</td>
+            <td class="d-none d-lg-table-cell">SidewalkFront_ep</td>
+            <td>Sidewalk (Fronts) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">SWKB</td>
+            <td class="d-none d-lg-table-cell">SidewalkBack_ep</td>
+            <td>Sidewalk (Backs) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">TAL</td>
+            <td class="d-none d-lg-table-cell">PMTAL_ep</td>
+            <td>Pavement Marking - Turn Arrow Left (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">TALR</td>
+            <td class="d-none d-lg-table-cell">PMTALR_ep</td>
+            <td>Pavement Marking - Turn Arrow Left and Right (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">TAR</td>
+            <td class="d-none d-lg-table-cell">PMTAR_ep</td>
+            <td>Pavement Marking - Turn Arrow Right (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">TB</td>
+            <td class="d-none d-lg-table-cell">TeleBooth_ep</td>
+            <td>Telephone Booth (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">TCALM</td>
+            <td class="d-none d-lg-table-cell">PMTrafCalm_ep</td>
+            <td>Pavement Marking Symbol - Traffic Calm Warning (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">TEL</td>
+            <td class="d-none d-lg-table-cell">TeleAer_ep</td>
+            <td>Telephone Line (Aerial) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">TELP</td>
+            <td class="d-none d-lg-table-cell">TelePole_ep</td>
+            <td>Telephone Pole (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">TELS</td>
+            <td class="d-none d-lg-table-cell">TeleServBox_ep</td>
+            <td>Telephone Service Box (Large) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">TESMT</td>
+            <td class="d-none d-lg-table-cell">EaseTempLine_ep</td>
+            <td>Easement Lines Temporary (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">TESMTP</td>
+            <td class="d-none d-lg-table-cell">EaseTempLine</td>
+            <td>Easement Lines Temporary (Proposed)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">TFD</td>
+            <td class="d-none d-lg-table-cell">SignalLoop_ep</td>
+            <td>Traffic Detector Loops (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">TFSP</td>
+            <td class="d-none d-lg-table-cell">TrafSeparator_ep</td>
+            <td>Traffic Separator (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">TG</td>
+            <td class="d-none d-lg-table-cell">StreamGauge_ep</td>
+            <td>Stream or Tide Gauge (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">THA</td>
+            <td class="d-none d-lg-table-cell">SU_QLATestHole_ep</td>
+            <td>Subsurface Utility Test Hole (QLA Only) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">TMPW</td>
+            <td class="d-none d-lg-table-cell">TempBarrier_ep</td>
+            <td>Temporary Barrier Dividing Traffic (All) (Existing) (Temporary)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">TO</td>
+            <td class="d-none d-lg-table-cell">PMTO_ep</td>
+            <td>Pavement Marking Message - TO (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">TPD</td>
+            <td class="d-none d-lg-table-cell">TelePed_ep</td>
+            <td>Telephone Pedestal / Service (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">TRANSA</td>
+            <td class="d-none d-lg-table-cell">ElecBurPriA_ep</td>
+            <td>Conductors (Primary Distribution) Quality Level A Locate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">TRANSB</td>
+            <td class="d-none d-lg-table-cell">ElecBurPriB_ep</td>
+            <td>Conductors (Primary Distribution) Quality Level B Designate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">TRANSC</td>
+            <td class="d-none d-lg-table-cell">ElecBurPriC_ep</td>
+            <td>Conductors (Primary Distribution) Quality Level C Above Ground Evidence (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">TRANSD</td>
+            <td class="d-none d-lg-table-cell">ElecBurPriD_ep</td>
+            <td>Conductors (Primary Distribution) Quality Level D Existing Records (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">TRD</td>
+            <td class="d-none d-lg-table-cell">Treadle_ep</td>
+            <td>Treadle, Axle Sensor (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">TREE</td>
+            <td class="d-none d-lg-table-cell">Tree_ep</td>
+            <td>Trees (Unknown) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">TREEC</td>
+            <td class="d-none d-lg-table-cell">TreeConiferous_ep</td>
+            <td>Coniferous Tree (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">TREECI</td>
+            <td class="d-none d-lg-table-cell">TreeCitrus_ep</td>
+            <td>Citrus Tree (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">TREECY</td>
+            <td class="d-none d-lg-table-cell">TreeCypress_ep</td>
+            <td>Cypress Tree (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">TREED</td>
+            <td class="d-none d-lg-table-cell">TreeDeciduous_ep</td>
+            <td>Deciduous Tree (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">TREEOA</td>
+            <td class="d-none d-lg-table-cell">TreeOak_ep</td>
+            <td>Oak Tree (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">TREEPA</td>
+            <td class="d-none d-lg-table-cell">TreePalm_ep</td>
+            <td>Palm Tree (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">TREEPC</td>
+            <td class="d-none d-lg-table-cell">TreePalmCluster_ep</td>
+            <td>Palm Tree Cluster (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">TREEPI</td>
+            <td class="d-none d-lg-table-cell">TreePine_ep</td>
+            <td>Pine Tree (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">TRNF</td>
+            <td class="d-none d-lg-table-cell">Transformer_ep</td>
+            <td>Transformer (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">TURN</td>
+            <td class="d-none d-lg-table-cell">PMTURN_ep</td>
+            <td>Pavement Marking Message - TURN (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">TWP</td>
+            <td class="d-none d-lg-table-cell">GovTwpRgeLine_ep</td>
+            <td>Government: Township and Range Government Survey Line</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">9</td>
+          </tr>
+          <tr>
+            <td scope="row">TX</td>
+            <td class="d-none d-lg-table-cell">PavtTractorXing_ep</td>
+            <td>Tractor Crossings (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">UD</td>
+            <td class="d-none d-lg-table-cell">UnderDrain_ep</td>
+            <td>Underdrains and Cross Drains (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">UDBX</td>
+            <td class="d-none d-lg-table-cell">UnderDrainBx_ep</td>
+            <td>Underdrain Box (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">UEW</td>
+            <td class="d-none d-lg-table-cell">EndTreatUEW_ep</td>
+            <td>U-Type Endwall (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">UMISC</td>
+            <td class="d-none d-lg-table-cell">UtilMisc_ep</td>
+            <td>Utility Items (Miscellaneous) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">UMKR</td>
+            <td class="d-none d-lg-table-cell">UtilMarker_ep</td>
+            <td>Subsurface Utility Marker (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">UNPS</td>
+            <td class="d-none d-lg-table-cell">ShldrUnpaved_ep</td>
+            <td>Shoulders (Unpaved) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">UTURN</td>
+            <td class="d-none d-lg-table-cell">PMUTurn_ep</td>
+            <td>Pavement Marking - U-Turn Arrow (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">VB</td>
+            <td class="d-none d-lg-table-cell">ValveBox_ep</td>
+            <td>Valve Box (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">VBG</td>
+            <td class="d-none d-lg-table-cell">ValveBoxGas_ep</td>
+            <td>Valve Box (Gas) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">VBNPW</td>
+            <td class="d-none d-lg-table-cell">ValveBoxWtrNP_ep</td>
+            <td>Valve Box (Non-potable Water) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">VBS</td>
+            <td class="d-none d-lg-table-cell">ValveBoxSwr_ep</td>
+            <td>Valve Box (Sewer) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">VBW</td>
+            <td class="d-none d-lg-table-cell">ValveBoxWtr_ep</td>
+            <td>Valve Box (Water) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">VC</td>
+            <td class="d-none d-lg-table-cell">ValveCover_ep</td>
+            <td>Valve Cover (Unknown) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">VCEF</td>
+            <td class="d-none d-lg-table-cell">ValveCvrEff_ep</td>
+            <td>Valve Cover (Effluent) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">VCG</td>
+            <td class="d-none d-lg-table-cell">ValveCvrGas_ep</td>
+            <td>Valve Cover (Gas) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">VCNPW</td>
+            <td class="d-none d-lg-table-cell">ValveCvrWaterNP_ep</td>
+            <td>Valve Cover (Non-potable Water) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">VCRW</td>
+            <td class="d-none d-lg-table-cell">ValveCvrWtrRaw_ep</td>
+            <td>Valve Cover (Raw Water) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">VCS</td>
+            <td class="d-none d-lg-table-cell">ValveCvrSewer_ep</td>
+            <td>Valve Cover (Sewer) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">VCW</td>
+            <td class="d-none d-lg-table-cell">ValveCvrWater_ep</td>
+            <td>Valve Cover (Water) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">VLV</td>
+            <td class="d-none d-lg-table-cell">Valve_ep</td>
+            <td>Valve (Unknown) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">VLVB</td>
+            <td class="d-none d-lg-table-cell">ValveBFP_ep</td>
+            <td>Valve (Back Flow Preventer), Valve Box (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">VLVG</td>
+            <td class="d-none d-lg-table-cell">ValveGas_ep</td>
+            <td>Valve, Valve Box (Gas) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">VLVNPW</td>
+            <td class="d-none d-lg-table-cell">ValveWaterNP_ep</td>
+            <td>Valve, Valve Box (Water) (Non Potable) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">VLVS</td>
+            <td class="d-none d-lg-table-cell">ValveSewer_ep</td>
+            <td>Valve, Valve Box (Sewer) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">VLVW</td>
+            <td class="d-none d-lg-table-cell">ValveWater_ep</td>
+            <td>Valve, Valve Box (Water) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">VNT</td>
+            <td class="d-none d-lg-table-cell">Vent_ep</td>
+            <td>Vent (Unknown) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">VNTG</td>
+            <td class="d-none d-lg-table-cell">VentGas_ep</td>
+            <td>Vent (Gas) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">VNTS</td>
+            <td class="d-none d-lg-table-cell">VentSewer_ep</td>
+            <td>Vent (Sewer) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">VOID</td>
+            <td class="d-none d-lg-table-cell">VoidArea_ep</td>
+            <td>Void Area (No Locations Collected) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">WALL</td>
+            <td class="d-none d-lg-table-cell">Wall_ep</td>
+            <td>Walls (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">WDL</td>
+            <td class="d-none d-lg-table-cell">TreeLineWoods_ep</td>
+            <td>Woods Line (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">WEDG</td>
+            <td class="d-none d-lg-table-cell">WaterEdge_ep</td>
+            <td>Edge of Water (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">WELL</td>
+            <td class="d-none d-lg-table-cell">Well_ep</td>
+            <td>Well (Any Size) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">WEST</td>
+            <td class="d-none d-lg-table-cell">PMWEST_ep</td>
+            <td>Pavement Marking Message - WEST (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">WEW</td>
+            <td class="d-none d-lg-table-cell">EndTreatWEW_ep</td>
+            <td>Winged Endwall (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">WIM</td>
+            <td class="d-none d-lg-table-cell">WindMill_ep</td>
+            <td>Wind Mill (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">WLA</td>
+            <td class="d-none d-lg-table-cell">WaterA_ep</td>
+            <td>Water Line (All Sizes) Quality Level A Locate (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">WLB</td>
+            <td class="d-none d-lg-table-cell">WaterB_ep</td>
+            <td>Water Line (All Sizes) Quality Level B Designate (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">WLC</td>
+            <td class="d-none d-lg-table-cell">WaterC_ep</td>
+            <td>Water Line (All Sizes) Quality Level C Above Ground Evidence (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">WLD</td>
+            <td class="d-none d-lg-table-cell">WaterD_ep</td>
+            <td>Water Line (All Sizes) Quality Level D Existing Records (Buried) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">WLPT</td>
+            <td class="d-none d-lg-table-cell">WetlandSym_ep</td>
+            <td>Wetland Point (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">WPB</td>
+            <td class="d-none d-lg-table-cell">PullBox_ep</td>
+            <td>Wiring Pull Box (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">3</td>
+          </tr>
+          <tr>
+            <td scope="row">WWAROW</td>
+            <td class="d-none d-lg-table-cell">PMWrongWayArrow_ep</td>
+            <td>Pavement Marking - Wrong Way Arrow (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">XING</td>
+            <td class="d-none d-lg-table-cell">PMXING_ep</td>
+            <td>Pavement Marking Message - XING (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">XO</td>
+            <td class="d-none d-lg-table-cell">PavtXover_ep</td>
+            <td>Crossovers and Detours (Temporary) (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">XS</td>
+            <td class="d-none d-lg-table-cell">XSPt_ep</td>
+            <td>Cross Section Point, Station</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">7</td>
+          </tr>
+          <tr>
+            <td scope="row">XSC</td>
+            <td class="d-none d-lg-table-cell">XSPatternlines_ep</td>
+            <td>Cross Section Chain (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">7</td>
+          </tr>
+          <tr>
+            <td scope="row">YD</td>
+            <td class="d-none d-lg-table-cell">YardDrain_ep</td>
+            <td>Yard Drain (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Line</td>
+            <td class="d-none d-lg-table-cell text-center">2</td>
+          </tr>
+          <tr>
+            <td scope="row">YIELD</td>
+            <td class="d-none d-lg-table-cell">PMYIELD_ep</td>
+            <td>Pavement Marking Message - YIELD (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">YLDAHD</td>
+            <td class="d-none d-lg-table-cell">PMYieldAhead_ep</td>
+            <td>Pavement Marking - Yield Ahead Warning Triangle (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          <tr>
+            <td scope="row">ZONE</td>
+            <td class="d-none d-lg-table-cell">PMZONE_ep</td>
+            <td>Pavement Marking Message - ZONE (Existing)</td>
+            <td class="d-none d-lg-table-cell text-center">Point</td>
+            <td class="d-none d-lg-table-cell text-center">1</td>
+          </tr>
+          </table>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+
+<footer class="footer mt-auto">
+  <!--page only section-->
+  <div class="container-fluid bg-light py-3 d-print-none mt-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-4 text-center text-sm-start">
+          <span class="text-muted">&copy; 2022 - H &amp; H Survey Consultants LLC</span>
+        </div>
+        <div class="col-12 col-sm-4 text-center">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#modalSettings">Settings</a>
+        </div>
+        <div class="col-12 col-sm-4 text-center text-sm-end">
+          <a href="LegalNotice.html">Legal Notices</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Print only section-->
+  <div class="container-fluid text-center d-none d-print-flex justify-content-between">
+    <small id="timestamp" class="my-0 py-0">Timestamp goes here.</small>
+    <small>[END OF DOCUMENT]</small>
+    <small class="my-0 py-0">&copy; 2022 - H &amp; H Survey Consultants LLC</small>
+  </div>
+</footer>
+</body>
+
+<!-- Modal -->
+<div class="modal fade" id="modalSettings" tabindex="-1" data-bs-backdrop="static" aria-labelledby="modalSettingsLabel" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="modalSettingsLabel">Website Settings</h5>
+            
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="txtName" class="form-label">Name<span class="text-danger">*</span></label>
+                <input type="email" class="form-control" id="txtName" placeholder="John Doe">
+            </div>
+            <div class="btn-group w-100" id="color-mode" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnGroup.settings.color" id="setting.color.light" autocomplete="off" disabled>
+                <label class="btn btn-outline-primary w-100" for="setting.color.light">Light Theme</label>
+            
+                <input type="radio" class="btn-check" name="btnGroup.settings.color" id="setting.color.dark" autocomplete="off" disabled>
+                <label class="btn btn-outline-primary w-100" for="setting.color.dark">Dark Theme</label>
+            
+                <input type="radio" class="btn-check" name="btnGroup.settings.color" id="setting.color.system" autocomplete="off" disabled>
+                <label class="btn btn-outline-primary w-100" for="setting.color.system">System Default</label>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="dismiss-modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="saveSettings()">Save changes</button>
+        </div>
+    </div>
+</div>
+</div>
+</html>

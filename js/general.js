@@ -5,7 +5,7 @@
  * Created Date: 08-11-2022 19-53-07
  * Author: Nathan White
  * -----
- * Last Modified: 08-13-2022 12-18-35
+ * Last Modified: 08-17-2022 20-04-50
  * Modified By: Nathan White
  * -----
  * Copyright (c) 2022 Exacta Land Surveying
@@ -107,6 +107,11 @@ function getCookie(cookieName) {
     }
   }
   return "";
+}
+
+function getRadioGroupValue(name) {
+  const btns = document.querySelector('input[type=radio][name="'+name+'"]:checked');
+  return btns;
 }
 
 // #endregion

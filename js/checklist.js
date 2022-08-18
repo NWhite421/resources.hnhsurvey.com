@@ -5,7 +5,7 @@
  * Created Date: 08-11-2022 19-53-07
  * Author: Nathan White
  * -----
- * Last Modified: 08-13-2022 12-23-46
+ * Last Modified: 08-17-2022 19-19-33
  * Modified By: Nathan White
  * -----
  * Copyright (c) 2022 Exacta Land Surveying
@@ -84,6 +84,7 @@ window.addEventListener("afterprint", event => {
 window.addEventListener("load", event => {
   loadFromReload();
   //debugModal();
+  SetAllStatus();
 });
 
 function debugModal() {
@@ -331,3 +332,41 @@ function toggleComments() {
 }
 
 // #endregion
+
+// #region Selects
+function SetAllStatus() {
+  var selectOptions = document.querySelectorAll("select[data-int-for]");
+  selectOptions.forEach(option => {
+    SetMessage(option);
+  });
+}
+
+function SetMessage(selectElement) {
+  const sel = selectElement[selectElement.selectedIndex];
+  const selDiv = sel.getAttribute("data-int-for");
+  const divs = selectElement.parentElement.querySelectorAll("div");
+  for (let i = 0; i < divs.length; i++) {
+    const element = divs[i];
+    if (element.id == selDiv) {
+      element.removeAttribute("hidden");
+    } else {
+      element.setAttribute("hidden", "true");
+    }
+  }
+}
+
+function ViewSample(button) {
+  const file = button.getAttribute("data-int-target");
+  const title = button.getAttribute("data-int-title");
+
+  document.getElementById("sample-title").innerHTML = title;
+  document.getElementById("sample-viewer").setAttribute("src", file);
+  document.getElementById("sample-link").href = file;
+
+  const sampleModal = new bootstrap.Modal('#sampleViewerModal', {
+    keyboard: false,
+    focus: true
+  });
+  
+  sampleModal.show();
+}

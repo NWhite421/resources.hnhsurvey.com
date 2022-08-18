@@ -5,7 +5,7 @@ Project: HNH Resources Website
 Created Date: 08-11-2022 19-53-07
 Author: Nathan White
 -----
-Last Modified: 08-13-2022 12-24-56
+Last Modified: 08-17-2022 20-13-58
 Modified By: Nathan White
 -----
 Copyright (c) 2022 Exacta Land Surveying
@@ -429,6 +429,17 @@ Copyright (c) 2022 Exacta Land Surveying
     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body d-flex flex-column align-content-stretch">
+    <div>
+      <div class="row">
+        <div class="col-12 col-sm-6 d-grid">
+          <a href="#" class="btn btn-primary mb-2" onclick="printFile()" data-bs-toggle="offcanvas" href="#tableofcontents"
+          role="button" aria-controls="tableofcontents">Print / Save URL</a>
+        </div>
+        <div class="col-12 col-sm-6 d-grid">
+          <a href="#" class="btn btn-primary mb-2" onclick="resetAllChecks()">Reset Form</a>
+        </div>
+      </div>
+    </div>
     <a href="../index.html" class="border-bottom flex-column pb-2 mb-2">Return to Homepage</a>
     <nav id="nav-tob" class="w-100 flex-column align-items-stretch pe-4 border-bottom mb-2">
       <nav class="nav nav-pills flex-column">
@@ -453,17 +464,6 @@ Copyright (c) 2022 Exacta Land Surveying
         </nav>
       </nav>
     </nav>
-    <div class="mt-auto">
-      <div class="row">
-        <div class="col-12 col-sm-6 d-grid">
-          <a href="#" class="btn btn-primary mb-2" onclick="printFile()" data-bs-toggle="offcanvas" href="#tableofcontents"
-          role="button" aria-controls="tableofcontents">Print / Save URL</a>
-        </div>
-        <div class="col-12 col-sm-6 d-grid">
-          <a href="#" class="btn btn-primary mb-2" onclick="resetAllChecks()">Reset Form</a>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 <div class="modal" tabindex="-1" id="printModal">
