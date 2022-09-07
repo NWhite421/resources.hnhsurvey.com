@@ -5,7 +5,7 @@
  * Created Date: 08-11-2022 19-53-07
  * Author: Nathan White
  * -----
- * Last Modified: 08-13-2022 12-23-46
+ * Last Modified: 08-17-2022 19-19-33
  * Modified By: Nathan White
  * -----
  * Copyright (c) 2022 Exacta Land Surveying
@@ -84,6 +84,7 @@ window.addEventListener("afterprint", event => {
 window.addEventListener("load", event => {
   loadFromReload();
   //debugModal();
+  SetAllStatus();
 });
 
 function debugModal() {
@@ -103,7 +104,7 @@ function loadFromReload() {
   const lastUpdate = new Date(document.querySelector('meta[name="last-update"]').content);
   if (lastUpdate > createDate) 
   {
-    alert("The link you followed was created on an outdated checklist. The checklist may or may not be accurate.");
+    alert("The link you followed was created on an outdated checklist. The checklist may not be accurate.");
   }
 
   var jobNumber = urlParams.get('jobNumber');
@@ -123,6 +124,9 @@ function loadFromReload() {
 
   const reviewValues = urlParams.get('checkstatus');
   setScores(reviewValues);
+
+  const selectValues = urlParams.get("selectvalues");
+  setSelectedViews(selectValues);
 }
 
 // #endregion
@@ -162,6 +166,8 @@ function confirmPrint() {
 
   document.getElementById("job-number").innerHTML = jobNumberField.value;
   document.getElementById("review-number").innerHTML = reviewField.value;
+  document.getElementById("return-link").href = getSaveLink();
+
 
   checklistVariables.validPass = true;
 
@@ -211,17 +217,17 @@ function verifyPrintInputs() {
 // #region Save URL
 
 function getSaveLink() {
-  console.log("starting save url generation.");
+  console.debug("starting save url generation.");
 
   const htmlLink = document.getElementById("save-link");
   var buttonStatus = getPassingString();
-  console.log(buttonStatus);
+  console.debug("Status: " + buttonStatus);
   var linkText = window.location.href.split('#')[0].split('?')[0];
   
-
   var date = new Date();
 
   linkText += "?reload=true&checkstatus=" + buttonStatus;
+  linkText += "&selectvalues=" + getSelectedViews();
   linkText += "&created=" + date.toISOString();
 
   htmlLink.value = linkText;
@@ -303,6 +309,30 @@ function getPassingString() {
   return retVal;
 }
 
+function getSelectedViews() {
+  var retVal = "";
+  const selects = document.querySelectorAll('select');
+  console.debug(selects.length);
+  for (var i = 0; i < selects.length; i++) {
+    const selectList = selects[i];
+    const value = selectList.selectedIndex;
+    console.debug(value);
+    retVal += value.toString();
+  }
+  console.debug(retVal);
+  return retVal;
+}
+
+function setSelectedViews(values) {
+  const sepValues = values.split('');
+  const selects = document.querySelectorAll('select');
+  
+  for (var i = 0; i < selects.length; i++) {
+    var selectList = selects[i];
+    selectList.selectedIndex = sepValues[i];
+  }
+}
+
 function resetAllChecks() {
   const radios = document.querySelectorAll('input[type=radio][checked]');
   var confirmReset = confirm("Are you sure you wish to reset this form. Any inputs will be lost.");
@@ -328,6 +358,46 @@ function toggleComments() {
   }
   textArea.setAttribute('disabled', 'true');
   reviewer.setAttribute('disabled', 'true');
+}
+
+// #endregion
+
+// #region Selects
+function SetAllStatus() {
+  var selectOptions = document.querySelectorAll("select[data-int-for]");
+  selectOptions.forEach(option => {
+    SetMessage(option);
+  });
+}
+
+function SetMessage(selectElement) {
+  const sel = selectElement[selectElement.selectedIndex];
+  const selDiv = sel.getAttribute("data-int-for");
+  const divs = selectElement.parentElement.querySelectorAll("div");
+  for (let i = 0; i < divs.length; i++) {
+    const element = divs[i];
+    if (element.id == selDiv) {
+      element.removeAttribute("hidden");
+    } else {
+      element.setAttribute("hidden", "true");
+    }
+  }
+}
+
+function ViewSample(button) {
+  const file = button.getAttribute("data-int-target");
+  const title = button.getAttribute("data-int-title");
+
+  document.getElementById("sample-title").innerHTML = title;
+  document.getElementById("sample-viewer").setAttribute("src", file);
+  document.getElementById("sample-link").href = file;
+
+  const sampleModal = new bootstrap.Modal('#sampleViewerModal', {
+    keyboard: false,
+    focus: true
+  });
+  
+  sampleModal.show();
 }
 
 // #endregion

@@ -1,16 +1,3 @@
-<!--
-File: predraw.html
-Path: \homebuilder
-Project: HNH Resources Website
-Created Date: 08-11-2022 19-53-07
-Author: Nathan White
------
-Last Modified: 08-14-2022 14-01-13
-Modified By: Nathan White
------
-Copyright (c) 2022 Exacta Land Surveying
--->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,7 +15,6 @@ Copyright (c) 2022 Exacta Land Surveying
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="" id="color-theme">
-  <link rel="stylesheet" href="../css/internalstyes.css">
   <script src="../js/general.js"></script>
   <script src="../js/checklist.js"></script>
 </head>
@@ -413,12 +399,12 @@ Copyright (c) 2022 Exacta Land Surveying
       <div class="container">
         <div class="row">
           <div class="col-12 col-sm-6 text-center text-sm-start">
-            <p class="my-0 py-0"><span class="text-muted" autofill>&copy; [year] - Exacta Land Surveyors</span></p>
+            <p class="my-0 py-0"><span class="text-muted" autofill>&copy; [year] - EXACTA Land Surveyors, LLC</span></p>
             <p class="my-0 py-0"><span class="text-muted">H &amp; H Survey Consultants</span></p>
           </div>
           <div class="col-12 col-sm-6 text-center text-sm-end">
             <p class="my-0 py-0 text-muted">Theming provided by Bootstrap and Bootswatch (dark theme).</p>
-            <a href="LegalNotice.html" class="text-white" hidden>Legal Notices</a>
+            <a href="../legalnotices.html" class="text-muted">Legal Notices</a>
           </div>
         </div>
       </div>
@@ -431,6 +417,17 @@ Copyright (c) 2022 Exacta Land Surveying
     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body d-flex flex-column align-content-stretch">
+    <div>
+      <div class="row">
+        <div class="col-12 col-sm-6 d-grid">
+          <a href="#" class="btn btn-primary mb-2" onclick="printFile()" data-bs-toggle="offcanvas" href="#tableofcontents"
+          role="button" aria-controls="tableofcontents">Print / Save URL</a>
+        </div>
+        <div class="col-12 col-sm-6 d-grid">
+          <a href="#" class="btn btn-primary mb-2" onclick="resetAllChecks()">Reset Form</a>
+        </div>
+      </div>
+    </div>
     <a href="../index.html" class="border-bottom flex-column pb-2 mb-2">Return to Homepage</a>
     <nav id="nav-tob" class="w-100 flex-column align-items-stretch pe-4 border-bottom mb-2">
       <nav class="nav nav-pills flex-column">
@@ -455,17 +452,6 @@ Copyright (c) 2022 Exacta Land Surveying
         </nav>
       </nav>
     </nav>
-    <div class="mt-auto">
-      <div class="row">
-        <div class="col-12 col-sm-6 d-grid">
-          <a href="#" class="btn btn-primary mb-2" onclick="printFile()" data-bs-toggle="offcanvas" href="#tableofcontents"
-          role="button" aria-controls="tableofcontents">Print / Save URL</a>
-        </div>
-        <div class="col-12 col-sm-6 d-grid">
-          <a href="#" class="btn btn-primary mb-2" onclick="resetAllChecks()">Reset Form</a>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 <div class="modal" tabindex="-1" id="printModal">

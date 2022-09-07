@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="print-friendly" content="gui">
+  <meta name="last-update" content="2022-08-12T22:39:49Z">
+  <title>Site Plan - H &amp; H Survey</title>
+  <link href="../resource/hnh_icon_color.png" rel="icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="" id="color-theme">
+  <link rel="stylesheet" href="../css/internalstyles.css" type="text/css">
+  <script src="../js/general.js"></script>
+  <script src="../js/checklist.js"></script>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <main class="py-2">
+    
+    <div class="container" data-bs-spy="scroll" data-bs-target="#nav-toc" data-bs-smooth-scroll="true">
+      <div class="text-center">
+        <h1>Site Plan Checklist</h1>
+        <h6 id="subtitle">General Scattered Lot</h6>
+        <div class="row d-none d-print-flex mb-0" id="review-information">
+          <div class="col-6 text-start">
+            <p class="pb-2 mb-0">Job Number: <b><span id="job-number">Not specified</span></b></p>
+          </div>
+          <div class="col-6 text-end">
+            <p class="pb-2 mb-0">Review: <b><span id="review-number">Not specified</span></b></p>
+          </div>
+          <div class="col-12 text-center">
+            <p class="pb-2 mb-0">You can use <a id="return-link">This Link</a> to return to the website's review.</p>
+          </div>
+        </div>
+      </div>
+      <hr class="my-0 py-2">
+      <h5 id="house-information" class="w-100 border-top border-bottom border-primary p-1 text-center text-primary">House Information</h5>
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-start align-items-md-center" id="section-a1">
+            <div class="col-12 col-sm-3 d-grid text-center text-sm-start d-print-none">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area" data-int-status="status-a1">
+                <input type="radio" class="btn-check" name="question-a1" id="pass-a1" autocomplete="off" data-bs-statusText="PASS " data-bs-statusClasses="text-success">
+                <label class="btn btn-outline-success w-100 py-0" for="pass-a1"><i class="bi bi-check-circle"></i></label>
+                
+                <input type="radio" class="btn-check" name="question-a1" id="fail-a1" autocomplete="off" data-bs-statusText="FAIL " data-bs-statusClasses="text-danger" checked>
+                <label class="btn btn-outline-danger w-100 py-0" for="fail-a1"><i class="bi bi-x-circle"></i></label>
+              </div>
+            </div>
+            <div class="col-8 col-sm-9 align-middle">
+              <h6 class="text-start">
+                <span id="status-a1" class="d-none d-print-inline"></span>House Model
+              </h6>
+            </div>
+          </div>
+          <hr class="my-1">
+          <p>The correct house model and garage orientation are used on the lot. You can get a typical house model from the <b>Homebuilder Houses.dwg</b> CAD file or by drawing in the <b>Foundation Plan</b> dimensions from plans provided.</p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-start align-items-md-center" id="section-a2">
+            <div class="col-12 col-sm-3 d-grid text-center text-sm-start d-print-none">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area" data-int-status="status-a2">
+                <input type="radio" class="btn-check" name="question-a2" id="pass-a2" autocomplete="off" data-bs-statusText="PASS " data-bs-statusClasses="text-success">
+                <label class="btn btn-outline-success w-100 py-0" for="pass-a2"><i class="bi bi-check-circle"></i></label>
+                
+                <input type="radio" class="btn-check" name="question-a2" id="fail-a2" autocomplete="off" data-bs-statusText="FAIL " data-bs-statusClasses="text-danger" checked>
+                <label class="btn btn-outline-danger w-100 py-0" for="fail-a2"><i class="bi bi-x-circle"></i></label>
+              </div>
+            </div>
+            <div class="col-8 col-sm-9 align-middle">
+              <h6 class="text-start">
+                <span id="status-a2" class="d-none d-print-inline"></span>House Location
+              </h6>
+            </div>
+          </div>
+          <hr class="my-1">
+          <p>Place the house in between the side lot lines. Place the house model behind the setback line plus 1.00 foot. Ensure the house and appurtenances.</p>
+          <div>
+            <select class="form-select form-select-dark d-print-none" data-int-for="question-a2-fi" aria-label="Select a format" onchange="SetMessage(this)">
+              <option selected data-int-for="a2-general">General Requirement</option>
+              <option data-int-for="a2-deltona">Deltona</option>
+              <option data-int-for="a2-palmBay">Palm Bay</option>
+            </select>
+            <div id="a2-general" hidden>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" class="w-25">Front</th>
+                    <th scope="col" class="w-25">Front (R/W)</th>
+                    <th scope="col" class="w-25">Sides</th>
+                    <th scope="col" class="w-25">Rear</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>25.00'</td> 
+                    <td>25.00'</td> 
+                    <td>7.50'</td> 
+                    <td>20.00'</td> 
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div id="a2-palmBay" hidden>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" class="w-25">Front</th>
+                    <th scope="col" class="w-25">Front (R/W)</th>
+                    <th scope="col" class="w-25">Sides</th>
+                    <th scope="col" class="w-25">Rear</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>25.00'</td> 
+                    <td>25.00'</td> 
+                    <td>8.00'</td> 
+                    <td>25.00'</td> 
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div id="a2-deltona" hidden>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" class="w-25">Front</th>
+                    <th scope="col" class="w-25">Front (R/W)</th>
+                    <th scope="col" class="w-25">Sides</th>
+                    <th scope="col" class="w-25">Rear</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>25.00'</td> 
+                    <td>15.00'</td> 
+                    <td>7.50'</td> 
+                    <td>25.00'</td> 
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-start align-items-md-center" id="section-a3">
+            <div class="col-12 col-sm-3 d-grid text-center text-sm-start d-print-none">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area" data-int-status="status-a3">
+                <input type="radio" class="btn-check" name="question-a3" id="pass-a3" autocomplete="off" data-bs-statusText="PASS " data-bs-statusClasses="text-success">
+                <label class="btn btn-outline-success w-100 py-0" for="pass-a3"><i class="bi bi-check-circle"></i></label>
+                
+                <input type="radio" class="btn-check" name="question-a3" id="fail-a3" autocomplete="off" data-bs-statusText="FAIL " data-bs-statusClasses="text-danger" checked>
+                <label class="btn btn-outline-danger w-100 py-0" for="fail-a3"><i class="bi bi-x-circle"></i></label>
+              </div>
+            </div>
+            <div class="col-8 col-sm-9 align-middle">
+              <h6 class="text-start">
+                <span id="status-a3" class="d-none d-print-inline"></span>Building Ties
+              </h6>
+            </div>
+          </div>
+          <hr class="my-1">
+          <p>Tie the closest point on each side of the building perpendicularly to the property line. If the perpendicular point falls outside the property, you can tie to the closest property corner.</p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-start align-items-md-center" id="section-a4">
+            <div class="col-12 col-sm-3 d-grid text-center text-sm-start d-print-none">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area" data-int-status="status-a4">
+                <input type="radio" class="btn-check" name="question-a4" id="pass-a4" autocomplete="off" data-bs-statusText="PASS " data-bs-statusClasses="text-success">
+                <label class="btn btn-outline-success w-100 py-0" for="pass-a4"><i class="bi bi-check-circle"></i></label>
+
+                <input type="radio" class="btn-check" name="question-a4" id="na-a4" autocomplete="off" data-bs-statusText="N/A " data-bs-statusClasses="text-secondary" checked>
+                <label class="btn btn-outline-secondary w-100 py-0" for="na-a4"><i class="bi bi-slash-circle"></i></label>
+                
+                <input type="radio" class="btn-check" name="question-a4" id="fail-a4" autocomplete="off" data-bs-statusText="FAIL " data-bs-statusClasses="text-danger">
+                <label class="btn btn-outline-danger w-100 py-0" for="fail-a4"><i class="bi bi-x-circle"></i></label>
+              </div>
+            </div>
+            <div class="col-8 col-sm-9 align-middle">
+              <h6 class="text-start">
+                <span id="status-a4" class="d-none d-print-inline"></span>Finish Floor Elevation
+              </h6>
+            </div>
+          </div>
+          <hr class="my-1">          
+          <div>
+            <select class="form-select form-select-dark d-print-none" data-int-for="question-a4-select" aria-label="Select a format" onchange="SetMessage(this)">
+              <option selected data-int-for="a4-general">General Requirement</option>
+              <option data-int-for="a4-palmBay">Palm Bay</option>
+              <option data-int-for="a4-palmCoast">Palm Coast</option>
+              <option data-int-for="a4-ocala">Ocala</option>
+            </select>
+            <div id="a4-general" hidden>
+              <p><b class="d-none d-print-inline">General Requirement </b>Determine the Finished Floor Elevation (FFE) of the house by adding 2.00' above the crown of road directly in front of the subject parcel. Consider your lot's drainage onto both neighboring lots and rights-of-way.</p>
+            </div>
+            <div id="a4-palmBay" hidden>
+              <p><b class="d-none d-print-inline">Palm Bay Requirement </b>FFE grades are determined by the septic engineer. The FFE callout shall be removed.</p>
+            </div>
+            <div id="a4-palmCoast" hidden>
+              <p class="pb-0 mb-1"><b class="d-none d-print-inline">Palm Coast Requirement </b>Follow the grading plan provided in the following PDF.</p>
+              <button class="btn btn-primary mt-0 mb-2 py-0 me-2 d-print-none" 
+                data-int-target="../files/palmcoast/palm_coast_sample_elevations.pdf" data-int-title="Palm Coast Sample Elevations" onclick="ViewSample(this)">View Sample</button>
+            </div>
+            <div id="a4-ocala" hidden>
+              <p><b class="d-none d-print-block">Ocala Requirement</b></p>
+              <p class="my-1 py-0"><span class="d-print-inline fst-italic">Generally: </span> The FFE will be provided by the client after the septic permit is provided.</p>
+              <p class="my-1 py-0"><span class="d-print-inline fst-italic">For Commence Logistics: </span> The client has opted to bear the responsibility of determining the FFE. The FFE shall be removed from the survey.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-start align-items-md-center" id="section-a5">
+            <div class="col-12 col-sm-3 d-grid text-center text-sm-start d-print-none">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area" data-int-status="status-a5">
+                <input type="radio" class="btn-check" name="question-a5" id="pass-a5" autocomplete="off" data-bs-statusText="PASS " data-bs-statusClasses="text-success">
+                <label class="btn btn-outline-success w-100 py-0" for="pass-a5"><i class="bi bi-check-circle"></i></label>
+
+                <input type="radio" class="btn-check" name="question-a5" id="na-a5" autocomplete="off" data-bs-statusText="N/A " data-bs-statusClasses="text-secondary" checked>
+                <label class="btn btn-outline-secondary w-100 py-0" for="na-a5"><i class="bi bi-slash-circle"></i></label>
+                
+                <input type="radio" class="btn-check" name="question-a5" id="fail-a5" autocomplete="off" data-bs-statusText="FAIL " data-bs-statusClasses="text-danger">
+                <label class="btn btn-outline-danger w-100 py-0" for="fail-a5"><i class="bi bi-x-circle"></i></label>
+              </div>
+            </div>
+            <div class="col-8 col-sm-9 align-middle">
+              <h6 class="text-start">
+                <span id="status-a5" class="d-none d-print-inline"></span>Driveway
+              </h6>
+            </div>
+          </div>
+          <hr class="my-1">
+          <p>Add a driveway from the garage to the road. If the house does not have a garage, do not add one. Ensure the apron of the driveway lies outside of the property.</p>
+        </div>
+      </div>
+      <h5 id="grading-information" class="w-100 border-top border-bottom border-primary p-1 text-center text-primary">Grading Information</h5>
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-start align-items-md-center" id="section-b1">
+            <div class="col-12 col-sm-3 d-grid text-center text-sm-start d-print-none">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area" data-int-status="status-b1">
+                <input type="radio" class="btn-check" name="question-b1" id="pass-b1" autocomplete="off" data-bs-statusText="PASS " data-bs-statusClasses="text-success">
+                <label class="btn btn-outline-success w-100 py-0" for="pass-b1"><i class="bi bi-check-circle"></i></label>
+
+                <input type="radio" class="btn-check" name="question-b1" id="na-b1" autocomplete="off" data-bs-statusText="N/A " data-bs-statusClasses="text-secondary" checked>
+                <label class="btn btn-outline-secondary w-100 py-0" for="na-b1"><i class="bi bi-slash-circle"></i></label>
+                
+                <input type="radio" class="btn-check" name="question-b1" id="fail-b1" autocomplete="off" data-bs-statusText="FAIL " data-bs-statusClasses="text-danger">
+                <label class="btn btn-outline-danger w-100 py-0" for="fail-b1"><i class="bi bi-x-circle"></i></label>
+              </div>
+            </div>
+            <div class="col-8 col-sm-9 align-middle">
+              <h6 class="text-start">
+                <span id="status-b1" class="d-none d-print-inline"></span>Spot Elevations
+              </h6>
+            </div>
+          </div>
+          <hr class="my-1">
+          <div>
+            <select class="form-select form-select-dark d-print-none mb-0" data-int-for="question-b1-select" aria-label="Select a format" onchange="SetMessage(this)">
+              <option selected data-int-for="b1-general">General Requirement</option>
+              <option data-int-for="b1-palmBay">Palm Bay</option>
+              <option data-int-for="b1-palmCoast">Palm Coast</option>
+              <option data-int-for="b1-ocala-commence">Ocala - Commence Logistics</option>
+            </select>
+            <div id="b1-general" hidden>
+              <p class="mt-0"><b class="d-none d-print-inline">General Requirement </b>Create eight (8) proposed grades on the parcel showing the intended drainage. Have three elevations in the rear of the lot, three elevations in the front of the lot, and two elevations in the middle on each side lot line.</p>
+            </div>
+            <div id="b1-palmBay" hidden>
+              <p class="mt-0 mb-1"><b class="d-none d-print-inline">Palm Bay Requirement </b>See the sample for a reference of elevations.</p>
+              <button class="btn btn-primary mt-0 mb-2 py-0 me-2 d-print-none" 
+                data-int-target="../files/palmbay/palm_bay_elevation_locations.pdf" data-int-title="Palm Bay Elevation Locations" onclick="ViewSample(this)">View Sample</button>
+            </div>
+            <div id="b1-palmCoast" hidden>
+              <p class="mt-0 mb-1"><b class="d-none d-print-inline">Palm Coast Requirement </b>See the sample for a reference of elevations.</p>
+              <button class="btn btn-primary mt-0 mb-2 py-0 me-2 d-print-none" 
+                data-int-target="../files/palmcoast/palm_coast_sample_elevations.pdf" data-int-title="Palm Bay Elevation Locations" onclick="ViewSample(this)">View Sample</button>
+            </div>
+            <div id="b1-ocala-commence" hidden>
+              <p class="mt-0"><b class="d-none d-print-inline">Palm Coast Requirement </b>The client has opted to bear the responsibility of determining the final grades. Do not add any grades.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-start align-items-md-center" id="section-b2">
+            <div class="col-12 col-sm-3 d-grid text-center text-sm-start d-print-none">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area" data-int-status="status-b2">
+                <input type="radio" class="btn-check" name="question-b2" id="pass-b2" autocomplete="off" data-bs-statusText="PASS " data-bs-statusClasses="text-success">
+                <label class="btn btn-outline-success w-100 py-0" for="pass-b2"><i class="bi bi-check-circle"></i></label>
+
+                <input type="radio" class="btn-check" name="question-b2" id="na-b2" autocomplete="off" data-bs-statusText="N/A " data-bs-statusClasses="text-secondary" checked>
+                <label class="btn btn-outline-secondary w-100 py-0" for="na-b2"><i class="bi bi-slash-circle"></i></label>
+                
+                <input type="radio" class="btn-check" name="question-b2" id="fail-b2" autocomplete="off" data-bs-statusText="FAIL " data-bs-statusClasses="text-danger">
+                <label class="btn btn-outline-danger w-100 py-0" for="fail-b2"><i class="bi bi-x-circle"></i></label>
+              </div>
+            </div>
+            <div class="col-8 col-sm-9 align-middle">
+              <h6 class="text-start">
+                <span id="status-b2" class="d-none d-print-inline"></span>Required Details
+              </h6>
+            </div>
+          </div>
+          <hr class="my-1">
+          <p>Add the details from the paperspace as required for the specific jurisdiction.</p>
+        </div>
+      </div>
+      <h5 id="paper-space" class="w-100 border-top border-bottom border-primary p-1 text-center text-primary">Paper Space</h5>
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-start align-items-md-center" id="section-c1">
+            <div class="col-12 col-sm-3 d-grid text-center text-sm-start d-print-none">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area" data-int-status="status-c1">
+                <input type="radio" class="btn-check" name="question-c1" id="pass-c1" autocomplete="off" data-bs-statusText="PASS " data-bs-statusClasses="text-success">
+                <label class="btn btn-outline-success w-100 py-0" for="pass-c1"><i class="bi bi-check-circle"></i></label>
+                
+                <input type="radio" class="btn-check" name="question-c1" id="fail-c1" autocomplete="off" data-bs-statusText="FAIL " data-bs-statusClasses="text-danger" checked>
+                <label class="btn btn-outline-danger w-100 py-0" for="fail-c1"><i class="bi bi-x-circle"></i></label>
+              </div>
+            </div>
+            <div class="col-8 col-sm-9 align-middle">
+              <h6 class="text-start">
+                <span id="status-c1" class="d-none d-print-inline"></span>Survey Heading
+              </h6>
+            </div>
+          </div>
+          <hr class="my-1">
+          <p>Update the title of the survey to be a &quot;SITE PLAN&quot;.</p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-start align-items-md-center" id="section-c2">
+            <div class="col-12 col-sm-3 d-grid text-center text-sm-start d-print-none">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area" data-int-status="status-c2">
+                <input type="radio" class="btn-check" name="question-c2" id="pass-c2" autocomplete="off" data-bs-statusText="PASS " data-bs-statusClasses="text-success">
+                <label class="btn btn-outline-success w-100 py-0" for="pass-c2"><i class="bi bi-check-circle"></i></label>
+                
+                <input type="radio" class="btn-check" name="question-c2" id="fail-c2" autocomplete="off" data-bs-statusText="FAIL " data-bs-statusClasses="text-danger" checked>
+                <label class="btn btn-outline-danger w-100 py-0" for="fail-c2"><i class="bi bi-x-circle"></i></label>
+              </div>
+            </div>
+            <div class="col-8 col-sm-9 align-middle">
+              <h6 class="text-start">
+                <span id="status-c2" class="d-none d-print-inline"></span>House Model
+              </h6>
+            </div>
+          </div>
+          <hr class="my-1">
+          <p>Update the house model field to state the model name, elevation type (if applicable), and garage orientation.</p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-start align-items-md-center" id="section-c3">
+            <div class="col-12 col-sm-3 d-grid text-center text-sm-start d-print-none">
+              <div class="btn-group me-0 pe-0" role="group" aria-label="Pass and fail area" data-int-status="status-c3">
+                <input type="radio" class="btn-check" name="question-c3" id="pass-c3" autocomplete="off" data-bs-statusText="PASS " data-bs-statusClasses="text-success">
+                <label class="btn btn-outline-success w-100 py-0" for="pass-c3"><i class="bi bi-check-circle"></i></label>
+                
+                <input type="radio" class="btn-check" name="question-c3" id="fail-c3" autocomplete="off" data-bs-statusText="FAIL " data-bs-statusClasses="text-danger" checked>
+                <label class="btn btn-outline-danger w-100 py-0" for="fail-c3"><i class="bi bi-x-circle"></i></label>
+              </div>
+            </div>
+            <div class="col-8 col-sm-9 align-middle">
+              <h6 class="text-start">
+                <span id="status-c3" class="d-none d-print-inline"></span>Dates
+              </h6>
+            </div>
+          </div>
+          <hr class="my-1">
+          <p>Update the dates as required.</p>
+        </div>
+      </div>
+      <div id="comment-section" class="d-none d-print-block">
+        <h5 class="mt-0 mb-0 py-0">Comments by Reviewer</h5>
+        <p id="comment-area" class="py-1 my-0"></p>
+      </div>
+    </div>
+    <div style="position: fixed; top: 10px; right: 10px;" class="d-print-none">
+      <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#tableofcontents" role="button"
+        aria-controls="tableofcontents">
+        <i class="bi bi-layout-text-sidebar"></i>
+      </a>
+    </div>
+  </main>
+  <footer class="footer mt-auto">
+    <div class="container-fluid bg-dark py-3 d-print-none mt-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-6 text-center text-sm-start">
+            <p class="my-0 py-0"><span class="text-muted" autofill>&copy; [year] - EXACTA Land Surveyors, LLC</span></p>
+            <p class="my-0 py-0"><span class="text-muted">H &amp; H Survey Consultants</span></p>
+          </div>
+          <div class="col-12 col-sm-6 text-center text-sm-end">
+            <p class="my-0 py-0 text-muted">Theming provided by Bootstrap and Bootswatch (dark theme).</p>
+            <a href="../legalnotices.html" class="text-muted">Legal Notices</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="tableofcontents" aria-labelledby="tableofcontentsLabel">
+  <div class="offcanvas-header bg-secondary">
+    <h5 class="offcanvas-title text-white" id="tableofcontentsLabel">Table of Contents</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column align-content-stretch">
+    <div>
+      <div class="row">
+        <div class="col-12 col-sm-6 d-grid">
+          <a href="#" class="btn btn-primary mb-2" onclick="printFile()" data-bs-toggle="offcanvas" href="#tableofcontents"
+          role="button" aria-controls="tableofcontents">Print / Save URL</a>
+        </div>
+        <div class="col-12 col-sm-6 d-grid">
+          <a href="#" class="btn btn-primary mb-2" onclick="resetAllChecks()">Reset Form</a>
+        </div>
+      </div>
+    </div>
+    <a href="../index.html" class="border-bottom flex-column pb-2 mb-2">Return to Homepage</a>
+    <nav id="nav-tob" class="w-100 flex-column align-items-stretch pe-4 border-bottom mb-2">
+      <nav class="nav nav-pills flex-column">
+        <a class="nav-link" href="#model-space">Model Space</a>
+        <nav class="nav nav-pills flex-column">
+          <a class="nav-link ms-3" href="#section-a1">Legal Description Harmony</a>
+          <a class="nav-link ms-3" href="#section-a2">Save the Drawing</a>
+          <a class="nav-link ms-3" href="#section-a3">Boundary &amp; Adjacent Information</a>
+          <a class="nav-link ms-3" href="#section-a4">Easements</a>
+          <a class="nav-link ms-3" href="#section-a5">Dimensions</a>
+          <a class="nav-link ms-3" href="#section-a6">Road Information</a>
+          <a class="nav-link ms-3" href="#section-a7">Adjacent Parcel Information</a>
+        </nav>
+        <a class="nav-link" href="#paper-space">Paper Space</a>
+        <nav class="nav nav-pills flex-column">
+          <a class="nav-link ms-3" href="#section-b1">Legal Description</a>
+          <a class="nav-link ms-3" href="#section-b2">Boundary Survey Certified To</a>
+          <a class="nav-link ms-3" href="#section-b3">Property Address</a>
+          <a class="nav-link ms-3" href="#section-b4">Lot Size</a>
+          <a class="nav-link ms-3" href="#section-b5">Surveyor's Note 6 - FEMA</a>
+          <a class="nav-link ms-3" href="#section-b6">Surveyor's Note 9 - FPRN CORS</a>
+        </nav>
+      </nav>
+    </nav>
+  </div>
+</div>
+<div class="modal" tabindex="-1" id="printModal">
+  <div class="modal-dialog modal-xl modal-fullscreen-sm-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Printing File</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group mb-3 col-12">
+          <span class="input-group-text" id="job-number-print-label">Job Number</span>
+          <input type="text" class="form-control" aria-label="Job number" aria-describedby="job-number-print-label"
+            id="job-number-print" onkeyup="getSaveLink()">
+        </div>
+        <div class="input-group mb-3 col-12">
+          <span class="input-group-text" id="review-number-print-label">Review</span>
+          <input type="number" class="form-control" aria-label="Review number"
+            aria-describedby="review-number-print-label" id="review-number-print" min="1"
+            onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" onchange="getSaveLink()">
+        </div>
+        <div class="form-check mb-2 col-12">
+          <input class="form-check-input" type="checkbox" value="" id="include-comments"
+          onclick="toggleComments()">
+          <label class="form-check-label" for="include-comments">
+            Include comments in prints
+          </label>
+        </div>
+        <div class="input-group mb-3 col-12">
+          <span class="input-group-text" id="reviewer-label">Reviewer</span>
+          <input type="text" class="form-control" aria-label="Reviewer" aria-describedby="reviewer-label" disabled id="reviewer" onkeyup="getSaveLink()">
+        </div>
+        <div class="mb-3 col-12">
+          <label for="comment-text" class="form-label">Comments</label>
+          <textarea class="form-control" id="comment-text" rows="3" disabled></textarea>
+        </div>
+        <span class="mb-3 col-12">
+          <div class="row border border-danger bg-danger text-white rounded mx-2" style="--bs-bg-opacity: .2;" hidden id="print-error">
+            <div class="col-12">
+              <p class="pb-0 my-0">Please complete the following fields.</p>
+              <ul id="print-error-list">
+                <li>test</li>
+                <li>test</li>
+              </ul>
+            </div>
+          </div>
+        </span>
+        <hr class="py-1 my-1">
+        <div class="input-group">
+          <span class="input-group-text" id="save-link-label">Job Link</span>
+          <input type="text" class="form-control" aria-label="Job number" aria-describedby="save-link-label" id="save-link" readonly aria-readonly="true">
+          <button class="btn btn-primary" type="button" id="save-link-copy"
+          onclick="confirmSaveLink()" title="Copy link to clipboard"><i class="bi bi-clipboard-fill"></i></button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="confirmPrint()">Print</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="toast-link-success" class="toast text-bg-primary" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000">
+    <div class="toast-body">
+      <h6 class="mb-0 pb-0">Success!</h6>
+      <p>The link was copied to the clipboard.</p>
+    </div>
+  </div>
+</div>
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="toast-reset-success" class="toast text-bg-primary" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000">
+    <div class="toast-body">
+      <h6 class="mb-0 pb-0">Success!</h6>
+      <p>The form has been reset.</p>
+    </div>
+  </div>
+</div>
+<div class="modal" tabindex="-1" id="sampleViewerModal">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="sample-title">change me</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <embed type="application/pdf" id="sample-viewer" class="w-100 h-100" src="">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a id="sample-link" target="_blank" class="btn btn-primary" href="">New Tab</a>
+      </div>
+    </div>
+  </div>
+</div>
+</html>
