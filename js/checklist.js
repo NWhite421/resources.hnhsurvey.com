@@ -37,6 +37,11 @@ window.addEventListener("beforeprint", event => {
     failCountField.classList.add("text-danger");
     failCountField.classList.remove("text-success");
   }
+
+  const title = document.querySelector('meta[name="title"]').content;
+  const jobNumber = document.getElementById("job-number-print").value;
+  const reviewNumber = document.getElementById("review-number-print").value;
+  document.title = jobNumber + " - " + title + " Review " + reviewNumber;
 });
 
 function convertCommentsToPrint() {
@@ -95,6 +100,9 @@ function convertButtonsToStatus() {
 window.addEventListener("afterprint", event => {
   const textPrintArea = document.getElementById("comment-section");
   textPrintArea.setAttribute('hidden', 'true');
+
+  const title = document.querySelector('meta[name="title"]').content;
+  document.title = title + " - H & H Survey Consultants";
 });
 
 // #endregion
@@ -105,6 +113,9 @@ window.addEventListener("load", event => {
   loadFromReload();
   //debugModal();
   SetAllStatus();
+
+  const title = document.querySelector('meta[name="title"]').content;
+  document.title = title + " - H & H Survey Consultants";
 });
 
 function debugModal() {
