@@ -25,11 +25,27 @@ window.addEventListener("beforeprint", event => {
   {
     alert("Please use the \"Print Copy\" under the table of contents to print correctly.");
   }
-  convertButtonsToStatus();
   convertCommentsToPrint();
+  var failedCount = convertButtonsToStatus();
+  console.debug("Fail count: " + failedCount);
+  var failCountField = document.getElementById("failed-count");
+  failCountField.innerText = failedCount;
+  if (failedCount == 0) {
+    failCountField.classList.remove("text-danger");
+    failCountField.classList.add("text-success");
+  } else {
+    failCountField.classList.add("text-danger");
+    failCountField.classList.remove("text-success");
+  }
+
+  const title = document.querySelector('meta[name="title"]').content;
+  const jobNumber = document.getElementById("job-number-print").value;
+  const reviewNumber = document.getElementById("review-number-print").value;
+  document.title = jobNumber + " - " + title + " Review " + reviewNumber;
 });
 
 function convertCommentsToPrint() {
+  let currentDate = new Date();
   const textArea = document.getElementById("comment-text");
   const reviewer = document.getElementById("reviewer");
   const checkReview = document.getElementById("include-comments");
@@ -37,13 +53,14 @@ function convertCommentsToPrint() {
 
   if (checkReview.checked) {
     textPrintHtml.innerHTML = convertTextareaToHTML(textArea.value);
-    textPrintHtml.innerHTML += "<i>Reviewed by: " + reviewer.value + "</i>"
+    textPrintHtml.innerHTML += "<i>Reviewed by: " + reviewer.value + " on " + currentDate.toLocaleString() + "</i>"
   } else {
     textPrintHtml.innerHTML = "<i>No comments</i>";
   }
 }
 
 function convertButtonsToStatus() {
+  var failedPasses = 0;
   const checkedButtons = document.querySelectorAll('input[type=radio]:checked');
   console.log(checkedButtons.length);
 
@@ -56,6 +73,12 @@ function convertButtonsToStatus() {
       var resultField = document.getElementById(resultFieldId);
       if (resultField != null) {
         resultField.classList = "d-none d-print-inline " + buttonClasses;
+        console.debug(buttonClasses);
+        if (buttonClasses.includes("danger")) {
+          console.debug("counting towards a fail.");
+          failedPasses++;
+          console.debug("counting towards a fail. Current count: " + failedPasses);
+        }
         resultField.innerText = buttonValue;
       }
       else {
@@ -66,6 +89,8 @@ function convertButtonsToStatus() {
       console.error("The button was not properly configured \"" + button.getAttribute("id") + "\"");
     }
   })
+
+  return failedPasses;
 }
 
 // #endregion
@@ -75,6 +100,9 @@ function convertButtonsToStatus() {
 window.addEventListener("afterprint", event => {
   const textPrintArea = document.getElementById("comment-section");
   textPrintArea.setAttribute('hidden', 'true');
+
+  const title = document.querySelector('meta[name="title"]').content;
+  document.title = title + " - H & H Survey Consultants";
 });
 
 // #endregion
@@ -85,6 +113,9 @@ window.addEventListener("load", event => {
   loadFromReload();
   //debugModal();
   SetAllStatus();
+
+  const title = document.querySelector('meta[name="title"]').content;
+  document.title = title + " - H & H Survey Consultants";
 });
 
 function debugModal() {
@@ -104,7 +135,7 @@ function loadFromReload() {
   const lastUpdate = new Date(document.querySelector('meta[name="last-update"]').content);
   if (lastUpdate > createDate) 
   {
-    alert("The link you followed was created on an outdated checklist. The checklist may or may not be accurate.");
+    alert("The link you followed was created on an outdated checklist. The checklist may not be accurate.");
   }
 
   var jobNumber = urlParams.get('jobNumber');
@@ -122,8 +153,16 @@ function loadFromReload() {
     document.getElementById("reviewer").value = reviewName;
   }
 
+  const comments = urlParams.get('comments');
+  if (comments != null && comments != "") {
+    document.getElementById("comment-text").value = comments; 
+  }
+
   const reviewValues = urlParams.get('checkstatus');
   setScores(reviewValues);
+
+  const selectValues = urlParams.get("selectvalues");
+  setSelectedViews(selectValues);
 }
 
 // #endregion
@@ -163,6 +202,8 @@ function confirmPrint() {
 
   document.getElementById("job-number").innerHTML = jobNumberField.value;
   document.getElementById("review-number").innerHTML = reviewField.value;
+  document.getElementById("return-link").href = getSaveLink();
+
 
   checklistVariables.validPass = true;
 
@@ -212,17 +253,17 @@ function verifyPrintInputs() {
 // #region Save URL
 
 function getSaveLink() {
-  console.log("starting save url generation.");
+  console.debug("starting save url generation.");
 
   const htmlLink = document.getElementById("save-link");
   var buttonStatus = getPassingString();
-  console.log(buttonStatus);
+  console.debug("Status: " + buttonStatus);
   var linkText = window.location.href.split('#')[0].split('?')[0];
   
-
   var date = new Date();
 
   linkText += "?reload=true&checkstatus=" + buttonStatus;
+  linkText += "&selectvalues=" + getSelectedViews();
   linkText += "&created=" + date.toISOString();
 
   htmlLink.value = linkText;
@@ -230,6 +271,7 @@ function getSaveLink() {
   const jobNumber = document.getElementById("job-number-print").value;
   const reviewNumber = document.getElementById("review-number-print").value;
   const reviewerName = document.getElementById("reviewer").value;
+  const textArea = document.getElementById("comment-text").value;
 
   if (jobNumber != "") {
     linkText += "&jobNumber=" + jobNumber;
@@ -241,6 +283,10 @@ function getSaveLink() {
   
   if (reviewerName != "") {
     linkText += "&reviewerName=" + reviewerName;
+  }
+
+  if (textArea != "") {
+    linkText += "&comments=" + textArea;
   }
 
   document.getElementById('save-link').value = encodeURI(linkText);
@@ -302,6 +348,30 @@ function getPassingString() {
     retVal = retVal + (selectedIndex);
   }
   return retVal;
+}
+
+function getSelectedViews() {
+  var retVal = "";
+  const selects = document.querySelectorAll('select');
+  console.debug(selects.length);
+  for (var i = 0; i < selects.length; i++) {
+    const selectList = selects[i];
+    const value = selectList.selectedIndex;
+    console.debug(value);
+    retVal += value.toString();
+  }
+  console.debug(retVal);
+  return retVal;
+}
+
+function setSelectedViews(values) {
+  const sepValues = values.split('');
+  const selects = document.querySelectorAll('select');
+  
+  for (var i = 0; i < selects.length; i++) {
+    var selectList = selects[i];
+    selectList.selectedIndex = sepValues[i];
+  }
 }
 
 function resetAllChecks() {
@@ -370,3 +440,5 @@ function ViewSample(button) {
   
   sampleModal.show();
 }
+
+// #endregion
