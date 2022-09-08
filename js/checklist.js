@@ -25,8 +25,18 @@ window.addEventListener("beforeprint", event => {
   {
     alert("Please use the \"Print Copy\" under the table of contents to print correctly.");
   }
-  convertButtonsToStatus();
   convertCommentsToPrint();
+  var failedCount = convertButtonsToStatus();
+  console.debug("Fail count: " + failedCount);
+  var failCountField = document.getElementById("failed-count");
+  failCountField.innerText = failedCount;
+  if (failedCount == 0) {
+    failCountField.classList.remove("text-danger");
+    failCountField.classList.add("text-success");
+  } else {
+    failCountField.classList.add("text-danger");
+    failCountField.classList.remove("text-success");
+  }
 });
 
 function convertCommentsToPrint() {
@@ -45,6 +55,7 @@ function convertCommentsToPrint() {
 }
 
 function convertButtonsToStatus() {
+  var failedPasses = 0;
   const checkedButtons = document.querySelectorAll('input[type=radio]:checked');
   console.log(checkedButtons.length);
 
@@ -57,6 +68,12 @@ function convertButtonsToStatus() {
       var resultField = document.getElementById(resultFieldId);
       if (resultField != null) {
         resultField.classList = "d-none d-print-inline " + buttonClasses;
+        console.debug(buttonClasses);
+        if (buttonClasses.includes("danger")) {
+          console.debug("counting towards a fail.");
+          failedPasses++;
+          console.debug("counting towards a fail. Current count: " + failedPasses);
+        }
         resultField.innerText = buttonValue;
       }
       else {
@@ -67,6 +84,8 @@ function convertButtonsToStatus() {
       console.error("The button was not properly configured \"" + button.getAttribute("id") + "\"");
     }
   })
+
+  return failedPasses;
 }
 
 // #endregion
