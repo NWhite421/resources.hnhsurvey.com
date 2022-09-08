@@ -604,7 +604,7 @@ Copyright (c) 2022 Exacta Land Surveying
         </div>
         <div class="mb-3 col-12">
           <label for="comment-text" class="form-label">Comments</label>
-          <textarea class="form-control" id="comment-text" rows="3" disabled></textarea>
+          <textarea class="form-control" id="comment-text" rows="3" disabled onkeyup="getSaveLink()"></textarea>
         </div>
         <span class="mb-3 col-12">
           <div class="row border border-danger bg-danger text-white rounded mx-2" style="--bs-bg-opacity: .2;" hidden id="print-error">

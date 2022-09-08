@@ -30,6 +30,7 @@ window.addEventListener("beforeprint", event => {
 });
 
 function convertCommentsToPrint() {
+  let currentDate = new Date();
   const textArea = document.getElementById("comment-text");
   const reviewer = document.getElementById("reviewer");
   const checkReview = document.getElementById("include-comments");
@@ -37,7 +38,7 @@ function convertCommentsToPrint() {
 
   if (checkReview.checked) {
     textPrintHtml.innerHTML = convertTextareaToHTML(textArea.value);
-    textPrintHtml.innerHTML += "<i>Reviewed by: " + reviewer.value + "</i>"
+    textPrintHtml.innerHTML += "<i>Reviewed by: " + reviewer.value + " on " + currentDate.toLocaleString() + "</i>"
   } else {
     textPrintHtml.innerHTML = "<i>No comments</i>";
   }
@@ -120,6 +121,11 @@ function loadFromReload() {
   const reviewName = urlParams.get('reviewerName');
   if (reviewName != null && reviewName != "") {
     document.getElementById("reviewer").value = reviewName;
+  }
+
+  const comments = urlParams.get('comments');
+  if (comments != null && comments != "") {
+    document.getElementById("comment-text").value = comments; 
   }
 
   const reviewValues = urlParams.get('checkstatus');
@@ -235,6 +241,7 @@ function getSaveLink() {
   const jobNumber = document.getElementById("job-number-print").value;
   const reviewNumber = document.getElementById("review-number-print").value;
   const reviewerName = document.getElementById("reviewer").value;
+  const textArea = document.getElementById("comment-text").value;
 
   if (jobNumber != "") {
     linkText += "&jobNumber=" + jobNumber;
@@ -246,6 +253,10 @@ function getSaveLink() {
   
   if (reviewerName != "") {
     linkText += "&reviewerName=" + reviewerName;
+  }
+
+  if (textArea != "") {
+    linkText += "&comments=" + textArea;
   }
 
   document.getElementById('save-link').value = encodeURI(linkText);

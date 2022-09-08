@@ -385,6 +385,7 @@
       <div id="comment-section" class="d-none d-print-block">
         <h5 class="mt-0 mb-0 py-0">Comments by Reviewer</h5>
         <p id="comment-area" class="py-1 my-0"></p>
+        <p class="pb-2 mb-0">You can use <a id="return-link">This Link</a> to return to the website's review.</p>
       </div>
     </div>
     <div style="position: fixed; top: 10px; right: 10px;" class="d-print-none">
@@ -486,7 +487,7 @@
         </div>
         <div class="mb-3 col-12">
           <label for="comment-text" class="form-label">Comments</label>
-          <textarea class="form-control" id="comment-text" rows="3" disabled></textarea>
+          <textarea class="form-control" id="comment-text" rows="3" disabled onkeyup="getSaveLink()"></textarea>
         </div>
         <span class="mb-3 col-12">
           <div class="row border border-danger bg-danger text-white rounded mx-2" style="--bs-bg-opacity: .2;" hidden id="print-error">

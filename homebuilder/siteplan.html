@@ -34,9 +34,6 @@
           <div class="col-6 text-end">
             <p class="pb-2 mb-0">Review: <b><span id="review-number">Not specified</span></b></p>
           </div>
-          <div class="col-12 text-center">
-            <p class="pb-2 mb-0">You can use <a id="return-link">This Link</a> to return to the website's review.</p>
-          </div>
         </div>
       </div>
       <hr class="my-0 py-2">
@@ -377,6 +374,7 @@
       <div id="comment-section" class="d-none d-print-block">
         <h5 class="mt-0 mb-0 py-0">Comments by Reviewer</h5>
         <p id="comment-area" class="py-1 my-0"></p>
+        <p class="pb-2 mb-0">You can use <a id="return-link">This Link</a> to return to the website's review.</p>
       </div>
     </div>
     <div style="position: fixed; top: 10px; right: 10px;" class="d-print-none">
@@ -423,24 +421,25 @@
     <a href="../index.html" class="border-bottom flex-column pb-2 mb-2">Return to Homepage</a>
     <nav id="nav-tob" class="w-100 flex-column align-items-stretch pe-4 border-bottom mb-2">
       <nav class="nav nav-pills flex-column">
-        <a class="nav-link" href="#model-space">Model Space</a>
+        <a class="nav-link" href="#house-information">House Information</a>
         <nav class="nav nav-pills flex-column">
-          <a class="nav-link ms-3" href="#section-a1">Legal Description Harmony</a>
-          <a class="nav-link ms-3" href="#section-a2">Save the Drawing</a>
-          <a class="nav-link ms-3" href="#section-a3">Boundary &amp; Adjacent Information</a>
-          <a class="nav-link ms-3" href="#section-a4">Easements</a>
-          <a class="nav-link ms-3" href="#section-a5">Dimensions</a>
-          <a class="nav-link ms-3" href="#section-a6">Road Information</a>
-          <a class="nav-link ms-3" href="#section-a7">Adjacent Parcel Information</a>
+          <a class="nav-link ms-3" href="#section-a1">House Model</a>
+          <a class="nav-link ms-3" href="#section-a2">House Location</a>
+          <a class="nav-link ms-3" href="#section-a3">Building Ties</a>
+          <a class="nav-link ms-3" href="#section-a4">Finish Floor Elevation</a>
+          <a class="nav-link ms-3" href="#section-a5">Driveway</a>
         </nav>
-        <a class="nav-link" href="#paper-space">Paper Space</a>
+        <a class="nav-link" href="#grading-information">House Information</a>
         <nav class="nav nav-pills flex-column">
-          <a class="nav-link ms-3" href="#section-b1">Legal Description</a>
-          <a class="nav-link ms-3" href="#section-b2">Boundary Survey Certified To</a>
-          <a class="nav-link ms-3" href="#section-b3">Property Address</a>
-          <a class="nav-link ms-3" href="#section-b4">Lot Size</a>
-          <a class="nav-link ms-3" href="#section-b5">Surveyor's Note 6 - FEMA</a>
-          <a class="nav-link ms-3" href="#section-b6">Surveyor's Note 9 - FPRN CORS</a>
+          <a class="nav-link ms-3" href="#section-b1">Spot Elevations</a>
+          <a class="nav-link ms-3" href="#section-b2">Required Details</a>
+          <a class="nav-link ms-3" href="#section-b3">Drainage Arrows</a>
+        </nav>        
+        <a class="nav-link" href="#paper-space">House Information</a>
+        <nav class="nav nav-pills flex-column">
+          <a class="nav-link ms-3" href="#section-c1">Survey Heading</a>
+          <a class="nav-link ms-3" href="#section-c2">House Model</a>
+          <a class="nav-link ms-3" href="#section-c3">Dates</a>
         </nav>
       </nav>
     </nav>
@@ -478,7 +477,7 @@
         </div>
         <div class="mb-3 col-12">
           <label for="comment-text" class="form-label">Comments</label>
-          <textarea class="form-control" id="comment-text" rows="3" disabled></textarea>
+          <textarea class="form-control" id="comment-text" rows="3" disabled onkeyup="getSaveLink()"></textarea>
         </div>
         <span class="mb-3 col-12">
           <div class="row border border-danger bg-danger text-white rounded mx-2" style="--bs-bg-opacity: .2;" hidden id="print-error">
