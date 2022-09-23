@@ -11,37 +11,33 @@
  * Copyright (c) 2022 Exacta Land Surveying
  */
 
-function searchTable() {
-  return searchTableAsync();
-}
+$(document).ready(function () {
 
-async function searchTableAsync() {
-  // Declare variables
-  var input, filter, table, tr, td, i, txtValue, column;
-  input = document.getElementById("searchBar");
-  column = getRadioGroupValue("bgSearchFunction");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("tableCodes");
-  tr = table.getElementsByTagName("tr");
+  // Filters the <tbody> element based on the contents of the input "searchBox"
+  $("#searchBox").on("keyup", function () {
+    var value = $(this).val().toLowerCase();
+    $("#tableContent tr").filter(function () {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    });
+  });
 
-  var columnId = (column.toString() == "btnradio1") ? 0 : 2;
+  // Clears the content and triggers the input "searchBox" keyup event (see above)
+  $("#clearSearch").click(function () {
+    $("#searchBox").val("").trigger("keyup");
+  });
 
-  // Loop through all table rows, and hide those who don't match the search query
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[columnId];
-    if (td) {
-      txtValue = td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1 || txtValue.toUpperCase() == filter) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
+  $('th').click(function () {
+    var table = $(this).parents('table').eq(0)
+    var rows = table.find('tr:gt(0)').toArray().sort(comparer($(this).index()))
+    this.asc = !this.asc
+    if (!this.asc) { rows = rows.reverse() }
+    for (var i = 0; i < rows.length; i++) { table.append(rows[i]) }
+  })
+  function comparer(index) {
+    return function (a, b) {
+      var valA = getCellValue(a, index), valB = getCellValue(b, index)
+      return $.isNumeric(valA) && $.isNumeric(valB) ? valA - valB : valA.toString().localeCompare(valB)
     }
   }
-}
-
-function clearSearch() {
-  var input = document.getElementById("searchBar");
-  input.value = "";
-  searchTable();
-}
+  function getCellValue(row, index) { return $(row).children('td').eq(index).text() }
+});
